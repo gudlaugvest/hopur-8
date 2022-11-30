@@ -11,9 +11,7 @@ class Player_UI:
         print()
         print("Player Menu".rjust(18))
         print()
-        print("1. Create Player")
-        print("2. List all Players")
-        print("b. Go Back")
+
 
 
 

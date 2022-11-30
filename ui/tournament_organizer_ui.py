@@ -31,8 +31,6 @@ class Tournament_Organizer_UI:
                 return "q"
             elif command == "1":
                 tournament_menu = Tournament_UI(self.logic_wrapper)
-                back_method = tournament_menu.input_prompt()
-                if back_method == "q":
-                    return "q"
+                tournament_menu.input_prompt()
             else:
                 print("Invalid input, try again!")
