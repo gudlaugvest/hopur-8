@@ -28,7 +28,7 @@ class Player_UI:
             elif command == "q":
                 return "q"
             elif command == "1":
-                player = Player(self)
+                player = Player()
                 player.name = str(input("Enter name of Player: "))
                 player.id_number = int(input("Enter id number: "))
                 player.home_address = input("Enter in home address: ")

@@ -1,5 +1,9 @@
 
-class Team_UI:
+
+from model.tournament_model import Tournament
+
+
+class Tournament_UI:
     def __init__(self, logic_connection):
         self.logic_wrapper = logic_connection
 
@@ -7,17 +11,21 @@ class Team_UI:
         print()
         print("############################")
         print()
-        print("Team Menu".rjust(18))
-        print()
-        print("1. Create Team")
+        print("Tournament".rjust(18))
         print("b. Go Back")
+
 
 
     def input_prompt(self):
         while True:
             self.menu_output()
             print()
-            command = input("Enter your command: ")
+            tournament = Tournament()
+            tournament.organizer_name = input("Enter name of organizer: ")
+            tournament.tournament_name = input("Enter Tournament name: ")
+            tournament.number_rounds = input("Enter number of rounds: ")
+            #tournament.date = date()
+            command = input("Enter command: ")
             command = command.lower()
             if command == "b":
                 return "b"
@@ -27,4 +35,3 @@ class Team_UI:
                 pass
             else:
                 print("Invalid input, try again!")
-
