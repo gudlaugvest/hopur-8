@@ -26,37 +26,14 @@ class Organizer_Menu_UI:
             command = input("Enter your command: ")
             command = command.lower()
             if command == "b":
-                return "b"
+                break
             elif command == "q":
                 return "q"
             elif command == "1":
                 club = Club_UI(self.logic_wrapper)
-                back_method = club.input_prompt()
-                if back_method == "q":
-                    return "q"
+                club.input_prompt()
             elif command == "3":
                 player_ui = Player_UI(self.logic_wrapper)
                 back_method = player_ui.input_prompt()
-
-    def input_prompt2(self):
-        while True:
-            self.menu_output()
-            print()
-            command = input("Enter your command: ")
-            command = command.lower()
-            if command == "b":
-                return "b"
-            elif command == "q":
-                return "q"
-            elif command == "1":
-                club = Club_UI(self.logic_wrapper)
-                back_method = club.input_prompt()
-                if back_method == "q":
-                    return "q"
-
-            elif command == "2":
-                result = self.player_logic.get_all_players()
-                for element in result:
-                    print("name: {}, id_number: {}, home_address: {}, phone_number: {}, email_address: {}, team: {}".format(element.name, element.id_number, element.home_address, element.phone_number, element.email_address, element.team))
             else:
                 print("Invalid input, try again!")
