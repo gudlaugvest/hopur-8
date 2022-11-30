@@ -8,10 +8,22 @@ class Team_Logic:
         self.data_wrapper = data_connections
         
 
-    def team_info(self, team):
-        self.data_wrapper.team_info(team)
+    def create_team(self, team):
+        self.data_wrapper.create_team(team)
 
-    def get_captain(self, player):
-        self.data_wrapper.get_captain(player)
-
+    def get_captain(self, team_id):
+        teams = self.data_wrapper.get_all_teams()
+        correct_team = None
+        for team in teams:
+            if team.id == team_id:
+                correct_team = team
+                break
+        players = self.data_wrapper.get_all_players()
+        correct_player = None
+        for player in players:
+            if player.id == correct_team.team_captain:
+                correct_player = player
+                return correct_player
+        return None
         
+
