@@ -15,7 +15,6 @@ class Tournament_UI:
         print("b. Go Back")
 
 
-
     def input_prompt(self):
         while True:
             self.menu_output()
@@ -25,13 +24,5 @@ class Tournament_UI:
             tournament.tournament_name = input("Enter Tournament name: ")
             tournament.number_rounds = input("Enter number of rounds: ")
             #tournament.date = date()
-            command = input("Enter command: ")
-            command = command.lower()
-            if command == "b":
-                return "b"
-            elif command == "q":
-                return "q"
-            elif command == "1":
-                pass
-            else:
-                print("Invalid input, try again!")
+            
+            

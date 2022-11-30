@@ -9,4 +9,4 @@ class Player:
 
 
     def __str__(self):
-        return "name: {}, id_number: {}, home_address: {}, phone_number: {}, email_address: {}, team: {}".format(self.name, self.id_number, self.home_address, self.phone_number, self.email_address, self.team)
+        return f"name: {self.name}, id_number: {self.id_number}, home_address: {self.home_address}, phone_number: {self.phone_number}, email_address: {self.email_address}, team: {self.team}"

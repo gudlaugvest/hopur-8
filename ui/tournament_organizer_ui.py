@@ -19,7 +19,6 @@ class Tournament_Organizer_UI:
         print("b. Go Back")
 
 
-
     def input_prompt(self):
         while True:
             self.menu_output()
@@ -31,6 +30,9 @@ class Tournament_Organizer_UI:
             elif command == "q":
                 return "q"
             elif command == "1":
-                Tournament_UI(self)
+                tournament_menu = Tournament_UI(self.logic_wrapper)
+                back_method = tournament_menu.input_prompt()
+                if back_method == "q":
+                    return "q"
             else:
                 print("Invalid input, try again!")

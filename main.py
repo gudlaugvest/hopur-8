@@ -9,7 +9,4 @@ organizermenu = Tournament_Organizer_UI()
 organizermenu.input_prompt()
 
 tournamentmenu = Tournament_UI()
-tournamentmenu.input_prompt
-
-
-
+tournamentmenu.input_prompt()
