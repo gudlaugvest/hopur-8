@@ -9,6 +9,7 @@ class Data_Wrapper:
     def create_player(self, player):
         return self.player_data.create_player(player)
 
+
     def get_all_players(self):
         return self.player_data.get_all_players()
 

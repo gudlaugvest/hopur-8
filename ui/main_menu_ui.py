@@ -1,5 +1,6 @@
 from logic.logic_wrapper import Logic_Wrapper
 from ui.player_ui import Player_UI
+from ui.team_ui import Team_UI
 
 
 
@@ -38,6 +39,11 @@ class MainMenu_UI:
                     return "q"
             elif command == "2":
                 pass
+            elif command == "3":
+                team_menu = Team_UI(self.logic_wrapper)
+                back_method = team_menu.input_prompt()
+                if back_method == "q":
+                    return "q"
             else:
                 ("Invalid input, try again!")
 
