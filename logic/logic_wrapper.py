@@ -2,6 +2,7 @@
 from data.data_wrapper import Data_Wrapper
 from logic.player_logic import Player_logic
 from logic.team_logic import Team_Logic
+from logic.tournament_logic import Tournament_Logic
 
 
 class Logic_Wrapper:
@@ -9,6 +10,7 @@ class Logic_Wrapper:
         self.data_wrapper = Data_Wrapper()
         self.player_logic = Player_logic(self.data_wrapper)
         self.team_logic = Team_Logic(self.data_wrapper)
+        self.tournament_logic = Tournament_Logic(self.data_wrapper)
 
     def create_player(self, player):
         """Takes in customer object and forwards it to the data layer"""
@@ -22,3 +24,25 @@ class Logic_Wrapper:
 
     def get_captain(self):
         return self.team_logic.get_captain()
+
+    
+    def type_of_tournament(self):
+        return self.tournament_logic.type_of_tournament()
+
+
+    def create_tournament(self):
+        return self.tournament_logic.create_tournament()
+
+        
+
+    def register_team_to_match(self):
+        return self.tournament_logic.register_team_to_match()        
+
+    def register_type_of_match(self):
+        return self.tournament_logic.register_type_of_match()
+        
+
+    def display_final_match(self):
+        return self.tournament_logic.display_final_match()
+       
+        

@@ -16,10 +16,10 @@ class Club_UI:
 
 
     def input_prompt(self):
-        while True:
-            self.menu_output()
-            print()
-            club = Club()
-            club.name = input("Enter name: ")
-            club.home_address = input("Enter home address: ")
-            club.phone_number = input("Enter phone number: ")
+        self.menu_output()
+        print()
+        club = Club()
+        club.name = input("Enter name: ")
+        club.home_address = input("Enter home address: ")
+        club.phone_number = input("Enter phone number: ")
+        
