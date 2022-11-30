@@ -1,5 +1,5 @@
 class Club:
-    def __init__(self, name, home_address, phone_number) -> None:
+    def __init__(self, name = "", home_address = "", phone_number = "") -> None:
         self.name = name
         self.home_address = home_address
         self.phone_number = phone_number

@@ -1,5 +1,5 @@
 from logic.logic_wrapper import Logic_Wrapper
-from ui.player_ui import Player_UI
+from ui.tournament_organizer_ui import Tournament_Organizer_UI
 
 
 
@@ -12,13 +12,10 @@ class MainMenu_UI:
         print()
         print("############################")
         print()
-        print("Main Menu".rjust(18))
+        print("Basement-Open".rjust(18))
         print()
-        print("1. Player Menu")
-        print("2. Tournament Orginizer Menu")
-        print("3. Team Menu")
-        print("4. Club Menu")
-        print("5. Tournmanet Menu")
+        print("1. Tournament Orginizer")
+        print("2. Other")
         print("q. Quit")
 
 
@@ -32,11 +29,13 @@ class MainMenu_UI:
                 print("Goodbye")
                 break
             elif command == "1":
-                menu = Player_UI(self.logic_wrapper)
-                back_method = menu.input_prompt()
+                organizer_menu = Tournament_Organizer_UI(self.logic_wrapper)
+                back_method = organizer_menu.input_prompt()
                 if back_method == "q":
                     return "q"
             elif command == "2":
+                pass
+            elif command == "3":
                 pass
             else:
                 ("Invalid input, try again!")

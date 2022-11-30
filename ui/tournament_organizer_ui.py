@@ -1,5 +1,10 @@
 
-class Team_UI:
+
+
+from ui.tournament_ui import Tournament_UI
+
+
+class Tournament_Organizer_UI:
     def __init__(self, logic_connection):
         self.logic_wrapper = logic_connection
 
@@ -7,9 +12,10 @@ class Team_UI:
         print()
         print("############################")
         print()
-        print("Team Menu".rjust(18))
+        print("Tournament Organizer".rjust(18))
         print()
-        print("1. Create Team")
+        print("1. Create Tournament")
+        print("2. Go to existing tournament")
         print("b. Go Back")
 
 
@@ -24,7 +30,9 @@ class Team_UI:
             elif command == "q":
                 return "q"
             elif command == "1":
-                pass
+                tournament_menu = Tournament_UI(self.logic_wrapper)
+                back_method = tournament_menu.input_prompt()
+                if back_method == "q":
+                    return "q"
             else:
                 print("Invalid input, try again!")
-
