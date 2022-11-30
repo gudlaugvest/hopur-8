@@ -19,6 +19,7 @@ class MainMenu_UI:
         print("3. Team Menu")
         print("4. Club Menu")
         print("5. Tournmanet Menu")
+        print("q. Quit")
 
 
     def input_prompt(self):
