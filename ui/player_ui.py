@@ -28,7 +28,7 @@ class Player_UI:
             elif command == "q":
                 return "q"
             elif command == "1":
-                player = Player(self)
+                player = Player()
                 player.name = str(input("Enter name of Player: "))
                 player.id_number = int(input("Enter id number: "))
                 player.home_address = input("Enter in home address: ")
@@ -37,7 +37,7 @@ class Player_UI:
                 player.team = input("Enter in team name: ")
                 self.logic_wrapper.create_player(player)
             elif command == "2":
-                result = self.player_logic.get_all_players()
+                result = self.logic_wrapper.get_all_players()
                 for element in result:
                     print("name: {}, id_number: {}, home_address: {}, phone_number: {}, email_address: {}, team: {}".format(element.name, element.id_number, element.home_address, element.phone_number, element.email_address, element.team))
             else:

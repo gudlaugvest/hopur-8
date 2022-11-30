@@ -23,3 +23,4 @@ class Logic_Wrapper:
 
     def get_captain(self):
         return self.team_logic.get_captain()
+
