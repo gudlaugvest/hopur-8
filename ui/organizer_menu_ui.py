@@ -1,5 +1,5 @@
 from ui.club_ui import Club_UI
-
+from ui.player_ui import Player_UI
 
 class Organizer_Menu_UI:
     def __init__(self, logic_connection):
@@ -19,9 +19,26 @@ class Organizer_Menu_UI:
         print("5. Postpone matches")
         print("b. Go Back")
 
-
-
     def input_prompt(self):
+        while True:
+            self.menu_output()
+            print()
+            command = input("Enter your command: ")
+            command = command.lower()
+            if command == "b":
+                return "b"
+            elif command == "q":
+                return "q"
+            elif command == "1":
+                club = Club_UI(self.logic_wrapper)
+                back_method = club.input_prompt()
+                if back_method == "q":
+                    return "q"
+            elif command == "3":
+                player_ui = Player_UI(self.logic_wrapper)
+                back_method = player_ui.input_prompt()
+
+    def input_prompt2(self):
         while True:
             self.menu_output()
             print()

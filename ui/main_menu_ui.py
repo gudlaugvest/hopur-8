@@ -1,4 +1,5 @@
 from logic.logic_wrapper import Logic_Wrapper
+from ui.organizer_menu_ui import Organizer_Menu_UI
 from ui.tournament_organizer_ui import Tournament_Organizer_UI
 
 
@@ -29,7 +30,7 @@ class MainMenu_UI:
                 print("Goodbye")
                 break
             elif command == "1":
-                organizer_menu = Tournament_Organizer_UI(self.logic_wrapper)
+                organizer_menu = Organizer_Menu_UI(self.logic_wrapper)
                 back_method = organizer_menu.input_prompt()
                 if back_method == "q":
                     return "q"
