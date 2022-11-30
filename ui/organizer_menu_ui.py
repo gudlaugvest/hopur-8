@@ -1,3 +1,6 @@
+from ui.club_ui import Club_UI
+
+
 class Organizer_Menu_UI:
     def __init__(self, logic_connection):
         self.logic_wrapper = logic_connection
@@ -7,7 +10,7 @@ class Organizer_Menu_UI:
         print()
         print("############################")
         print()
-        print("".rjust(18))
+        print("Organizer Menu".rjust(18))
         print()
         print("1. Club")
         print("2. Team")
@@ -29,7 +32,11 @@ class Organizer_Menu_UI:
             elif command == "q":
                 return "q"
             elif command == "1":
-                club = Club_UI()
+                club = Club_UI(self.logic_wrapper)
+                back_method = club.input_prompt()
+                if back_method == "q":
+                    return "q"
+
             elif command == "2":
                 result = self.player_logic.get_all_players()
                 for element in result:
