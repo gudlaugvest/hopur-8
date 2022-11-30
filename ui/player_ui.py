@@ -30,7 +30,7 @@ class Player_UI:
             elif command == "1":
                 player = Player()
                 player.name = str(input("Enter name of Player: "))
-                player.id_number = int(input("Enter id number: "))
+                player.id_number = str(input("Enter id number: "))
                 player.home_address = input("Enter in home address: ")
                 player.phone_number = input("Enter in phone number: ")
                 player.email_address = input("Enter in email address: ")
