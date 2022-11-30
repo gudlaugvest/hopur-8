@@ -1,6 +1,4 @@
-from logic.player_logic import Player_logic
 from model.player_model import Player
-
 
 
 class Player_UI:
@@ -18,6 +16,7 @@ class Player_UI:
         print("b. Go Back")
 
 
+
     def input_prompt(self):
         while True:
             self.menu_output()
@@ -29,7 +28,7 @@ class Player_UI:
             elif command == "q":
                 return "q"
             elif command == "1":
-                player = Player()
+                player = Player(self)
                 player.name = str(input("Enter name of Player: "))
                 player.id_number = int(input("Enter id number: "))
                 player.home_address = input("Enter in home address: ")
