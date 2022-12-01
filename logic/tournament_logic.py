@@ -1,12 +1,9 @@
-from data.tournament_data import Tournament_Data
 
 class Tournament_Logic:
 
     def __init__(self, data_connections):
         '''This function initializes the class'''
         self.data_wrapper = data_connections
-
-
 
 
 
@@ -19,7 +16,6 @@ class Tournament_Logic:
         '''This function gets all tournaments'''
         return self.data_wrapper.get_all_tournaments()
         
-
 
 
     def register_type_of_match(self):
