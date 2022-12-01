@@ -51,10 +51,10 @@ class Logic_Wrapper:
         return self.tournament_logic.display_final_match()
 
 
-    def create_clubs(self):
-        return self.club_logic.create_clubs()
+    def create_club(self, club):
+        return self.clubs_logic.create_club(club)
 
     def get_all_clubs(self):
-        return self.club_logic.get_all_clubs()
+        return self.clubs_logic.get_all_clubs()
        
         

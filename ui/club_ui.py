@@ -22,4 +22,4 @@ class Club_UI:
         club.name = input("Enter name: ")
         club.home_address = input("Enter home address: ")
         club.phone_number = input("Enter phone number: ")
-        
+        self.logic_wrapper.create_club(club)
