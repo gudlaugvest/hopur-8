@@ -10,8 +10,8 @@ class Captain_UI:
         print(" Captain menu".rjust(18))
         print()
         print("1. Register final match")
+        print("b. Go back")
         print("q. Quit")
-
 
 
     def input_prompt(self):
@@ -20,10 +20,13 @@ class Captain_UI:
             print()
             command = input("Enter your command: ")
             command = command.lower()
-            if command == "q":
-                return "q"
+            if command == "b":
+                break
+            elif command == "q":
+                quit()
             elif command == "1":
-                pass           
+                pass
+           
             
             else:
                 print("Invalid input, try again!")
