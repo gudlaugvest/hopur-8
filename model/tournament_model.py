@@ -5,3 +5,5 @@ class Tournament:
         self.number_rounds = number_rounds
         self.date = date
 
+    def __str__(self):
+        return f"{self.organizer_name} {self.tournament_name} {self.number_rounds} {self.date}"
