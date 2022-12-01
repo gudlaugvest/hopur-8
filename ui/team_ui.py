@@ -16,7 +16,6 @@ class Team_UI:
         print()
 
 
-
     def input_prompt(self):
         self.menu_output()
         print()
@@ -24,10 +23,9 @@ class Team_UI:
         team.team_name = input("Enter name team: ")
         team.captain = input("Enter name of captain: ")
         team.club = input("Enter name of club: ")
-        
         player_ui = Player_UI(self.logic_wrapper)
         player_ui.input_prompt()
-
+        self.logic_wrapper.create_team(team)
 
 
 
