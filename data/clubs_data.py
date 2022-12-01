@@ -6,6 +6,7 @@ class Clubs_Data:
     def __init__(self):
         self.file_name = "data/clubs.csv"
     
+    
     def create_club(self, tournament):
         i = len(self.get_all_clubs()) + 1
         with open(self.file_name, "a", newline="", encoding="utf-8") as csvfile:
