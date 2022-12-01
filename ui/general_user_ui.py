@@ -2,8 +2,8 @@ from ui.matches_ui import Matches_UI
 
 
 class General_User_UI:
-    def __init__(self, logic_connection):
-        self.logic_wrapper = logic_connection
+    def __init__(self, logic_wrapper):
+        self.logic_wrapper = logic_wrapper
 
 
     def menu_output(self):

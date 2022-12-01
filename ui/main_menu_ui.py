@@ -7,6 +7,7 @@ from ui.organizer_menu_ui import Organizer_Menu_UI
 class MainMenu_UI:
     def __init__(self):
         self.logic_wrapper = Logic_Wrapper()
+     
 
     def menu_output(self):
         print()

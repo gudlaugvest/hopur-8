@@ -6,12 +6,12 @@ class Team_Data:
     def __init__(self):
         self.file_name = "file/team.csv"
 
-    def create_team(self, team):
+    def create_team(self, team: Team):
         with open(self.file_name, "a", newline="", encoding="utf-8") as csvfile:
-            fieldnames = ["name", "team captain", "team players", "team club"] 
+            fieldnames = ["id", "name", "captain_id", "club", "players_id"] 
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
-            writer.writerow({"name": team.name, "team_captain_id": team.team_captain, "team_players_ids": team.team_players, "team_club_id": team.team_club})
+            writer.writerow({"id": team.id, "name": team.name, "captain_id": team.captain_id, "club": team.club, "players_id": team.players_id})
 
     def get_all_teams(self):
         team_list = []

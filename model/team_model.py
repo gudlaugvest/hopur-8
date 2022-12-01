@@ -1,11 +1,12 @@
 class Team():
-    def __init__(self, team_name = "", captain = "", players = "", club = "", player_id=""):
-        self.team_name = team_name
-        self.captain = captain
-        self.players = players
+    def __init__(self, id="", name = "", captain_id = "", club = "", players_id=""):
+        self.id = id
+        self.name = name
+        self.captain_id = captain_id
         self.club = club
-        self.player_id = player_id
+        self.players_id = players_id
 
     def __str__(self):
-        return f"{self.team_name}"
-    
+        pass
+
+

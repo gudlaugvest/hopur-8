@@ -1,6 +1,6 @@
 class Matches_UI:
-    def __init__(self, logic_connection):
-        self.logic_wrapper = logic_connection
+    def __init__(self, logic_wrapper):
+        self.logic_wrapper = logic_wrapper
 
 
     def menu_output(self):
@@ -25,7 +25,7 @@ class Matches_UI:
             if command == "b":
                 break
             elif command == "q":
-                return "q"
+                quit()
             elif command == "1":
                 pass
             elif command == "2":

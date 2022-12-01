@@ -3,8 +3,8 @@ from ui.player_ui import Player_UI
 from ui.team_ui import Team_UI
 
 class Organizer_Menu_UI:
-    def __init__(self, logic_connection):
-        self.logic_wrapper = logic_connection
+    def __init__(self, logic_wrapper):
+        self.logic_wrapper = logic_wrapper
 
 
     def menu_output(self):

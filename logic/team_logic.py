@@ -10,6 +10,7 @@ class Team_Logic:
     def create_team(self, team):
         self.data_wrapper.create_team(team)
 
+
     def get_captain(self, team_id):
         teams = self.data_wrapper.get_all_teams()
         correct_team = None
