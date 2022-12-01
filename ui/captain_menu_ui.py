@@ -1,4 +1,6 @@
-class Captain_UI:
+from ui.register_ui import Register_UI
+
+class Captain_Menu_UI:
     def __init__(self, logic_connection):
         self.logic_wrapper = logic_connection
 
