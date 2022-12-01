@@ -1,6 +1,5 @@
 
 from model.tournament_model import Tournament
-from ui.organizer_menu_ui import Organizer_Menu_UI
 
 
 class Tournament_UI:
@@ -23,6 +22,5 @@ class Tournament_UI:
             tournament.organizer_name = input("Enter name of organizer: ")
             tournament.tournament_name = input("Enter Tournament name: ")
             tournament.number_rounds = input("Enter number of rounds: ")
+            #stoppa loop kiktu a tetta i kvold
             #tournament.date = date()
-            org_menu = Organizer_Menu_UI(self.logic_wrapper)
-            org_menu.input_prompt()

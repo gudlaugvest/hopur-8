@@ -1,6 +1,7 @@
 from ui.club_ui import Club_UI
 from ui.player_ui import Player_UI
 from ui.team_ui import Team_UI
+from ui.tournament_ui import Tournament_UI
 
 class Organizer_Menu_UI:
     def __init__(self, logic_wrapper):
@@ -16,8 +17,8 @@ class Organizer_Menu_UI:
         print("1. Club")
         print("2. Team")
         print("3. Player")
-        print("4. Get info on tournament")
-        print("5. Postpone matches")
+        print("4. Create Tournament")
+        print("5. Update matches")
         print("b. Go Back")
 
 
@@ -40,5 +41,8 @@ class Organizer_Menu_UI:
             elif command == "3":
                 player_ui = Player_UI(self.logic_wrapper)
                 player_ui.input_prompt()
+            elif command == "4":
+                tournament_ui = Tournament_UI(self.logic_wrapper)
+                tournament_ui.input_prompt()
             else:
                 print("Invalid input, try again!")
