@@ -7,10 +7,11 @@ class Clubs_Data:
         self.file_name = "data/clubs.csv"
     
     def create_club(self, tournament):
+        i = len(self.get_all_clubs()) + 1
         with open(self.file_name, "a", newline="", encoding="utf-8") as csvfile:
             fieldnames = ["name", "home_address", "phone_number"]
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-            writer.writerow({"name": tournament.name, "home_address": tournament.home_address, "phone_number": tournament.phone_number})
+            writer.writerow({"id" : i, "name": tournament.name, "home_address": tournament.home_address, "phone_number": tournament.phone_number})
 
     def get_all_clubs(self):
         club_list = []
