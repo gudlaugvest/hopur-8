@@ -1,9 +1,11 @@
+from data.data_wrapper import Data_Wrapper
 from data.player_data import Player_Data
 from model.player_model import Player
 
 
 class Player_logic:
-    def __init__(self, data_connections):
+    def __init__(self, data_connections: Data_Wrapper):
+        
         self.data_wrapper = data_connections
 
 

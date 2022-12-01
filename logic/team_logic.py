@@ -4,7 +4,7 @@ from model.team_model import Team
 
 class Team_Logic:
 
-    def __init__(self, data_connections):
+    def __init__(self, data_connections : Data_Wrapper()):
         self.data_wrapper = data_connections
         
 

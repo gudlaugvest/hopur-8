@@ -1,23 +1,26 @@
+from data.data_wrapper import Data_Wrapper
+
+
 class Tournament_Logic:
 
-    def __init__(self, data_connections):
+    def __init__(self, data_connections: Data_Wrapper()):
         '''This function initializes the class'''
         self.data_wrapper = data_connections
 
 
-    def type_of_tournament(self):
-        '''This function specifies what type of tournament'''
-        pass
+
 
 
     def create_tournament(self):
         '''this function creates a tournament'''
         pass
+
+
+    def get_all_tournaments(self):
+        pass
         
 
-    def register_team_to_match(self):
-        '''This function registers a team to a match'''
-        pass
+
 
     def register_type_of_match(self):
         '''This function specifies what type of match'''
@@ -25,4 +28,7 @@ class Tournament_Logic:
 
     def display_final_match(self):
         '''This function displays the final match'''
+        pass
+
+    def get_all_games_in_tournament(self, tournament):
         pass
