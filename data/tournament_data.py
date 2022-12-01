@@ -4,7 +4,7 @@ import csv
 class Tournament_Data:
 
     def __init__(self):
-        self.file_name = "data\list_of_tournament.csv"
+        self.file_name = "file\list_of_tournament.csv"
 
       
     def create_tournament(self, tournament):
