@@ -32,7 +32,6 @@ class Player_UI:
                 player.home_address = input("Enter in home address: ")
                 player.phone_number = input("Enter in phone number: ")
                 player.email_address = input("Enter in email address: ")
-                player.team = input("Enter in team name: ")
                 self.logic_wrapper.create_player(player)
             elif command == "2":
                 result = self.logic_wrapper.get_all_players()
