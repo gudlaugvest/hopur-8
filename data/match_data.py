@@ -4,7 +4,7 @@ from model.matches_model import Match
 class Match_Data:
 
     def __init__(self):
-        self.file_name = "data/matches.csv"  
+        self.file_name = "file/matches.csv"  
 
 
     def create_match(self, match):

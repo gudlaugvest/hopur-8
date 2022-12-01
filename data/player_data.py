@@ -4,7 +4,7 @@ from model.player_model import Player
 
 class Player_Data:
     def __init__(self):
-        self.file_name = "data/player.csv"
+        self.file_name = "file/player.csv"
             
 
     def create_player(self, player):
