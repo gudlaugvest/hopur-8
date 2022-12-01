@@ -16,27 +16,12 @@ class Player_UI:
 
 
     def input_prompt(self):
-        while True:
-            self.menu_output()
-            print()
-            command = input("Enter your command: ")
-            command = command.lower()
-            if command == "b":
-                return "b"
-            elif command == "q":
-                return "q"
-            elif command == "1":
-                player = Player()
-                player.name = str(input("Enter name of Player: "))
-                player.id_number = str(input("Enter id number: "))
-                player.home_address = input("Enter in home address: ")
-                player.phone_number = input("Enter in phone number: ")
-                player.email_address = input("Enter in email address: ")
-                player.team = input("Enter in team name: ")
-                self.logic_wrapper.create_player(player)
-            elif command == "2":
-                result = self.logic_wrapper.get_all_players()
-                for element in result:
-                    print("name: {}, id_number: {}, home_address: {}, phone_number: {}, email_address: {}, team: {}".format(element.name, element.id_number, element.home_address, element.phone_number, element.email_address, element.team))
-            else:
-                print("Invalid input, try again!")
+      
+        player = Player()
+        player.name = str(input("Enter name of Player: "))
+        player.id_number = str(input("Enter id number: "))
+        player.home_address = input("Enter home address: ")
+        player.phone_number = input("Enter phone number: ")
+        player.email_address = input("Enter email address: ")
+        self.logic_wrapper.create_player(player)
+
