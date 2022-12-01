@@ -1,9 +1,8 @@
-from data.data_wrapper import Data_Wrapper
 
 class Match_Logic:
 
 
-    def __init__(self, data_connections: Data_Wrapper()):
+    def __init__(self, data_connections):
         self.data_wrapper = data_connections
 
     def create_match(self):

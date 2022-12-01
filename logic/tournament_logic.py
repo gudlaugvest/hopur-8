@@ -1,9 +1,8 @@
-from data.data_wrapper import Data_Wrapper
 
 
 class Tournament_Logic:
 
-    def __init__(self, data_connections: Data_Wrapper()):
+    def __init__(self, data_connections):
         '''This function initializes the class'''
         self.data_wrapper = data_connections
 
