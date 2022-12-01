@@ -14,12 +14,16 @@ class Player_UI:
 
 
     def input_prompt(self):
-      
+        self.menu_output()
         player = Player()
-        player.name = input("Enter name of Player: ")
-        player.id_number = input("Enter id number: ")
-        player.home_address = input("Enter home address: ")
-        player.phone_number = input("Enter phone number: ")
-        player.email_address = input("Enter email address: ")
-        self.logic_wrapper.create_player(player)
+        counter = 0
+        while counter <=3:
+            player.name = input("Enter name of Player: ")
+            player.id_number = input("Enter id number: ")
+            player.home_address = input("Enter home address: ")
+            player.phone_number = input("Enter phone number: ")
+            player.email_address = input("Enter email address: ")
+            print()
+            counter += 1
+            self.logic_wrapper.create_player(player)
 

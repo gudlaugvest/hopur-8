@@ -18,17 +18,16 @@ class Team_UI:
 
 
     def input_prompt(self):
-        while True:
-            self.menu_output()
-            print()
-            team = Team()
-            team.team_name = input("Enter name team: ")
-            team.captain = input("Enter name of captain: ")
-            team.club = input("Enter name of club: ")
-            print()
-            print(" Players".rjust(18))
-            player_ui = Player_UI(self.logic_wrapper)
-            player_ui.input_prompt()
+        self.menu_output()
+        print()
+        team = Team()
+        team.team_name = input("Enter name team: ")
+        team.captain = input("Enter name of captain: ")
+        team.club = input("Enter name of club: ")
+        
+        player_ui = Player_UI(self.logic_wrapper)
+        player_ui.input_prompt()
+
 
 
 
