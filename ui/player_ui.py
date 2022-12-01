@@ -9,17 +9,15 @@ class Player_UI:
         print()
         print("############################")
         print()
-        print("Player Menu".rjust(18))
+        print("Players".rjust(18))
         print()
-
-
 
 
     def input_prompt(self):
       
         player = Player()
-        player.name = str(input("Enter name of Player: "))
-        player.id_number = str(input("Enter id number: "))
+        player.name = input("Enter name of Player: ")
+        player.id_number = input("Enter id number: ")
         player.home_address = input("Enter home address: ")
         player.phone_number = input("Enter phone number: ")
         player.email_address = input("Enter email address: ")
