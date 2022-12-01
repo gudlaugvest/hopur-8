@@ -34,7 +34,7 @@ class MainMenu_UI:
                 if back_method == "q":
                     return "q"
             elif command == "2":
-                general_user = General_User_UI()
+                general_user = General_User_UI(self.logic_wrapper)
                 general_user.input_prompt()
             elif command == "3":
                 pass
