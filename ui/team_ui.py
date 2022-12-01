@@ -25,6 +25,8 @@ class Team_UI:
             team.team_name = input("Enter name team: ")
             team.captain = input("Enter name of captain: ")
             team.club = input("Enter name of club: ")
+            print()
+            print(" Players".rjust(18))
             player_ui = Player_UI(self.logic_wrapper)
             player_ui.input_prompt()
 
