@@ -22,8 +22,7 @@ class Captain_UI:
             if command == "q":
                 return "q"
             elif command == "1":
-                pass
-            
+                pass           
             
             else:
                 print("Invalid input, try again!")
