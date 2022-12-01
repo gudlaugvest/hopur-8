@@ -1,1 +1,2 @@
-Name, home_address, phone_number
+id,name,home_address,phone_number
+1,Fylkir,heimili_1,3333333

@@ -1,9 +1,8 @@
 from data.clubs_data import Clubs_Data
-from data.data_wrapper import Data_Wrapper
 
 class Clubs_Logic:
 
-    def __init__(self, data_connections : Data_Wrapper()):
+    def __init__(self, data_connections):
         self.data_wrapper = data_connections
 
 

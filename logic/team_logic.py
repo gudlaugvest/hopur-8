@@ -1,10 +1,9 @@
-from data.data_wrapper import Data_Wrapper
 from model.team_model import Team
 
 
 class Team_Logic:
 
-    def __init__(self, data_connections : Data_Wrapper()):
+    def __init__(self, data_connections):
         self.data_wrapper = data_connections
         
 
