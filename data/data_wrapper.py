@@ -48,3 +48,9 @@ class Data_Wrapper:
 
     def get_all_matches(self):
         return self.match_data.get_all_matches()
+
+    def unplayed_matches(self, match_list, date):
+        return self.match_data.unplayed_matches(match_list, date)
+    
+    def played_matches(self, match_list, date):
+        return self.match_data.played_matches(match_list, date)
