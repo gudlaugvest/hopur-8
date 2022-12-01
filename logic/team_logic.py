@@ -25,5 +25,3 @@ class Team_Logic:
                 correct_player = player
                 return correct_player
         return None
-        
-
