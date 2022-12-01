@@ -12,10 +12,10 @@ class Clubs_Data:
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             writer.writerow({"name": tournament.name, "home_address": tournament.home_address, "phone_number": tournament.phone_number})
 
-    def get_all_players(self):
-        player_list = []
+    def get_all_clubs(self):
+        club_list = []
         with open(self.file_name, newline="" ,encoding="utf-8") as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                player_list.append(Tournament(row["name"], row["home_address"], row["phone_number"]))
-        return player_list
+                club_list.append(Tournament(row["name"], row["home_address"], row["phone_number"]))
+        return club_list
