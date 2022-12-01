@@ -1,8 +1,6 @@
 from logic.logic_wrapper import Logic_Wrapper
+from ui.general_user_ui import General_User_UI
 from ui.organizer_menu_ui import Organizer_Menu_UI
-from ui.tournament_organizer_ui import Tournament_Organizer_UI
-
-
 
 
 class MainMenu_UI:
@@ -35,7 +33,8 @@ class MainMenu_UI:
                 if back_method == "q":
                     return "q"
             elif command == "2":
-                pass
+                general_user = General_User_UI()
+                general_user.input_prompt()
             elif command == "3":
                 pass
             else:
