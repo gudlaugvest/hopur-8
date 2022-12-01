@@ -4,7 +4,7 @@ from model.club_model import Club
 class Clubs_Data:
     
     def __init__(self):
-        self.file_name = "data/clubs.csv"
+        self.file_name = "file/clubs.csv"
     
     def create_club(self, club):
         i = len(self.get_all_clubs()) + 1
