@@ -28,7 +28,7 @@ class General_User_UI:
             if command == "b":
                 break
             elif command == "q":
-                return "q"
+                quit()
             elif command == "1":
                 matches = Matches_UI(self.logic_wrapper)
                 matches.input_prompt()
