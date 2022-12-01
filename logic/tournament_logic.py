@@ -6,6 +6,7 @@ class Tournament_Logic:
 
 
     def type_of_tournament(self):
+        '''This function specifies what type of tournament'''
         pass
 
 

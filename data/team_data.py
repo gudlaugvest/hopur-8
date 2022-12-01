@@ -4,7 +4,7 @@ from model.team_model import Team
 class Team_Data:
 
     def __init__(self):
-        self.file_name = "file/team.csv"
+        self.file_name = "data/team.csv"
 
     def create_team(self, team):
         with open(self.file_name, "a", newline="", encoding="utf-8") as csvfile:
