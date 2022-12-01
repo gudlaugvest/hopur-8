@@ -1,5 +1,5 @@
 from logic.logic_wrapper import Logic_Wrapper
-from ui.captain_menu_ui import Captain_Menu_UI
+from ui.captain_ui import Captain_UI
 from ui.general_user_ui import General_User_UI
 from ui.organizer_menu_ui import Organizer_Menu_UI
 

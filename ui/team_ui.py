@@ -21,8 +21,8 @@ class Team_UI:
         print()
         team = Team()
         team.name = input("Enter name team: ")
-        team.captain_id = input("Enter name of captain id : ")
         team.club = input("Enter name of club: ")
+        team.captain_id = input("Enter captain id: ")
         print()
         counter = 0
         while counter <=3:

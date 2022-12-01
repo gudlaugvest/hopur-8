@@ -11,6 +11,8 @@ class Tournament_UI:
         print("############################")
         print()
         print("Tournament".rjust(18))
+        print()
+        print("c. Continue")
         print("b. Go Back")
 
 
@@ -18,9 +20,13 @@ class Tournament_UI:
         while True:
             self.menu_output()
             print()
-            tournament = Tournament()
-            tournament.organizer_name = input("Enter name of organizer: ")
-            tournament.tournament_name = input("Enter Tournament name: ")
-            tournament.number_rounds = input("Enter number of rounds: ")
-            #stoppa loop kiktu a tetta i kvold
-            #tournament.date = date()
+            command = input("Enter command: ")
+            if command == "b":
+                return "b"
+            elif command == "c":
+                tournament = Tournament()
+                tournament.organizer_name = input("Enter name of organizer: ")
+                tournament.tournament_name = input("Enter Tournament name: ")
+                tournament.number_rounds = input("Enter number of rounds: ")
+                #stoppa loop kiktu a tetta i kvold
+                #tournament.date = date()

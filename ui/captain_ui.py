@@ -1,6 +1,6 @@
 from ui.register_ui import Register_UI
 
-class Captain_Menu_UI:
+class Captain_UI:
     def __init__(self, logic_connection):
         self.logic_wrapper = logic_connection
 
@@ -28,7 +28,5 @@ class Captain_Menu_UI:
                 quit()
             elif command == "1":
                 pass
-           
-            
             else:
                 print("Invalid input, try again!")
