@@ -1,5 +1,4 @@
 
-
 class Tournament_Logic:
 
     def __init__(self, data_connections):
@@ -8,26 +7,22 @@ class Tournament_Logic:
 
 
 
-
-
-    def create_tournament(self):
+    def create_tournament(self, tournament):
         '''this function creates a tournament'''
-        pass
+        self.data_wrapper.create_tournament(tournament)
 
 
     def get_all_tournaments(self):
-        pass
+        '''This function gets all tournaments'''
+        return self.data_wrapper.get_all_tournaments()
         
-
 
 
     def register_type_of_match(self):
         '''This function specifies what type of match'''
         pass
 
-    def display_final_match(self):
-        '''This function displays the final match'''
-        pass
+
 
     def get_all_games_in_tournament(self, tournament):
         pass
