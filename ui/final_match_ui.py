@@ -9,7 +9,7 @@ class Final_Match:
         print()
         print("############################")
         print()
-        print("Register final match".rjust(18))
+        print("Register score".rjust(18))
         print()
 
     

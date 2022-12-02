@@ -9,7 +9,7 @@ class Player_UI:
         print()
         print("############################")
         print()
-        print("Player Menu".rjust(18))
+        print("Player".rjust(18))
         print()
 
 
