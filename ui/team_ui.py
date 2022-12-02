@@ -27,3 +27,5 @@ class Team_UI:
             team = Team()
             team.name = input("Enter name team: ")
             team.club = input("Enter name of club: ")
+            self.logic_wrapper.create_team(team)
+

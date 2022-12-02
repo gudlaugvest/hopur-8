@@ -1,4 +1,4 @@
-id, name, team_captain_id, club, player_1, player_2, player_3, player_4
+id, name, club
 1,Lið1,5,1 4 10 5,1,f,f,f,f
 ,f,f,f,f
 ,f,f,f,f
