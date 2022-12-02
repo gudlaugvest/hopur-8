@@ -21,3 +21,5 @@ class Captain_data:
             for row in reader:
                 captain_list.append(Captain(row["id_number"]))
         return captain_list
+
+    

@@ -36,3 +36,4 @@ class Match_Data:
             if match < date:
                 played_matches.append(match)
         return played_matches
+        
