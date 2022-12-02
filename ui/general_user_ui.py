@@ -1,4 +1,4 @@
-from ui.matches_ui import Matches_UI
+from ui.lists_of_matches_ui import Matches_UI
 
 
 class General_User_UI:
