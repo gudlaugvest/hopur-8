@@ -4,11 +4,12 @@ from model.player_model import Player
 
 class Player_logic:
     def __init__(self, data_connections):
-        
+        '''This function initializes the class'''
         self.data_wrapper = data_connections
 
 
     def create_player(self, player):
+        '''this function creates a player'''
         self.data_wrapper.create_player(player)
 
 
