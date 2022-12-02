@@ -13,9 +13,9 @@ class General_User_UI:
         print(" Menu".rjust(18))
         print()
         print("1. Get list of players and teams")
-        print("2. Get list of matches")
+        print("2. Get list of matches with recorded scores")
         print("3. Get list of unplayed matches")
-        print("3. Get status of tournament")
+        print("4. Get status of tournament")
         print("b. Go back")
         print("q. Quit")
 
