@@ -23,7 +23,6 @@ class Team_UI:
         team = Team()
         team.name = input("Enter name team: ")
         team.club = input("Enter name of club: ")
-        self.logic_wrapper.create_team(team)
         captain = Captain(self)
         captain.id_number = input("Enter captain id: ")
         print()
@@ -35,3 +34,4 @@ class Team_UI:
             player.phone_number = input("Enter phone number: ")
             player.email_address = input("Enter email address: ")
             print()
+        
