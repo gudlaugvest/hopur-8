@@ -1,6 +1,7 @@
 from model.team_model import Team
 from logic.logic_wrapper import Logic_Wrapper
 from model.player_model import Player
+from model.captain_model import Captain
 
 
 class Team_UI:
@@ -23,13 +24,18 @@ class Team_UI:
         team = Team()
         team.name = input("Enter name team: ")
         team.club = input("Enter name of club: ")
-        team.captain_id = input("Enter captain id: ")
+        captain = Captain()
+        captain.id_number = input("Enter captain id: ")
         print()
         player = Player()
-        player.name = input("Enter name of Player: ")
-        player.id_number = input("Enter id number: ")
-        player.home_address = input("Enter home address: ")
-        player.phone_number = input("Enter phone number: ")
-        player.email_address = input("Enter email address: ")
-        
+        counter = 0
+        while counter !=4:
+            player.name = input("Enter name of Player: ")
+            player.id_number = input("Enter id number: ")
+            player.home_address = input("Enter home address: ")
+            player.phone_number = input("Enter phone number: ")
+            player.email_address = input("Enter email address: ")
+            if player.id_number == team.captain_id:
+                #self.logic_wrapper.create_captain(captain)
+            
 
