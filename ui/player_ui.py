@@ -23,7 +23,6 @@ class Player_UI:
             player.home_address = input("Enter home address: ")
             player.phone_number = input("Enter phone number: ")
             player.email_address = input("Enter email address: ")
+
             self.logic_wrapper.create_player(player)
             print()
-        
-
