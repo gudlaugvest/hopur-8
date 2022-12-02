@@ -16,4 +16,6 @@ class Final_Match:
 
 
     def input_prompt(self):
-        pass
+        self.menu_output()
+        print()
+        
