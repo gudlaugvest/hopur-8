@@ -1,6 +1,6 @@
 
 
-class Final_Match:
+class Register_Score:
     def __init__(self, logic_connection):
         self.logic_wrapper = logic_connection
 
@@ -11,9 +11,7 @@ class Final_Match:
         print()
         print("Register score".rjust(18))
         print()
-
-    
-
+        
 
     def input_prompt(self):
         self.menu_output()

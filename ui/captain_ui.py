@@ -1,4 +1,7 @@
 
+from ui.register_score_ui import Register_Score
+
+
 class Captain_UI:
     def __init__(self, logic_connection):
         self.logic_wrapper = logic_connection
@@ -10,7 +13,7 @@ class Captain_UI:
         print()
         print(" Captain menu".rjust(18))
         print()
-        print("1. Register final match")
+        print("1. Register Score")
         print("b. Go back")
         print("q. Quit")
 
@@ -26,6 +29,6 @@ class Captain_UI:
             elif command == "q":
                 quit()
             elif command == "1":
-                pass
+                register_score = Register_Score()
             else:
                 print("Invalid input, try again!")
