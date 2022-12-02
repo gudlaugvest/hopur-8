@@ -21,18 +21,22 @@ class Team_UI:
     def input_prompt(self):
         self.menu_output()
         print()
-        team = Team()
-        team.name = input("Enter name team: ")
-        team.club = input("Enter name of club: ")
-        captain = Captain(self)
-        captain.id_number = input("Enter captain id: ")
-        print()
-        player = Player()
-        for i in range(4):
-            player.name = input("Enter name of Player: ")
-            player.id_number = input("Enter id number: ")
-            player.home_address = input("Enter home address: ")
-            player.phone_number = input("Enter phone number: ")
-            player.email_address = input("Enter email address: ")
+        command = input("Enter command: ")
+        if command == "b":
+            return "b"
+        elif command == "c":
+            team = Team()
+            team.name = input("Enter name team: ")
+            team.club = input("Enter name of club: ")
+            captain = Captain(self)
+            captain.id_number = input("Enter captain id: ")
             print()
+            player = Player()
+            for i in range(4):
+                player.name = input("Enter name of Player: ")
+                player.id_number = input("Enter id number: ")
+                player.home_address = input("Enter home address: ")
+                player.phone_number = input("Enter phone number: ")
+                player.email_address = input("Enter email address: ")
+                print()
         
