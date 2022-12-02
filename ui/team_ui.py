@@ -38,4 +38,3 @@ class Team_UI:
             if player.id_number == team.captain_id:
                 #self.logic_wrapper.create_captain(captain)
             
-
