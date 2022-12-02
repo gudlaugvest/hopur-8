@@ -13,13 +13,18 @@ class Club_UI:
         print()
         print("Club".rjust(18))
         print()
-
+        print("c. Continue")
+        print("b. Go back")
 
     def input_prompt(self):
         self.menu_output()
         print()
-        club = Club()
-        club.name = input("Enter name: ")
-        club.home_address = input("Enter home address: ")
-        club.phone_number = input("Enter phone number: ")
-        self.logic_wrapper.create_club(club)
+        command = input("Enter command: ")
+        if command == "b":
+            return "b"
+        elif command == "c":
+            club = Club()
+            club.name = input("Enter name: ")
+            club.home_address = input("Enter home address: ")
+            club.phone_number = input("Enter phone number: ")
+            self.logic_wrapper.create_club(club)

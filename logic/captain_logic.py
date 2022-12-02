@@ -8,5 +8,6 @@ class Captain_Logic():
     def create_captain(self, captain: Captain):
         return self.data_wrapper.create_captain(captain)
 
+
     def get_captain(self):
         return self.data_wrapper.get_captain()
