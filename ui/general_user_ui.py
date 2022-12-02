@@ -30,10 +30,9 @@ class General_User_UI:
             elif command == "q":
                 quit()
             elif command == "1":
-                pass    
+                pass 
             elif command == "2":
                 pass
-
             elif command == "3":
                 pass
             elif command == "4":
