@@ -1,4 +1,3 @@
-from ui.register_ui import Register_UI
 
 class Captain_UI:
     def __init__(self, logic_connection):
