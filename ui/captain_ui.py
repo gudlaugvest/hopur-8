@@ -29,6 +29,7 @@ class Captain_UI:
             elif command == "q":
                 quit()
             elif command == "1":
-                register_score = Register_Score()
+                register_score = Register_Score(self.logic_wrapper)
+                register_score.input_prompt()
             else:
                 print("Invalid input, try again!")
