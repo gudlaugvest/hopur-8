@@ -19,5 +19,5 @@ class Team_Data:
         with open(self.file_name, newline="" ,encoding="utf-8") as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                team_list.append(Team(row["id"], row["name"],row["team_captain_id"], row["club"]))
+                team_list.append(Team(row["id"], row["name"], row["club"]))
         return team_list
