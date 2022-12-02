@@ -36,6 +36,4 @@ class Team_UI:
             player.phone_number = input("Enter phone number: ")
             player.email_address = input("Enter email address: ")
             if player.id_number == team.captain_id:
-                #self.logic_wrapper.create_captain(captain)
-            
-
+                pass
