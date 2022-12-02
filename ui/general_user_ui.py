@@ -12,9 +12,10 @@ class General_User_UI:
         print()
         print(" Menu".rjust(18))
         print()
-        print("1. Get list of matches")
-        print("2. Get list of matches with recorded result")
-        print("3. Get status in tournament")
+        print("1. Get list of players and teams")
+        print("2. Get list of matches")
+        print("3. Get list of unplayed matches")
+        print("3. Get status of tournament")
         print("b. Go back")
         print("q. Quit")
 
@@ -30,9 +31,13 @@ class General_User_UI:
             elif command == "q":
                 quit()
             elif command == "1":
+                pass    
+            elif command == "2":
                 matches = Matches_UI(self.logic_wrapper)
                 matches.input_prompt()
-            elif command == "2":
+            elif command == "3":
+                pass
+            elif command == "4":
                 pass
             
             else:
