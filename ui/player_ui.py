@@ -12,18 +12,18 @@ class Player_UI:
         print("Player Menu".rjust(18))
         print()
 
-    def add_another_player(self):
-        add_player = input("Do you want to add another player (yes/no)?: ")
-        add_player.lower()
-
 
     def input_prompt(self):
         self.menu_output()
         player = Player()
-        player.name = input("Enter name of Player: ")
-        player.id_number = input("Enter id number: ")
-        player.home_address = input("Enter home address: ")
-        player.phone_number = input("Enter phone number: ")
-        player.email_address = input("Enter email address: ")
-        self.logic_wrapper.create_player(player)
-        self.add_another_player()
+        counter = 0
+        while counter !=4:
+            player.name = input("Enter name of Player: ")
+            player.id_number = input("Enter id number: ")
+            player.home_address = input("Enter home address: ")
+            player.phone_number = input("Enter phone number: ")
+            player.email_address = input("Enter email address: ")
+            self.logic_wrapper.create_player(player)
+            print()
+        
+
