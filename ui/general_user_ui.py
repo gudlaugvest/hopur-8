@@ -1,4 +1,3 @@
-from ui.lists_of_matches_ui import Matches_UI
 
 
 class General_User_UI:
@@ -33,8 +32,8 @@ class General_User_UI:
             elif command == "1":
                 pass    
             elif command == "2":
-                matches = Matches_UI(self.logic_wrapper)
-                matches.input_prompt()
+                pass
+
             elif command == "3":
                 pass
             elif command == "4":
