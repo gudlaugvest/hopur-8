@@ -1,4 +1,4 @@
-id, name, club
+id,name,club,captain_id
 1,Lið1,5,1 4 10 5,1,f,f,f,f
 ,f,f,f,f
 ,f,f,f,f
@@ -51,4 +51,8 @@ id, name, club
 50,f,f,f,f
 51,f,f,f,f
 52,Blue,4,tviund,
-53,blue,6,tviund,2
+53,blue,6,tviund,254,e,e
+54,r,r
+55,name,club
+56,name2,club2,123
+57,blue,tviund,123

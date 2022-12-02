@@ -26,6 +26,9 @@ class Logic_Wrapper:
 
     def get_captain(self):
         return self.team_logic.get_captain()
+    
+    def get_player_by_id(self, id):
+        return self.player_logic.get_player_by_id(id)
 
     
     
@@ -57,4 +60,5 @@ class Logic_Wrapper:
     def get_all_clubs(self):
         return self.clubs_logic.get_all_clubs()
        
-        
+    def get_team_by_name(self, name):
+        return self.team_logic.get_team_by_name(name)

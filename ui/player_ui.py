@@ -16,13 +16,16 @@ class Player_UI:
     def input_prompt(self):
         self.menu_output()
         player = Player()
-        counter = 0
-        while counter !=4:
-            player.name = input("Enter name of Player: ")
-            player.id_number = input("Enter id number: ")
-            player.home_address = input("Enter home address: ")
-            player.phone_number = input("Enter phone number: ")
-            player.email_address = input("Enter email address: ")
-
-            self.logic_wrapper.create_player(player)
-            print()
+        player.name = input("Enter name of Player: ")
+        player.id_number = input("Enter id number: ")
+        player.home_address = input("Enter home address: ")
+        player.phone_number = input("Enter phone number: ")
+        player.email_address = input("Enter email address: ")
+        team_name = input("Enter team name: ")
+        team = self.logic_wrapper.get_team_by_name(team_name)
+        if team is None:
+            print("No team found with that name")
+            return
+        player.team_id = team.id
+        self.logic_wrapper.create_player(player)
+        print()
