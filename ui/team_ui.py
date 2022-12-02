@@ -17,23 +17,21 @@ class Team_UI:
         print()
 
 
-
     def input_prompt(self):
         self.menu_output()
         print()
         team = Team()
         team.name = input("Enter name team: ")
         team.club = input("Enter name of club: ")
-        captain = Captain()
+        self.logic_wrapper.create_team(team)
+        captain = Captain(self)
         captain.id_number = input("Enter captain id: ")
         print()
         player = Player()
-        counter = 0
-        while counter !=4:
+        for i in range(4):
             player.name = input("Enter name of Player: ")
             player.id_number = input("Enter id number: ")
             player.home_address = input("Enter home address: ")
             player.phone_number = input("Enter phone number: ")
             player.email_address = input("Enter email address: ")
-            if player.id_number == team.captain_id:
-                pass
+            print()
