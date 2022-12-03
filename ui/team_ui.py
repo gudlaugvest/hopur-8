@@ -27,7 +27,7 @@ class Team_UI:
             team = Team()
             team.name = input("Enter name team: ")
             team.club = input("Enter name of club: ")
-            captain_ssn = input("Enter captan SSN: ")
+            captain_ssn = input("Enter captan id: ")
             captain = self.logic_wrapper.get_player_by_id(captain_ssn)
             if captain is None:
                 print()
