@@ -31,9 +31,6 @@ class Logic_Wrapper:
         return self.player_logic.get_player_by_id(id)
 
     
-    
-    
-    
     def type_of_tournament(self):
         return self.tournament_logic.type_of_tournament()
 
@@ -41,7 +38,6 @@ class Logic_Wrapper:
     def create_tournament(self):
         return self.tournament_logic.create_tournament()
 
-        
 
     def register_team_to_match(self):
         return self.tournament_logic.register_team_to_match()        
@@ -62,3 +58,4 @@ class Logic_Wrapper:
        
     def get_team_by_name(self, name):
         return self.team_logic.get_team_by_name(name)
+
