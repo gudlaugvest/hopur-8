@@ -32,7 +32,6 @@ class Logic_Wrapper:
     def get_player_by_id(self, id):
         return self.player_logic.get_player_by_id(id)
 
-    
     def type_of_tournament(self):
         return self.tournament_logic.type_of_tournament()
 

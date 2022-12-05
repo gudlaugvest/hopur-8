@@ -17,16 +17,18 @@ class Tournament_UI:
 
 
     def input_prompt(self):
-        while True:
-            self.menu_output()
-            print()
-            command = input("Enter command: ")
-            if command == "b":
-                return "b"
-            elif command == "c":
-                tournament = Tournament()
-                tournament.organizer_name = input("Enter name of organizer: ")
-                tournament.tournament_name = input("Enter Tournament name: ")
-                tournament.number_rounds = input("Enter number of rounds: ")
-                #stoppa loop kiktu a tetta i kvold
-                #tournament.date = date()
+        self.menu_output()
+        print()
+        command = input("Enter command: ")
+        if command == "b":
+            return "b"
+        elif command == "c":
+            tournament = Tournament()
+            tournament.tournament_name = input("Enter Tournament name: ")
+            tournament.number_rounds = input("Enter number of rounds: ")
+            tournament.date = input("Enter date: ")
+            
+            #self.logic_wrapper.create_tournament(tournament)
+
+            
+

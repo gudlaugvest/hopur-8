@@ -46,3 +46,5 @@ class Organizer_Menu_UI:
                 tournament_ui.input_prompt()
             else:
                 print("Invalid input, try again!")
+
+  
