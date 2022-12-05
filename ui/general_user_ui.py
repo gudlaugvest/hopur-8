@@ -31,9 +31,9 @@ class General_User_UI:
                 quit()
             elif command == "1":
                 data_class = Player_Data()
-                result = data_class. read_all_players()
+                result = data_class.read_all_players()
                 for elem in result:
-                    print (elem)
+                    print (f"name: {elem.name}, team_id: {elem.team_id}")
             elif command == "2":
                 pass
             elif command == "3":
