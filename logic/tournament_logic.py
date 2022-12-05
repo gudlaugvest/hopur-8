@@ -23,6 +23,5 @@ class Tournament_Logic:
         pass
 
 
-
     def get_all_games_in_tournament(self, tournament):
         pass
