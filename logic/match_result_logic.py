@@ -14,5 +14,4 @@ class Match_Result_Logic:
     def get_all_matches(self):
         return self.match_data.get_all_matches()
 
-    def __str__(self):
-        return f"{self.home_team} \t {self.type_of_game} \t {self.away_team} \t | {self.results}"
+    
