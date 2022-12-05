@@ -4,6 +4,7 @@ from logic.player_logic import Player_logic
 from logic.team_logic import Team_Logic
 from logic.tournament_logic import Tournament_Logic
 from logic.clubs_logic import Clubs_Logic
+from logic.match_result_logic import Match_Result_Logic
 
 
 class Logic_Wrapper:
@@ -59,3 +60,11 @@ class Logic_Wrapper:
     def get_team_by_name(self, name):
         return self.team_logic.get_team_by_name(name)
 
+    def create_match_result(self, match_result):
+        return self.match_result_logic.create_match_result(match_result)
+    
+    def get_all_match_results(self):
+        return self.match_result_logic.get_all_match_results()
+    
+    
+    

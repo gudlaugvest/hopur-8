@@ -22,18 +22,3 @@ class Match_Data:
             for row in reader:
                 match_list.append(Match(row["home_team"], row["away_team"], row["date"]))
         return match_list
-
-    def unplayed_matches(self, match_list, date):
-        unplayed_matches = []
-        for match in match_list:
-            if match > date:
-                unplayed_matches.append(match)
-        return unplayed_matches
-    
-    def played_matches(self, match_list, date):
-        played_matches = []
-        for match in match_list:
-            if match < date:
-                played_matches.append(match)
-        return played_matches
-        

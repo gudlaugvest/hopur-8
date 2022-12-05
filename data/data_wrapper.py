@@ -4,6 +4,7 @@ from data.tournament_data import Tournament_Data
 from data.clubs_data import Clubs_Data
 from data.match_data import Match_Data
 from data.captain_data import Captain_data
+from data.match_result_data import Match_Result_Data
 
 
 class Data_Wrapper:
@@ -14,6 +15,7 @@ class Data_Wrapper:
         self.club_data = Clubs_Data()
         self.match_data = Match_Data()
         self.captain_data = Captain_data()
+        self.match_result_data = Match_Result_Data()
 
 
     def create_player(self, player):
@@ -51,10 +53,6 @@ class Data_Wrapper:
     def get_all_matches(self):
         return self.match_data.get_all_matches()
 
-    def unplayed_matches(self, match_list, date):
-        return self.match_data.unplayed_matches(match_list, date)
-    
-    def played_matches(self, match_list, date):
         return self.match_data.played_matches(match_list, date)
 
     def create_captain(self, player):
@@ -62,3 +60,15 @@ class Data_Wrapper:
     
     def get_captain(self):
         return self.captain_data.get_captain()
+    
+    def create_match_result(self, match_result):
+        return self.match_result_data.create_match_result(match_result)
+    
+    def get_all_match_results(self):
+        return self.match_result_data.get_all_match_results()
+    
+    def unplayed_matches(self, match_list, date):
+        return self.match_result_data.unplayed_matches(match_list, date)
+    
+    def played_matches(self, match_list, date):
+        return self.match_result_data.played_matches(match_list, date)
