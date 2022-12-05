@@ -4,6 +4,7 @@ from logic.player_logic import Player_logic
 from logic.team_logic import Team_Logic
 from logic.tournament_logic import Tournament_Logic
 from logic.clubs_logic import Clubs_Logic
+from logic.match_result_logic import Match_Result_Logic
 
 
 class Logic_Wrapper:
@@ -13,6 +14,7 @@ class Logic_Wrapper:
         self.team_logic = Team_Logic(self.data_wrapper)
         self.tournament_logic = Tournament_Logic(self.data_wrapper)
         self.clubs_logic = Clubs_Logic(self.data_wrapper)
+        self.match_result = Match_Result_Logic(self.data_wrapper)
 
     def create_player(self, player):
         """Takes in customer object and forwards it to the data layer"""
@@ -62,3 +64,37 @@ class Logic_Wrapper:
     
     def get_club_by_name(self, name):
         return self.clubs_logic.get_club_by_name(name)
+
+    def unplayed_matches(self, match_list, date):
+        return self.match_result_data.unplayed_matches(match_list, date)
+        
+
+    def played_matches(self, match_list, date):
+        return self.match_result_data.played_matches(match_list, date)
+        
+
+    
+    def get_match_results(self, date):
+        return self.match_result_data.get_match_results(date) 
+        
+
+    def get_unplayed_match_results(self, date):
+        return self.match_result_data.get_unplayed_match_results(date)
+        
+
+    def get_match_result(self, home_team, type_of_game, away_team):
+        return self.match_result_data.get_match_result(home_team, type_of_game, away_team)
+        
+
+    def create_match_result(self, home_team, type_of_game, away_team, results):
+        return self.match_result_data.create_match_result(home_team, type_of_game, away_team, results)
+        
+
+    def new_method(self, home_team, type_of_game, away_team, results):
+        return self.match_result_data.new_method(home_team, type_of_game, away_team, results)
+
+    def update_match_result(self, home_team, type_of_game, away_team, results):
+        return self.match_result_data.update_match_result(home_team, type_of_game, away_team, results)
+
+    def delete_match_result(self, home_team, type_of_game, away_team):
+        return self.match_result_data.delete_match_result(home_team, type_of_game, away_team)        

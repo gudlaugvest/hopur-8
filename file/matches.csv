@@ -1,2 +1,2 @@
-home_team_id,away_team_id,date
-hopur1,hopur2,20.03.2022
+id,home_team_id,away_team_id,date
+1,1,2,20.03.2022

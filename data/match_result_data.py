@@ -36,15 +36,15 @@ class Match_Result_Data:
         return played_matches
 
     
-    def get_match_results(self, date): # Returns a list of match results for a given date
+    def get_match_results(self, date): 
         match_results = []
         for match in self.played_matches(date): 
             for match_result in self.get_all_match_results(): 
-                if match == match_result: # If the match is played, add the match result to the list
+                if match == match_result: 
                     match_results.append(match_result)
         return match_results
 
-    def get_unplayed_match_results(self, date): # Returns a list of match results for a given date
+    def get_unplayed_match_results(self, date): 
         unplayed_match_results = []
         for match in self.unplayed_matches(date):
             for match_result in self.get_all_match_results():
@@ -61,17 +61,17 @@ class Match_Result_Data:
         match_result = self.new_method(home_team, type_of_game, away_team, results)
         self.match_result_data.create_match_result(match_result)
 
-    def new_method(self, home_team, type_of_game, away_team, results): # This method is only used in this class
-        match_result = Match_Result_Model(home_team, type_of_game, away_team, results) # Creates a new match result
+    def new_method(self, home_team, type_of_game, away_team, results): 
+        match_result = Match_Result_Model(home_team, type_of_game, away_team, results) 
         return match_result
 
-    def update_match_result(self, home_team, type_of_game, away_team, results): # Updates a match result
-        match_result = self.get_match_result(home_team, type_of_game, away_team) # Gets the match result
-        match_result.results = results # Updates the results of the match result
+    def update_match_result(self, home_team, type_of_game, away_team, results): 
+        match_result = self.get_match_result(home_team, type_of_game, away_team) 
+        match_result.results = results 
         self.match_result_data.update_match_result(match_result) 
 
     def delete_match_result(self, home_team, type_of_game, away_team):
         match_result = self.get_match_result(home_team, type_of_game, away_team)
         self.match_result_data.delete_match_result(match_result)
-
+    
     

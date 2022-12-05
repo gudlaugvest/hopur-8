@@ -1,8 +1,10 @@
+from logic.logic_wrapper import Logic_Wrapper
 
 class Match_UI:
 
-    def __init__(self, logic_connection):
-        self.logic_wrapper = logic_connection
+    def __init__(self, logic_wrapper : Logic_Wrapper):
+        self.logic_wrapper = logic_wrapper
+        
 
     def menu_output(self):
         print()
@@ -46,22 +48,30 @@ class Match_UI:
 
         self.logic_wrapper.create_match(home_team, away_team, type_of_game, date_of_match)
     
-    #def update_match_menu(self):
-        
-    #    print()
-    #    print("############################")
-    #    print()
-    #    print("Update Match".rjust(18))
-    #    print()
+
     
+
+    def update_match_menu(self):
+        
+        print()
+        print("############################")
+        print()
+        print("Update Match".rjust(18))
+        print()
+        print("Enter id of the match you want to change")
+
+        match_id = input("Enter match id: ")
+        correct_match = self.logic_wrapper.get_match_result(match_id)
+        print(correct_match)
+        print()
+        print("What do you want to change?")
+
+
         
 
-    #    home_team = input("Enter new home team: ")
-    #    away_team = input("Enter new away team: ")
-    #    type_of_game = input("Enter type of game: ")
-    #    date_of_match = input("Enter new date of match: ")
-
-    #    self.logic_wrapper.update_match(home_team, away_team, type_of_game, date_of_match)
+        
+        
+        #self.logic_wrapper.update_match(home_team, away_team, type_of_game, date_of_match)
 
             
     
