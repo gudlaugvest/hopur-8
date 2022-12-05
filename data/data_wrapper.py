@@ -3,6 +3,7 @@ from data.team_data import Team_Data
 from data.tournament_data import Tournament_Data
 from data.clubs_data import Clubs_Data
 from data.match_result_data import Match_Result_Data
+from data.datetime_data import Datetime_Data
 
 
 class Data_Wrapper:
@@ -17,10 +18,8 @@ class Data_Wrapper:
     def create_player(self, player):
         return self.player_data.create_player(player)
 
-
     def get_all_players(self):
         return self.player_data.read_all_players()
-
 
     def create_team(self, team):
         return self.team_data.create_team(team)
@@ -33,7 +32,6 @@ class Data_Wrapper:
     
     def get_all_clubs(self):
         return self.club_data.get_all_clubs()
-
         
     def create_tournament(self, tournament):
         return self.tournament_data.create_tournament(tournament)
@@ -41,10 +39,8 @@ class Data_Wrapper:
     def get_all_tournaments(self):
         return self.tournament_data.get_all_tournaments()
 
-
     def create_match(self, match):
         return self.match_data.create_match(match)
-        
 
     def get_all_matches(self):
         return self.match_data.get_all_matches()
@@ -81,3 +77,9 @@ class Data_Wrapper:
     
     def delete_match_result(self, match_result):
         return self.match_result_data.delete_match_result(match_result)
+
+    def create_date(self, date):
+        return self.datetime_data.create_date(date)
+        
+    def get_all_dates(self):
+        return self.datetime_data.get_all_dates()

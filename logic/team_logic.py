@@ -1,4 +1,3 @@
-from model.team_model import Team
 
 
 class Team_Logic:

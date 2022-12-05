@@ -97,4 +97,10 @@ class Logic_Wrapper:
         return self.match_result_data.update_match_result(home_team, type_of_game, away_team, results)
 
     def delete_match_result(self, home_team, type_of_game, away_team):
-        return self.match_result_data.delete_match_result(home_team, type_of_game, away_team)        
+        return self.match_result_data.delete_match_result(home_team, type_of_game, away_team)   
+
+    def create_date(self, date):
+        return self.datetime_data.create_date(date)
+        
+    def get_all_dates(self):
+        return self.datetime_data.get_all_dates()     
