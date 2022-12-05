@@ -8,9 +8,9 @@ class Match_UI:
 
     def menu_output(self):
         print()
-        print("############################")
+        print("####################################")
         print()
-        print("Match Menu".rjust(18))
+        print("Match Menu".rjust(22))
         print()
         print("1. Create Match")
         print("2. Update Match")
@@ -36,9 +36,9 @@ class Match_UI:
     
     def create_match_menu(self):
         print()
-        print("############################")
+        print("####################################")
         print()
-        print("Create Match".rjust(18))
+        print("Create Match".rjust(23))
         print()
         
 
@@ -55,9 +55,9 @@ class Match_UI:
     def update_match_menu(self):
         
         print()
-        print("############################")
+        print("####################################")
         print()
-        print("Update Match".rjust(18))
+        print("Update Match".rjust(23))
         print()
         print("Enter id of the match you want to change")
 

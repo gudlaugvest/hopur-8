@@ -5,9 +5,9 @@ class Matches_UI:
 
     def menu_output(self):
         print()
-        print("############################")
+        print("####################################")
         print()
-        print(" Matches".rjust(18))
+        print(" Matches".rjust(23))
         print()
         print("1. Get list of all matches")
         print("2. Get list of played matches")

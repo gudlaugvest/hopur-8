@@ -9,7 +9,7 @@ class Team_UI:
     
     def menu_output(self):
         print()
-        print("############################")
+        print("####################################")
         print()
         print(" Team \n".rjust(18))
         print("c. Continue to create Team")

@@ -7,7 +7,7 @@ class Player_UI:
 
     def menu_output(self):
         print()
-        print("############################")
+        print("####################################")
         print()
         print("Player".rjust(18))
         print()

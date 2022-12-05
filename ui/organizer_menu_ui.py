@@ -11,9 +11,9 @@ class Organizer_Menu_UI:
 
     def menu_output(self):
         print()
-        print("############################")
+        print("####################################")
         print()
-        print("Organizer Menu".rjust(18))
+        print("Organizer Menu".rjust(23))
         print()
         print("1. Club")
         print("2. Team")

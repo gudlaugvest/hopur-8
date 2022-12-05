@@ -1,4 +1,3 @@
-from data.player_data import Player_Data
 
 class General_User_UI:
     def __init__(self, logic_wrapper):
@@ -7,12 +6,12 @@ class General_User_UI:
 
     def menu_output(self):
         print()
-        print("############################")
+        print("####################################")
         print()
-        print(" Menu".rjust(18))
+        print(" Menu".rjust(20))
         print()
         print("1. Get list of players and teams")
-        print("2. Get list of matches with recorded scores")
+        print("2. Get list of matches and scores")
         print("3. Get list of unplayed matches")
         print("4. Get status of tournament")
         print("b. Go back")
@@ -30,12 +29,7 @@ class General_User_UI:
             elif command == "q":
                 quit()
             elif command == "1":
-                data_class = Player_Data()
-                result = data_class.read_all_players()
-                for elem in result:
-                    print (f"name: {elem.name}")
-
- 
+                pass
             elif command == "2":
                 pass
             elif command == "3":

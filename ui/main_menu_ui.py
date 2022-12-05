@@ -11,9 +11,9 @@ class MainMenu_UI:
 
     def menu_output(self):
         print()
-        print("############################")
+        print("####################################")
         print()
-        print("Basement-Open".rjust(18))
+        print("Basement-Open".rjust(23))
         print()
         print("1. Tournament Orginizer")
         print("2. General User")

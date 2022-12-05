@@ -9,8 +9,8 @@ class Club_UI:
 
     def menu_output(self):
         print()
-        print("############################\n")
-        print("Club\n".rjust(18))
+        print("####################################\n")
+        print("Club\n".rjust(19))
         print("c. Continue to create Club")
         print("b. Go back to Organizer Menu\n")
 
