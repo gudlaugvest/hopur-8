@@ -4,7 +4,7 @@ from model.match_results_model import Match_Result_Model
 class Match_Result_Data:
 
     def __init__(self):
-        self.file_name = "file/match_results.csv"
+        self.file_name = "file/matches.csv"
 
     def create_match_result(self, match):
         with open(self.file_name, "a", newline="", encoding="utf-8") as csvfile:

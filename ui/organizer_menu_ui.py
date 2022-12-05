@@ -2,6 +2,7 @@ from ui.club_ui import Club_UI
 from ui.player_ui import Player_UI
 from ui.team_ui import Team_UI
 from ui.tournament_ui import Tournament_UI
+from ui.match_ui import Match_UI
 
 class Organizer_Menu_UI:
     def __init__(self, logic_wrapper):
