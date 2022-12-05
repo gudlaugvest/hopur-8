@@ -15,6 +15,7 @@ class Player_logic:
 
     def get_all_players(self):
         return self.data_wrapper.get_all_players()
+      
 
     def get_player_by_id(self, id):
         all_players = self.get_all_players()

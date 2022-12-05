@@ -11,10 +11,10 @@ class Team_UI:
         print()
         print("############################")
         print()
-        print(" Team".rjust(18))
-        print()
-        print("c. Continue")
-        print("b. Go Back")
+        print(" Team \n".rjust(18))
+        print("c. Continue to create Team")
+        print("b. Go back to Organizer Menu")
+
 
     def input_prompt(self):
         self.menu_output()

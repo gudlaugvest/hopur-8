@@ -21,7 +21,7 @@ class Data_Wrapper:
 
 
     def get_all_players(self):
-        return self.player_data.get_all_players()
+        return self.player_data.read_all_players()
 
 
     def create_team(self, team):
