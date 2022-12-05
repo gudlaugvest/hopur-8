@@ -11,7 +11,8 @@ class Tournament_UI:
         print("############################")
         print()
         print("Tournament\n".rjust(18))
-        print("c. Continue")
+        print("1. Create Tournament")
+        print("2. Update Tournament")
         print("b. Go Back")
 
 
@@ -22,11 +23,14 @@ class Tournament_UI:
         print()
         if command == "b":
             return "b"
-        elif command == "c":
+        elif command == "1":
             tournament = Tournament()
             tournament.tournament_name = input("Enter Tournament name: ")
             tournament.number_rounds = input("Enter number of rounds: ")
             tournament.date = input("Enter date: ")
+        
+        elif command == "2":
+            pass
         
             #self.logic_wrapper.create_tournament(tournament)
 
