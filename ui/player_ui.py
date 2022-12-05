@@ -11,6 +11,8 @@ class Player_UI:
         print()
         print("Player".rjust(18))
         print()
+        print("c. Continue")
+        print("b. Go Back")
 
     def add_another_player(self):
         add_player = input("Do you want to add another player (y/n)? ")
@@ -27,6 +29,12 @@ class Player_UI:
 
     def input_prompt(self):
         self.menu_output()
+        print()
+        command = input("Enter command: ")
+        if command == "b":
+            return "b"
+        elif command == "c":
+            print()
         while True:
             player = Player()
             player.name = input("Enter name of Player: ")

@@ -14,7 +14,7 @@ class Player_Data:
             writer.writerow({"name": player.name, "id_number": player.id_number, "home_address": player.home_address, "phone_number": player.home_address, "email_address": player.email_address, "team_id": player.team_id})
 
 
-    def get_all_players(self):
+    def read_all_players(self):
         player_list = []
         with open(self.file_name, newline="" ,encoding="utf-8") as csvfile:
             reader = csv.DictReader(csvfile)
