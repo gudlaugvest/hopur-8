@@ -18,7 +18,8 @@ class Tournament_UI:
     def input_prompt(self):
         self.menu_output()
         print()
-        command = input("Enter command: \n")
+        command = input("Enter command: ")
+        print()
         if command == "b":
             return "b"
         elif command == "c":
@@ -26,8 +27,8 @@ class Tournament_UI:
             tournament.tournament_name = input("Enter Tournament name: ")
             tournament.number_rounds = input("Enter number of rounds: ")
             tournament.date = input("Enter date: ")
-            
-            self.logic_wrapper.create_tournament(tournament)
+        
+            #self.logic_wrapper.create_tournament(tournament)
 
             
 
