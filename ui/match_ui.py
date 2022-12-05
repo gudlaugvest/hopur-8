@@ -49,24 +49,25 @@ class Match:
 
         self.logic_wrapper.create_match(home_team, away_team, type_of_game, date_of_match)
     
-    def update_match_menu(self):
-        print()
-        print("############################")
-        print()
-        print("Update Match".rjust(18))
-        print()
-        print("1. Enter new home team: ")
-        print("2. Enter new away team: ")
-        print("3. Enter type of game: ")
-        print("4. Enter new date of match:")
+    #def update_match_menu(self):
+        
+    #    print()
+    #    print("############################")
+    #    print()
+    #    print("Update Match".rjust(18))
+    #    print()
+    #    print("1. Enter new home team: ")
+    #    print("2. Enter new away team: ")
+    #    print("3. Enter type of game: ")
+    #    print("4. Enter new date of match:")
         
 
-        home_team = input("Enter new home team: ")
-        away_team = input("Enter new away team: ")
-        type_of_game = input("Enter type of game: ")
-        date_of_match = input("Enter new date of match: ")
+    #    home_team = input("Enter new home team: ")
+    #    away_team = input("Enter new away team: ")
+    #    type_of_game = input("Enter type of game: ")
+    #    date_of_match = input("Enter new date of match: ")
 
-        self.logic_wrapper.update_match(home_team, away_team, type_of_game, date_of_match)
+    #    self.logic_wrapper.update_match(home_team, away_team, type_of_game, date_of_match)
 
             
     
