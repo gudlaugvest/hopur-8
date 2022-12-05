@@ -2,7 +2,6 @@ from data.player_data import Player_Data
 from data.team_data import Team_Data
 from data.tournament_data import Tournament_Data
 from data.clubs_data import Clubs_Data
-from data.match_data import Match_Data
 from data.match_result_data import Match_Result_Data
 
 
@@ -12,7 +11,6 @@ class Data_Wrapper:
         self.team_data = Team_Data()
         self.tournament_data = Tournament_Data()
         self.club_data = Clubs_Data()
-        self.match_data = Match_Data()
         self.match_result_data = Match_Result_Data()
 
 
