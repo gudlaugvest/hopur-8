@@ -33,8 +33,7 @@ class General_User_UI:
                 data_class = Player_Data()
                 result = data_class.read_all_players()
                 for elem in result:
-                    print("List of Players")
-                    print (f"name: {elem.name}, team_id: {elem.team_id}")
+                    print (f"name: {elem.name}")
             elif command == "2":
                 pass
             elif command == "3":
