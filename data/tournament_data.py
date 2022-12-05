@@ -6,6 +6,7 @@ class Tournament_Data:
     def __init__(self):
         self.file_name = "file/tournament.csv"
 
+
       
     def create_tournament(self, tournament: Tournament):
         '''this function creates a tournament''' 
