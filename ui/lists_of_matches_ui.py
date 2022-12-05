@@ -32,6 +32,7 @@ class Matches_UI:
                 pass
             
             else:
+                print()
                 print("Invalid input, try again!")
 
                 

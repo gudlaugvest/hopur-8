@@ -35,5 +35,8 @@ class Team_UI:
                 return
             team.captain_id = captain.id_number
             self.logic_wrapper.create_team(team)
+        else:
+            print()
+            print("Invalid input, please try again!")
  
 

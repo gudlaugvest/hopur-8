@@ -31,6 +31,9 @@ class Tournament_UI:
             self.logic_wrapper.create_tournament(tournament)
         elif command == "2":
             pass
+        else:
+            print()
+            print("Invalid input, please try again!")
         
 
             

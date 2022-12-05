@@ -31,7 +31,8 @@ class Match_UI:
             elif command == "2":
                 self.update_match_menu()
             else:
-                print("Invalid input, try again!")
+                print()
+                print("Invalid input, please try again!")
     
     def create_match_menu(self):
         print()

@@ -32,7 +32,7 @@ class Organizer_Menu_UI:
             if command == "b":
                 break
             elif command == "q":
-                return "q"
+                quit()
             elif command == "1":
                 club = Club_UI(self.logic_wrapper)
                 club.input_prompt()
@@ -49,4 +49,5 @@ class Organizer_Menu_UI:
                 match_ui = Match_UI(self.logic_wrapper)
                 match_ui.input_prompt()
             else:
-                print("Invalid input, try again!")
+                print()
+                print("Invalid input, please try again!")
