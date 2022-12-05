@@ -9,16 +9,13 @@ class Club_UI:
 
     def menu_output(self):
         print()
-        print("############################")
-        print()
-        print("Club".rjust(18))
-        print()
+        print("############################\n")
+        print("Club\n".rjust(18))
         print("c. Continue")
-        print("b. Go back")
+        print("b. Go back\n")
 
     def input_prompt(self):
         self.menu_output()
-        print()
         command = input("Enter command: ")
         if command == "b":
             return "b"
