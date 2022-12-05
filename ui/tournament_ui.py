@@ -3,7 +3,7 @@ from model.tournament_model import Tournament
 
 
 class Tournament_UI:
-    def __init__(self, logic_connection):
+    def __init__(self, logic_connection: Tournament):
         self.logic_wrapper = logic_connection
 
     def menu_output(self):
@@ -25,14 +25,13 @@ class Tournament_UI:
             return "b"
         elif command == "1":
             tournament = Tournament()
-            tournament.tournament_name = input("Enter Tournament name: ")
-            tournament.number_rounds = input("Enter number of rounds: ")
+            tournament.name = input("Enter Tournament name: ")
+            tournament.number_of_rounds = input("Enter number of rounds: ")
             tournament.date = input("Enter date: ")
-        
+            self.logic_wrapper.create_tournament(tournament)
         elif command == "2":
             pass
         
-            #self.logic_wrapper.create_tournament(tournament)
 
             
 

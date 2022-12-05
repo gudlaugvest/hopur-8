@@ -37,8 +37,8 @@ class Logic_Wrapper:
         return self.tournament_logic.type_of_tournament()
 
 
-    def create_tournament(self):
-        return self.tournament_logic.create_tournament()
+    def create_tournament(self, tournament):
+        return self.tournament_logic.create_tournament(tournament)
 
 
     def register_team_to_match(self):

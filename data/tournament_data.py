@@ -4,11 +4,12 @@ from model.tournament_model import Tournament
 class Tournament_Data:
 
     def __init__(self):
-        self.file_name = "file\list_of_tournament.csv"
+        self.file_name = "file/tournament.csv"
+
 
       
     def create_tournament(self, tournament: Tournament):
-        '''this function creates a tournament'''
+        '''this function creates a tournament''' 
         i = len(self.get_all_tournaments()) + 1
         with open(self.file_name, "a", newline="", encoding="utf-8") as csvfile:
             fieldnames = ["id", "name", "number_of_rounds", "date"] 

@@ -1,6 +1,9 @@
 
 from data.match_result_data import Match_Result_Data
+<<<<<<< HEAD
 
+=======
+>>>>>>> 75900705f1cc5eb5e32ea98007c1314bda13c121
 
 class Match_Result_Logic:
 
