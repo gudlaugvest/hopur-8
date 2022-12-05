@@ -40,6 +40,5 @@ class General_User_UI:
                 pass
             elif command == "4":
                 pass
-            
             else:
                 print("Invalid input, try again!")
