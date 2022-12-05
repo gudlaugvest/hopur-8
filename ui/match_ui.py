@@ -37,10 +37,7 @@ class Match_UI:
         print()
         print("Create Match".rjust(18))
         print()
-        print("1. Enter home team: ")
-        print("2. Enter away team: ")
-        print("3. Enter type of game: ")
-        print("4. Enter date of match:")
+        
 
         home_team = input("Enter home team: ")
         away_team = input("Enter away team: ")
@@ -56,10 +53,7 @@ class Match_UI:
     #    print()
     #    print("Update Match".rjust(18))
     #    print()
-    #    print("1. Enter new home team: ")
-    #    print("2. Enter new away team: ")
-    #    print("3. Enter type of game: ")
-    #    print("4. Enter new date of match:")
+    
         
 
     #    home_team = input("Enter new home team: ")
