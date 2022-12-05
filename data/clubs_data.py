@@ -20,3 +20,5 @@ class Clubs_Data:
             for row in reader:
                 club_list.append(Club(row["name"], row["home_address"], row["phone_number"]))
         return club_list
+
+

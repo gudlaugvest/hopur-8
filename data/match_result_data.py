@@ -74,6 +74,4 @@ class Match_Result_Data:
         match_result = self.get_match_result(home_team, type_of_game, away_team)
         self.match_result_data.delete_match_result(match_result)
 
-    def __str__(self):
-        return f"{self.home_team} \t {self.type_of_game} \t {self.away_team} \t | {self.results}"
     
