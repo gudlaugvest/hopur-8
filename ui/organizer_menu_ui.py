@@ -18,9 +18,8 @@ class Organizer_Menu_UI:
         print("1. Club")
         print("2. Team")
         print("3. Player")
-        print("4. Create Tournament")
-        print("5. Create Matches")
-        print("6. Update matches")
+        print("4. Tournament")
+        print("5. Matches")
         print("b. Go Back")
 
 
