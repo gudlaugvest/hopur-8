@@ -4,6 +4,7 @@ from ui.club_ui import Club_UI
 from data.player_data import Player_Data
 
 
+
 mainmenu = MainMenu_UI()
 mainmenu.input_prompt()
 
