@@ -29,13 +29,6 @@ class General_User_UI:
             elif command == "q":
                 quit()
             elif command == "1":
-                #teams =get all teams
-                #logic getplayersofteam(team)
-                #for team in teams:
-                    #playersinthisteam = self.logic.getplayersofteam(team)
-                    #print(team)
-                    #for player in playersinthisteam:
-                        #print(player)
                 pass
             elif command == "2":
                 pass
