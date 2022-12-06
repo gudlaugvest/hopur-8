@@ -8,7 +8,7 @@ class Register_Score:
         print()
         print("####################################")
         print()
-        print("Register score".rjust(23))
+        print("Register Score".rjust(23))
         print()
         
 

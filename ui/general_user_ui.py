@@ -32,7 +32,7 @@ class General_User_UI:
             elif command == "1":
                 list_of_players_and_teams = self.logic_wrapper.get_all_players()
                 for elem in list_of_players_and_teams:
-                    print(f"{elem.name}{elem.team_name}")
+                    print(f"Player: {elem.name}    Team: {elem.team_name}")
                 
             elif command == "2":
                 pass
