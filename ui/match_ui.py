@@ -63,10 +63,11 @@ class Match_UI:
         print("Enter id of the match you want to change")
 
         match_id = input("Enter match id: ")
-        correct_match = self.logic_wrapper.update_match(match_id)
+        correct_match = ""
+        if match_id in self.logic_wrapper.get_all_match_results():
+        #correct_match = self.logic_wrapper.get_all_match_results(match_id)
+            correct_match = match_id
+            
         correct_match.date = input("Enter new date: ")
-        print(correct_match)
-        self.logic_wrapper.update_match(correct_match)
-        print(correct_match)
-        print()           
-    
+            
+        self.logic_wrapper.update_match(correct_match)           
