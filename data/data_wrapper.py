@@ -57,14 +57,12 @@ class Data_Wrapper:
     def played_matches(self, match_list, date):
         return self.match_result_data.played_matches(match_list, date)
     
-    def get_match_result(self):
-        return self.match_result_data.get_match_result()
+    
     
     def get_unplayed_match_result(self):
         return self.match_result_data.get_unplayed_match_results()
     
-    def get_match_result(self):
-        return self.match_result_data.get_match_result()
+    
     
     def create_match_result(self, match_result):
         return self.match_result_data.create_match_result(match_result)

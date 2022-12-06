@@ -36,14 +36,7 @@ class Match_Result_Data:
                 played_matches.append(match)
         return played_matches
 
-    
-    def get_match_results(self, date):
-        match_results = []
-        for match in self.played_matches(date): 
-            for match_result in self.get_all_match_results(): 
-                if match == match_result: 
-                    match_results.append(match_result)
-        return match_results
+
 
     def get_unplayed_match_results(self, date): 
         unplayed_match_results = []
