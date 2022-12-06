@@ -28,7 +28,15 @@ class Tournament_UI:
             tournament = Tournament()
             tournament.name = input("Enter Tournament name: ")
             tournament.number_of_rounds = input("Enter number of rounds: ")
-            tournament.date = input("Enter date: ")
+            tournament.start_date = input("Enter start date: ")
+            tournament.end_date = input("Enter end date:")
+            day_of_start = tournament.start_date[2]
+            month_of_start = tournament.start_date[1]
+            year_of_start = tournament.start_date[0]
+            date = datetime(year=year_of_start, month=month_of_start, day=day_of_start)
+            
+
+            
             self.logic_wrapper.create_tournament(tournament)
         elif command == "2":
             pass
