@@ -30,6 +30,7 @@ class Register_Score:
             # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             # Birta lista af öllum team captains
             # Velja úr þeim lista eftir kennitölu eða id fyrir framan
+            # Hver team captain ætti aðeins að gera einu sinni results
             # Svo er spurt hver spilaði hvaða leik 4x501...... hafa lista af spilurum úr baðum liðum
             # Svo er beðið um result (for loopa sem er farið í gegnum 7 sinnum) (wihle loopu með counter upp í 7 (0-6))
             # á meðan counter er á milli 0-3 þá eru 501 leikir
