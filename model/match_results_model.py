@@ -8,4 +8,4 @@ class Match_Result_Model:
         self.id = id
 
     def __str__(self):
-        return f"{self.home_team:<12} {self.type_of_game:<24} {self.away_team:<12} | {self.date:<6}"
+        return f"{self.home_team:<12} {self.type_of_game:<12} {self.away_team:<12} | {self.date:<6}"
