@@ -61,6 +61,7 @@ class Match_UI:
         print("Update Match".rjust(23))
         print()
         print("Enter id of the match you want to change")
+        print()
 
         the_match = None
         match_id = input("Enter match id: ")
@@ -73,7 +74,7 @@ class Match_UI:
         #if match_id in self.logic_wrapper.get_all_match_results():
         #match_list = self.logic_wrapper.get_all_match_results(match_id)
         
-        print()
+        
         print("Enter new date for the match")
         print()
         new_date = input("Enter new date: (dd.mm.yyyy")
