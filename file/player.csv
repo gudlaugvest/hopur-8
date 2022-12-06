@@ -1,4 +1,4 @@
-name,id_number,home_address,phone_number,email_address,team_id
+name, id_number, home_address, phone_number, email_address, role, team_name
 1,Gudlaug,180594-3379,Grenasbraut 1220,7727236,gudlaugv22@ru.is
 2,Asta,180992-3679,Frostafold 153,7705021,astaj22@ru.is
 3,e,e,e,e,e
