@@ -33,13 +33,14 @@ class Player_UI:
                     print()
                     player = Player()
                     player.name = input("Enter name of Player: ")
-                    player.id_number = input("Enter id number: ")
+                    player.ss_number = input("Enter social security number: ")
                     #if len(player.id_number) >= 12:
                     #   print("id number is wrong")
                     #  return player.id_number 
                     player.home_address = input("Enter home address: ")
                     player.phone_number = input("Enter phone number: ")
                     player.email_address = input("Enter email address: ")
+                    player.role = input("Enter players role (Captein/Player): ")
                     team_name = input("Enter team name: ")
                     team = self.logic_wrapper.get_team_by_name(team_name) 
                     print()          
@@ -47,7 +48,7 @@ class Player_UI:
                     if team is None:
                         print("No team found with that name")
                         return
-                    player.team_id = team.name
+                    player.team_name = team.name
                     self.logic_wrapper.create_player(player)
 
         else:

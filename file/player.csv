@@ -1,4 +1,4 @@
-name,id_number,home_address,phone_number,email_address,team_id
+name, id_number, home_address, phone_number, email_address, role, team_name
 1,Gudlaug,180594-3379,Grenasbraut 1220,7727236,gudlaugv22@ru.is
 2,Asta,180992-3679,Frostafold 153,7705021,astaj22@ru.is
 3,e,e,e,e,e
@@ -79,7 +79,6 @@ sdfgh,dsfg,sdfsgdhf,sdfsgdhf,sdfg,33
 dsgfh,sdfgh,sdfgf,sdfgf,,29
 f,f,f,f,f,
 f,f,f,f,f,
-<<<<<<< Updated upstream
 h,h,h,h,h,29
 h,h,h,h,h,33
 g,g,g,g,g,33
@@ -100,15 +99,3 @@ kjhgfd,jyhrtgf,"k,jmhngbfv","k,jmhngbfv",kjythrg,blue
 kjyhtgdfs,mjnbvc,jyhtdgrs,jyhtdgrs,oikuytr,blue
 kjghg,hgdf,kjyhg,kjyhg,jmhngfd,blue
 
-=======
-h,h,h,h,h,29
-h,h,h,h,h,33
-g,g,g,g,g,33
-f,f,f,f,f,33
-g,g,g,g,g,33
-g,g,g,g,w,33
-g,g,g,g,g,33
-f,f,f,f,f,33
-f,f,f,f,,33
-a,b,f,f,f,33
->>>>>>> Stashed changes
