@@ -34,7 +34,13 @@ class General_User_UI:
             elif command == "2":
                 pass
             elif command == "3":
-                pass
+            # Á að geta fengið lista af óspiluðum leikjum þ.þ.e.a.s leikir sem date > current date
+                todays_date = '06.12.2022'
+                list_of_unplayed_matches = self.logic_wrapper.unplayed_matches(todays_date)
+                for matches in list_of_unplayed_matches:
+                    print(matches)
+
+
             elif command == "4":
                 pass
             else:

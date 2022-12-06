@@ -11,37 +11,37 @@ class Player_UI:
         print()
         print("Player".rjust(18))
         print()
-        print("c. Continue to input Player info")
-        print("b. Go Back to Organizer Menu")
+        print("c. Continue To Input Player Info")
+        print("b. Go Back To Organizer Menu")
 
 
     def input_prompt(self):
         self.menu_output()
         print()
-        command = input("Enter command: ")
+        command = input("Enter Command: ")
         if command == "b":
             return "b"
         elif command == "c":
             print()
             how_many = int(input("How many players?: "))
             if how_many < 4:
-                print("Has to be at least 4\n")
+                print("Has to be at least 4 players\n")
                 how_many = int(input("How many players?: "))
                 print()
             else:
                 for i in range(how_many):
                     print()
                     player = Player()
-                    player.name = input("Enter name of Player: ")
-                    player.ss_number = input("Enter social security number: ")
+                    player.name = input("Enter Name: ")
+                    player.ss_number = input("Enter Social Security Number: ")
                     #if len(player.id_number) >= 12:
                     #   print("id number is wrong")
                     #  return player.id_number 
-                    player.home_address = input("Enter home address: ")
-                    player.phone_number = input("Enter phone number: ")
-                    player.email_address = input("Enter email address: ")
-                    player.role = input("Enter players role (Captein/Player): ")
-                    team_name = input("Enter team name: ")
+                    player.home_address = input("Enter Home Address: ")
+                    player.phone_number = input("Enter Phone Number: ")
+                    player.email_address = input("Enter Email Address: ")
+                    player.role = input("Enter Players Role(Captein/Player): ")
+                    team_name = input("Enter Team Name: ")
                     team = self.logic_wrapper.get_team_by_name(team_name) 
                     print()          
                     
