@@ -1,2 +1,2 @@
-id,home_team_id,away_team_id,date
+id,home_team_id,type_of_game,away_team_id,date
 1,1,2,20.03.2022

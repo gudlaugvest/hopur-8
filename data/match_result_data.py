@@ -7,18 +7,19 @@ class Match_Result_Data:
         self.file_name = "file/matches.csv"
 
     def create_match_result(self, match):
+        i = len(self.get_all_match_results()) + 1
         with open(self.file_name, "a", newline="", encoding="utf-8") as csvfile:
-            fieldnames = ["home_team", "type_of_game", "away_team", "date"]
+            fieldnames = ["id", "home_team", "type_of_game", "away_team", "date"]
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
-            writer.writerow({"home_team": match.home_team, "type_of_game": match.type_of_game, "away_team": match.away_team,"date": match.date})
+            writer.writerow({"id" : i,"home_team": match.home_team, "type_of_game": match.type_of_game, "away_team": match.away_team,"date": match.date})
 
     def get_all_match_results(self):
         match_list = []
         with open(self.file_name, newline="" ,encoding="utf-8") as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                match_list.append(Match_Result_Model(row["home_team"], row["type_of_game"], row["away_team"], row["date"]))
+                match_list.append(Match_Result_Model(row["id"], row["home_team"], row["type_of_game"], row["away_team"], row["date"]))
         return match_list
 
     def unplayed_matches(self, match_list, date):
