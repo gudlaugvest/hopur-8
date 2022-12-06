@@ -61,7 +61,7 @@ class Data_Wrapper:
         return self.match_result_data.get_match_result()
     
     def get_unplayed_match_result(self):
-        return self.match_result_data.get_unplayed_match_result()
+        return self.match_result_data.get_unplayed_match_results()
     
     def get_match_result(self):
         return self.match_result_data.get_match_result()
@@ -69,11 +69,9 @@ class Data_Wrapper:
     def create_match_result(self, match_result):
         return self.match_result_data.create_match_result(match_result)
     
-    def new_method(self):
-        return self.match_result_data.new_method()
     
-    def update_match_result(self, match_result):
-        return self.match_result_data.update_match_result(match_result)
+    def update_match(self, match):
+        return self.match_result_data.update_match(match)
     
     def delete_match_result(self, match_result):
         return self.match_result_data.delete_match_result(match_result)
