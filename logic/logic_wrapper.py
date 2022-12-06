@@ -74,27 +74,20 @@ class Logic_Wrapper:
         
 
     
-    def get_match_results(self, date):
-        return self.match_result.get_match_results(date) 
+    def get_all_match_results(self):
+        return self.match_result.get_all_match_results() 
         
 
     def get_unplayed_match_results(self, date):
         return self.match_result.get_unplayed_match_results(date)
-        
-
-    def get_match_result(self, home_team, type_of_game, away_team):
-        return self.match_result.get_match_result(home_team, type_of_game, away_team)
-        
+                
 
     def create_match_result(self, match):
         return self.match_result.create_match_result(match)
         
 
-    def new_method(self, home_team, type_of_game, away_team, results):
-        return self.match_result.new_method(home_team, type_of_game, away_team, results)
-
-    def update_match_result(self, home_team, type_of_game, away_team, results):
-        return self.match_result.update_match_result(home_team, type_of_game, away_team, results)
+    def update_match(self, match):
+        return self.match_result.update_match(match)
 
     def delete_match_result(self, home_team, type_of_game, away_team):
         return self.match_result.delete_match_result(home_team, type_of_game, away_team)        

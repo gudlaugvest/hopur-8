@@ -63,17 +63,11 @@ class Match_UI:
         print("Enter id of the match you want to change")
 
         match_id = input("Enter match id: ")
-        correct_match = self.logic_wrapper.get_match_result(match_id)
-        print(correct_match)
-        print()
-        print("What do you want to change?")
-
-
-        
-
-        
-        
-        #self.logic_wrapper.update_match(home_team, away_team, type_of_game, date_of_match)
-
+        correct_match = ""
+        if match_id in self.logic_wrapper.get_all_match_results():
+        #correct_match = self.logic_wrapper.get_all_match_results(match_id)
+            correct_match = match_id
             
-    
+        correct_match.date = input("Enter new date: ")
+            
+        self.logic_wrapper.update_match(correct_match)           
