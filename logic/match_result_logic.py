@@ -18,7 +18,6 @@ class Match_Result_Logic:
     def create_match_result(self, match):
         return self.data_wrapper.create_match_result(match)
         
-
         
 
     def update_match(self, match):

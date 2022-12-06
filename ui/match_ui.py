@@ -69,8 +69,9 @@ class Match_UI:
         for match in match_list:
             if match.id == match_id:
                 the_match = match
-        #if the match == NOne:
-        #   match id er vitlaust
+        if the_match == None:
+            print("No match found with match id:{}".format(match_id))
+            return
         #if match_id in self.logic_wrapper.get_all_match_results():
         #match_list = self.logic_wrapper.get_all_match_results(match_id)
         

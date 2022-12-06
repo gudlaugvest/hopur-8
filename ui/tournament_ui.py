@@ -33,10 +33,11 @@ class Tournament_UI:
             day_of_start = tournament.start_date[2]
             month_of_start = tournament.start_date[1]
             year_of_start = tournament.start_date[0]
-            date = datetime(year=year_of_start, month=month_of_start, day=day_of_start)
-            
-
-            
+            tournament.start_date = datetime(year=year_of_start, month=month_of_start, day=day_of_start)
+            day_of_end = tournament.start_date[2]
+            month_of_end = tournament.start_date[1]
+            year_of_end = tournament.start_date[0]
+            tournament.end_date = datetime(year=year_of_end, month=month_of_end, day=day_of_end)
             self.logic_wrapper.create_tournament(tournament)
         elif command == "2":
             pass
