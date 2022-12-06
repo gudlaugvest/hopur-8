@@ -15,8 +15,6 @@ class Player_UI:
         print("b. Go Back to Organizer Menu")
 
 
-
-
     def input_prompt(self):
         self.menu_output()
         print()
@@ -25,7 +23,7 @@ class Player_UI:
             return "b"
         elif command == "c":
             print()
-            how_many = int(input("How many players?: \n"))
+            how_many = int(input("How many players?: "))
             if how_many < 4:
                 print("Has to be at least 4\n")
                 how_many = int(input("How many players?: "))
@@ -49,7 +47,7 @@ class Player_UI:
                     if team is None:
                         print("No team found with that name")
                         return
-                    player.team_id = team.id
+                    player.team_id = team.name
                     self.logic_wrapper.create_player(player)
 
         else:

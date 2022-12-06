@@ -1,4 +1,3 @@
-from data.player_data import Player_Data
 from model.player_model import Player
 
 
@@ -30,8 +29,3 @@ class Player_logic:
             if player.name == name:
                 return player
 
-    def list_all_players(self):
-        data_class = Player_Data()
-        result = data_class.read_all_players()
-        for elem in result:
-            print (f"name: {elem.name}")
