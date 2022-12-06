@@ -80,9 +80,6 @@ class Logic_Wrapper:
     def get_all_match_results(self):
         return self.match_result.get_all_match_results() 
         
-
-    def get_unplayed_match_results(self, date):
-        return self.match_result.get_unplayed_match_results(date)
                 
 
     def create_match_result(self, match):
