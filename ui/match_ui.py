@@ -73,9 +73,11 @@ class Match_UI:
         #if match_id in self.logic_wrapper.get_all_match_results():
         #match_list = self.logic_wrapper.get_all_match_results(match_id)
         
-        
+        print()
         print("Enter new date for the match")
-        new_date = input("Enter new date: ")
+        print()
+        new_date = input("Enter new date: (dd.mm.yyyy")
+        
         the_match.date = new_date
         self.logic_wrapper.update_match(the_match)
         
