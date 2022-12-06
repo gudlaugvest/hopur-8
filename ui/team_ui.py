@@ -12,21 +12,21 @@ class Team_UI:
         print("####################################")
         print()
         print(" Team \n".rjust(18))
-        print("c. Continue to create Team")
-        print("b. Go back to Organizer Menu")
+        print("c. Continue To Create Team")
+        print("b. Go Back To Organizer Menu")
 
 
     def input_prompt(self):
         self.menu_output()
         print()
-        command = input("Enter command: ")
+        command = input("Enter Command: ")
         if command == "b":
             return "b"
         elif command == "c":
             print()
             team = Team()
-            team.name = input("Enter name team: ")
-            team.club = input("Enter name of club: ")
+            team.name = input("Enter Name: ")
+            team.club = input("Enter Club: ")
             captain_ssn = input("Enter captan id: ")
             captain = self.logic_wrapper.get_player_by_id(captain_ssn)
             if captain is None:
