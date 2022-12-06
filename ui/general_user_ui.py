@@ -40,6 +40,9 @@ class General_User_UI:
             # Á að geta fengið lista af óspiluðum leikjum þ.þ.e.a.s leikir sem date > current date
                 todays_date = '06.12.2022'
                 list_of_unplayed_matches = self.logic_wrapper.unplayed_matches(todays_date)
+                print()
+                print("Home Team", "Match".rjust(10), "Away Team".rjust(12), "Date".rjust(12))
+                print()
                 for matches in list_of_unplayed_matches:
                     print(matches)
 
