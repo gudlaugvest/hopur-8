@@ -20,16 +20,16 @@ class Tournament_UI:
     def input_prompt(self):
         self.menu_output()
         print()
-        command = input("Enter command: ")
+        command = input("Enter Command: ")
         print()
         if command == "b":
             return "b"
         elif command == "1":
             tournament = Tournament()
             tournament.name = input("Enter Tournament name: ")
-            tournament.number_of_rounds = input("Enter number of rounds: ")
-            tournament.start_date = input("Enter start date(yyyy.mm.dd): ")
-            tournament.end_date = input("Enter end date(yyyy.mm.dd): ")
+            tournament.number_of_rounds = input("Enter Number Of Rounds: ")
+            tournament.start_date = input("Enter Start Date(yyyy.mm.dd): ")
+            tournament.end_date = input("Enter End Date(yyyy.mm.dd): ")
             day_of_start = tournament.start_date[2]
             month_of_start = tournament.start_date[1]
             year_of_start = tournament.start_date[0]
