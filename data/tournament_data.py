@@ -25,7 +25,6 @@ class Tournament_Data:
             for row in reader:
                 datestr = row['date']
                 thedate = datetime(year=datestr.split('.')[2], month=datestr.split('.')[1], day=datestr.split('.')[0])
-
                 tournament_list.append(Tournament(row["id"], row["name"], row["number_of_rounds"],thedate))
         return tournament_list
 

@@ -3,7 +3,6 @@ from data.team_data import Team_Data
 from data.tournament_data import Tournament_Data
 from data.clubs_data import Clubs_Data
 from data.match_result_data import Match_Result_Data
-from data.datetime_data import Datetime_Data
 
 
 class Data_Wrapper:
@@ -73,9 +72,3 @@ class Data_Wrapper:
     
     def delete_match_result(self, match_result):
         return self.match_result_data.delete_match_result(match_result)
-
-    def create_date(self, date):
-        return self.datetime_data.create_date(date)
-        
-    def get_all_dates(self):
-        return self.datetime_data.get_all_dates()
