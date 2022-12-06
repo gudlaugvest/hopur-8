@@ -22,10 +22,11 @@ class Match_Result_Data:
                 match_list.append(Match_Result_Model(row["id"], row["home_team"], row["type_of_game"], row["away_team"], row["date"]))
         return match_list
 
-    def unplayed_matches(self, match_list, date):
+    def unplayed_matches(self, date):
         unplayed_matches = []
+        match_list = self.get_all_match_results()
         for match in match_list:
-            if match > date:
+            if match.date > date:
                 unplayed_matches.append(match)
         return unplayed_matches
 

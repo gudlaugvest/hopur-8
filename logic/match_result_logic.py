@@ -7,8 +7,8 @@ class Match_Result_Logic:
         return self.data_wrapper.get_all_match_results()
 
 
-    def unplayed_matches(self, match_list, date):
-        return self.data_wrapper.unplayed_matches(match_list, date)
+    def unplayed_matches(self, date):
+        return self.data_wrapper.unplayed_matches(date)
         
     def played_matches(self, match_list, date):
         return self.data_wrapper.played_matches(match_list, date)
@@ -18,7 +18,6 @@ class Match_Result_Logic:
     def create_match_result(self, match):
         return self.data_wrapper.create_match_result(match)
         
-
         
 
     def update_match(self, match):

@@ -94,3 +94,6 @@ class Logic_Wrapper:
 
     def delete_match_result(self, home_team, type_of_game, away_team):
         return self.match_result.delete_match_result(home_team, type_of_game, away_team)        
+
+    def unplayed_matches(self, date):
+        return self.match_result.unplayed_matches(date)
