@@ -15,10 +15,6 @@ class Player_UI:
         print("b. Go Back to Organizer Menu")
 
 
-    def validate_team(self):
-        try_again = input("Enter do you want to try again (y/n)? ")
-        try_again.lower()
-
 
 
     def input_prompt(self):
@@ -29,25 +25,25 @@ class Player_UI:
             return "b"
         elif command == "c":
             print()
-            while True:
-                player = Player()
-                player.name = input("Enter name of Player: ")
-                player.id_number = input("Enter id number: ")
-                #if len(player.id_number) >= 12:
-                #   print("id number is wrong")
-                #  return player.id_number 
-                player.home_address = input("Enter home address: ")
-                player.phone_number = input("Enter phone number: ")
-                player.email_address = input("Enter email address: ")
-                team_name = input("Enter team name: ")
-                team = self.logic_wrapper.get_team_by_name(team_name)           
-                
-                if team is None:
-                    print("No team found with that name")
-                    if self.validate_team() == "n":
-                        return
-                player.team_id = team.id
-                self.logic_wrapper.create_player(player)
+
+            player = Player()
+            player.name = input("Enter name of Player: ")
+            player.id_number = input("Enter id number: ")
+            #if len(player.id_number) >= 12:
+            #   print("id number is wrong")
+            #  return player.id_number 
+            player.home_address = input("Enter home address: ")
+            player.phone_number = input("Enter phone number: ")
+            player.email_address = input("Enter email address: ")
+            team_name = input("Enter team name: ")
+            team = self.logic_wrapper.get_team_by_name(team_name)           
+            
+            if team is None:
+                print("No team found with that name")
+                return
+
+            player.team_id = team.id
+            self.logic_wrapper.create_player(player)
 
         else:
             print()

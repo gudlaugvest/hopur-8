@@ -1,5 +1,6 @@
 import csv
 from model.tournament_model import Tournament
+from datetime import datetime
 
 class Tournament_Data:
 
@@ -22,7 +23,10 @@ class Tournament_Data:
         with open(self.file_name, newline="" ,encoding="utf-8") as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                tournament_list.append(Tournament(row["id"], row["name"], row["number_of_rounds"],row["date"]))
+                datestr = row['date']
+                thedate = datetime(year=datestr.split('.')[2], month=datestr.split('.')[1], day=datestr.split('.')[0])
+
+                tournament_list.append(Tournament(row["id"], row["name"], row["number_of_rounds"],thedate))
         return tournament_list
 
     def register_type_of_match(self):
