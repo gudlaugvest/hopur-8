@@ -24,8 +24,9 @@ class Player_UI:
         elif command == "c":
             print()
             how_many = int(input("How many players?: "))
-            if how_many < 4:
-                print("Has to be at least 4 players\n")
+            while how_many < 4:
+                print()
+                print("Players for each team has to be at least 4! Please try again!\n")
                 how_many = int(input("How many players?: "))
                 print()
             else:
@@ -33,14 +34,16 @@ class Player_UI:
                     print()
                     player = Player()
                     player.name = input("Enter Name: ")
-                    player.ss_number = input("Enter Social Security Number: ")
-                    #if len(player.id_number) >= 12:
-                    #   print("id number is wrong")
-                    #  return player.id_number 
+                    player.ss_number = input("Enter Social Security Number(000000-0000): ")
+                    ss_number = map(int, ss_number.split("-"))
+                    while len(ss_number) != 2:
+                        print()
+                        print("Invalid Social Security Number!, Please Try Again!\n")
+                        player.ss_number = input("Enter Social Security Number: ")
                     player.home_address = input("Enter Home Address: ")
                     player.phone_number = input("Enter Phone Number: ")
                     player.email_address = input("Enter Email Address: ")
-                    player.role = input("Enter Players Role(Captein/Player): ")
+                    player.role = input("Enter Players Role(Captain/Player): ")
                     team_name = input("Enter Team Name: ")
                     team = self.logic_wrapper.get_team_by_name(team_name) 
                     print()          
