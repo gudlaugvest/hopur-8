@@ -27,6 +27,9 @@ class Logic_Wrapper:
     def create_team(self, team):
         return self.team_logic.create_team(team)
 
+    def get_all_teams(self):
+        return self.team_logic.get_all_teams()
+
     def get_captain(self):
         return self.team_logic.get_captain()
     

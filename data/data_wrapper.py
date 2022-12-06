@@ -26,6 +26,12 @@ class Data_Wrapper:
     def get_all_teams(self):
         return self.team_data.get_all_teams()
 
+    def get_captain(self, team_id):
+        return self.team_data.get_captain(team_id)
+
+    def get_team_by_name(self, name):
+        return self.team_data.get_team_by_name(name)
+
     def create_club(self, club):
         return self.club_data.create_club(club)
     
