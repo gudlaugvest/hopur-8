@@ -25,8 +25,8 @@ class Tournament_Data:
             for row in reader:
                 start_date = row['start_date']
                 end_date = row['end_date']
-                starting_date = datetime(year=start_date.split('.')[2], month=start_date.split('.')[1], day=start_date.split('.')[0])
-                ending_date = datetime(year=end_date.split('.')[2], month=end_date.split('.')[1], day=end_date.split('.')[0])
+                #starting_date = datetime(year=start_date.split('.')[2], month=start_date.split('.')[1], day=start_date.split('.')[0])
+                #ending_date = datetime(year=end_date.split('.')[2], month=end_date.split('.')[1], day=end_date.split('.')[0])
                 tournament_list.append(Tournament(row["id"], row["name"], row["number_of_rounds"],row["start_date"], row["end_date"]))
         return tournament_list
 

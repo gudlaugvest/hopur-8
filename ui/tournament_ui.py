@@ -49,8 +49,7 @@ class Tournament_UI:
             #day_of_end = tournament.start_date[2]
             #month_of_end = tournament.start_date[1]
             #year_of_end = tournament.start_date[0]
-            #tournament.end_date = datetime(year=year_of_end, month=month_of_end, day=day_of_end)
-
+            #tournament.end_date = datetime(year=year_of_end, month=month_of_end, day=day_of_end
 """
 
 year = 2021
