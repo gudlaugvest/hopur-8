@@ -28,8 +28,8 @@ class Tournament_UI:
             tournament = Tournament()
             tournament.name = input("Enter Tournament name: ")
             tournament.number_of_rounds = input("Enter number of rounds: ")
-            tournament.start_date = input("Enter start date: ")
-            tournament.end_date = input("Enter end date:")
+            tournament.start_date = input("Enter start date(yyyy.mm.dd): ")
+            tournament.end_date = input("Enter end date(yyyy.mm.dd): ")
             day_of_start = tournament.start_date[2]
             month_of_start = tournament.start_date[1]
             year_of_start = tournament.start_date[0]
