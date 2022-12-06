@@ -1,5 +1,4 @@
 
-
 class General_User_UI:
     def __init__(self, logic_wrapper):
         self.logic_wrapper = logic_wrapper
@@ -32,17 +31,13 @@ class General_User_UI:
             elif command == "1":
                 list_of_players_and_teams = self.logic_wrapper.get_all_players()
                 for elem in list_of_players_and_teams:
-                    print(f"{elem.role}: {elem.name}    Team: {elem.team_name}")
-                
+                    print(elem)
             elif command == "2":
                 pass
             elif command == "3":
             # Á að geta fengið lista af óspiluðum leikjum þ.þ.e.a.s leikir sem date > current date
                 todays_date = '06.12.2022'
                 list_of_unplayed_matches = self.logic_wrapper.unplayed_matches(todays_date)
-                print()
-                print("Home Team", "Match".rjust(10), "Away Team".rjust(12), "Date".rjust(12))
-                print()
                 for matches in list_of_unplayed_matches:
                     print(matches)
 

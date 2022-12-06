@@ -10,4 +10,4 @@ class Player:
 
 
     def __str__(self):
-        return f"name: {self.name}, id_number: {self.ss_number}, home_address: {self.home_address}, phone_number: {self.phone_number}, email_address: {self.email_address}, role: {self.role} team_id: {self.team_name}"
+        return f"{self.name:<12} {self.role:<12} {self.team_name:<12}"
