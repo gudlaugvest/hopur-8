@@ -1,3 +1,4 @@
+from player_logic import Player_Logic
 
 class General_User_UI:
     def __init__(self, logic_wrapper):
@@ -29,7 +30,10 @@ class General_User_UI:
             elif command == "q":
                 quit()
             elif command == "1":
-                pass
+                logic_class = Player_Logic()
+                result = logic_class.get_list_of_player_and_teams()
+                for elem in result:
+                    print(elem)
                 
             elif command == "2":
                 pass
