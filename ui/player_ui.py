@@ -14,10 +14,7 @@ class Player_UI:
         print("c. Continue to input Player info")
         print("b. Go Back to Organizer Menu")
 
-    def add_another_player(self):
-        add_player = input("Do you want to add another player (y/n)? ")
-        add_player.lower()
-        
+
     def validate_team(self):
         try_again = input("Enter do you want to try again (y/n)? ")
         try_again.lower()
@@ -51,9 +48,7 @@ class Player_UI:
                         return
                 player.team_id = team.id
                 self.logic_wrapper.create_player(player)
-                if self.add_another_player() == "n":
-                    break
-                print()
+
         else:
             print()
             print("Invalid input, please try again!")
