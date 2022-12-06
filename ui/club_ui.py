@@ -21,6 +21,7 @@ class Club_UI:
             return "b"
         elif command == "c":
             club = Club()
+            print()
             club.name = input("Enter name: ")
             club.home_address = input("Enter home address: ")
             club.phone_number = input("Enter phone number: ")
