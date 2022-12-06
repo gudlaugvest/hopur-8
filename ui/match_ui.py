@@ -75,7 +75,6 @@ class Match_UI:
         #match_list = self.logic_wrapper.get_all_match_results(match_id)
         
         
-        print("Enter new date for the match")
         print()
         new_date = input("Enter new date: (dd.mm.yyyy")
         
