@@ -39,14 +39,6 @@ class Match_Result_Data:
 
 
 
-    def get_unplayed_match_results(self, date): 
-        unplayed_match_results = []
-        for match in self.unplayed_matches(date):
-            for match_result in self.get_all_match_results():
-                if match == match_result:
-                    unplayed_match_results.append(match_result)
-        return unplayed_match_results
-
     def get_match_result(self, home_team, type_of_game, away_team):
         for match_result in self.get_all_match_results():
             if match_result.home_team == home_team and match_result.type_of_game == type_of_game and match_result.away_team == away_team:
