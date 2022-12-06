@@ -12,6 +12,9 @@ tournamentmenu = Tournament_UI()
 tournamentmenu.input_prompt()
 
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2ce297694414425f6a4291369ad832ea58253a5b
 clubmenu = Club_UI()
 clubmenu.input_prompt()
