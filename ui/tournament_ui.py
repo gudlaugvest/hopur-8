@@ -26,7 +26,7 @@ class Tournament_UI:
             return "b"
         elif command == "1":
             tournament = Tournament()
-            tournament.name = input("Enter Tournament name: ")
+            tournament.name = input("Enter Tournament Name: ")
             tournament.number_of_rounds = input("Enter Number Of Rounds: ")
             tournament.start_date = input("Enter Start Date(yyyy.mm.dd): ")
             tournament.end_date = input("Enter End Date(yyyy.mm.dd): ")
