@@ -27,16 +27,16 @@ class Match_Result_Logic:
     def get_match_result(self, home_team, type_of_game, away_team):
         return self.data_wrapper.get_match_result(home_team, type_of_game, away_team)
         
-    def create_match_result(self, home_team, type_of_game, away_team, results):
-        return self.data_wrapper.create_match_result(home_team, type_of_game, away_team, results)
+    def create_match_result(self, match):
+        return self.data_wrapper.create_match_result(match)
         
 
-    def new_method(self, home_team, type_of_game, away_team, results):
-        return self.data_wrapper.new_method(home_team, type_of_game, away_team, results)
+    def new_method(self, match):
+        return self.data_wrapper.new_method(match)
         
 
-    def update_match_result(self, home_team, type_of_game, away_team, results):
-        return self.data_wrapper.update_match_result(home_team, type_of_game, away_team, results)
+    def update_match_result(self, match):
+        return self.data_wrapper.update_match_result(match)
 
     def delete_match_result(self, home_team, type_of_game, away_team):
         return self.data_wrapper.delete_match_result(home_team, type_of_game, away_team)   

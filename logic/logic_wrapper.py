@@ -66,35 +66,35 @@ class Logic_Wrapper:
         return self.clubs_logic.get_club_by_name(name)
 
     def unplayed_matches(self, match_list, date):
-        return self.match_result_data.unplayed_matches(match_list, date)
+        return self.match_result.unplayed_matches(match_list, date)
         
 
     def played_matches(self, match_list, date):
-        return self.match_result_data.played_matches(match_list, date)
+        return self.match_result.played_matches(match_list, date)
         
 
     
     def get_match_results(self, date):
-        return self.match_result_data.get_match_results(date) 
+        return self.match_result.get_match_results(date) 
         
 
     def get_unplayed_match_results(self, date):
-        return self.match_result_data.get_unplayed_match_results(date)
+        return self.match_result.get_unplayed_match_results(date)
         
 
     def get_match_result(self, home_team, type_of_game, away_team):
-        return self.match_result_data.get_match_result(home_team, type_of_game, away_team)
+        return self.match_result.get_match_result(home_team, type_of_game, away_team)
         
 
-    def create_match_result(self, home_team, type_of_game, away_team, results):
-        return self.match_result_data.create_match_result(home_team, type_of_game, away_team, results)
+    def create_match_result(self, match):
+        return self.match_result.create_match_result(match)
         
 
     def new_method(self, home_team, type_of_game, away_team, results):
-        return self.match_result_data.new_method(home_team, type_of_game, away_team, results)
+        return self.match_result.new_method(home_team, type_of_game, away_team, results)
 
     def update_match_result(self, home_team, type_of_game, away_team, results):
-        return self.match_result_data.update_match_result(home_team, type_of_game, away_team, results)
+        return self.match_result.update_match_result(home_team, type_of_game, away_team, results)
 
     def delete_match_result(self, home_team, type_of_game, away_team):
-        return self.match_result_data.delete_match_result(home_team, type_of_game, away_team)        
+        return self.match_result.delete_match_result(home_team, type_of_game, away_team)        
