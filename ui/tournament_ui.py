@@ -40,8 +40,6 @@ class Tournament_UI:
                 pass
             end_date = datetime(tmp_end[0], tmp_end[1], tmp_end[2])
 
-
-
             #day_of_start = tournament.start_date[2]
             #month_of_start = tournament.start_date[1]
             #year_of_start = tournament.start_date[0]
