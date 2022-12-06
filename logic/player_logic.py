@@ -1,5 +1,3 @@
-from model.player_model import Player
-from data.player_data import Player_Data
 
 
 class Player_logic:
