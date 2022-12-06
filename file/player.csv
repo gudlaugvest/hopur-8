@@ -1,4 +1,4 @@
-name, id_number, home_address, phone_number, email_address, role, team_name
+name, ss_number, home_address, phone_number, email_address, role, team_name
 1,Gudlaug,180594-3379,Grenasbraut 1220,7727236,gudlaugv22@ru.is
 2,Asta,180992-3679,Frostafold 153,7705021,astaj22@ru.is
 3,e,e,e,e,e
@@ -97,4 +97,5 @@ asta,sdsfgh,sdfg,sdfg,sdfgh,33
 asdfgh,sdfg,asdfg,asdfg,jhg,blue
 kjhgfd,jyhrtgf,"k,jmhngbfv","k,jmhngbfv",kjythrg,blue
 kjyhtgdfs,mjnbvc,jyhtdgrs,jyhtdgrs,oikuytr,blue
-kjghg,hgdf,kjyhg,kjyhg,jmhngfd,blue
+kjghg,hgdf,kjyhg,kjyhg,jmhngfd,bluer,r,r,r,r,Captain,blue
+jon,180992,miklabraut,7705021,asta@gmail.com,Player,blue

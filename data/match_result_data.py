@@ -55,7 +55,7 @@ class Match_Result_Data:
     def update_match(self, match):
         all_matches = self.get_all_match_results()
         for i in range(len(all_matches)):
-            if match == all_matches[i]:
+            if match.id == all_matches[i].id:
                 all_matches[i] = match
         
         with open(self.file_name, "w", newline="", encoding="utf-8") as csvfile:

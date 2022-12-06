@@ -9,9 +9,9 @@ class Player_Data:
 
     def create_player(self, player):
         with open(self.file_name, "a", newline="", encoding="utf-8") as csvfile:
-            fieldnames = ["name", "id_number", "home_address", "phone_number", "email_address", "team_id"]
+            fieldnames = ["name", "ss_number", "home_address", "phone_number", "email_address", "role", "team_name"]
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-            writer.writerow({"name": player.name, "id_number": player.id_number, "home_address": player.home_address, "phone_number": player.home_address, "email_address": player.email_address, "team_id": player.team_id})
+            writer.writerow({"name": player.name, "ss_number": player.ss_number, "home_address": player.home_address, "phone_number": player.phone_number, "email_address": player.email_address, "role": player.role, "team_name": player.team_name })
 
 
     def read_all_players(self):
