@@ -30,8 +30,4 @@ class Player_logic:
             if player.name == name:
                 return player
 
-    def get_list_of_player_and_teams(self):
-        data_class = Player_Data()
-        result = data_class.read_all_players()
-        for elem in result:
-            return (f"player: {elem.name}, team: {elem.team_name}")
+
