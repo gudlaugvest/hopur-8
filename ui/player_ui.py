@@ -47,7 +47,7 @@ class Player_UI:
                     if team is None:
                         print("No team found with that name")
                         return
-                    player.team_id = team.id
+                    player.team_id = team.name
                     self.logic_wrapper.create_player(player)
 
         else:
