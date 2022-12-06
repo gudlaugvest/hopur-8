@@ -15,8 +15,6 @@ class Player_UI:
         print("b. Go Back to Organizer Menu")
 
 
-
-
     def input_prompt(self):
         self.menu_output()
         print()
