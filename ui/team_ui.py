@@ -9,7 +9,7 @@ class Team_UI:
     
     def menu_output(self):
         print()
-        print("############################")
+        print("####################################")
         print()
         print(" Team \n".rjust(18))
         print("c. Continue to create Team")
@@ -35,5 +35,8 @@ class Team_UI:
                 return
             team.captain_id = captain.id_number
             self.logic_wrapper.create_team(team)
+        else:
+            print()
+            print("Invalid input, please try again!")
  
 

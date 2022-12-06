@@ -22,3 +22,10 @@ class Player_logic:
         for player in all_players:
             if player.id_number == id:
                 return player
+
+
+    def list_all_players(self):
+        data_class = Player_Data()
+        result = data_class.read_all_players()
+        for elem in result:
+            print (f"name: {elem.name}")

@@ -9,10 +9,10 @@ class Club_UI:
 
     def menu_output(self):
         print()
-        print("############################\n")
-        print("Club\n".rjust(18))
-        print("c. Continue")
-        print("b. Go back\n")
+        print("####################################\n")
+        print("Club\n".rjust(19))
+        print("c. Continue to create Club")
+        print("b. Go back to Organizer Menu\n")
 
     def input_prompt(self):
         self.menu_output()
@@ -25,3 +25,6 @@ class Club_UI:
             club.home_address = input("Enter home address: ")
             club.phone_number = input("Enter phone number: ")
             self.logic_wrapper.create_club(club)
+        else:
+            print()
+            print("Invalid input, please try again!")

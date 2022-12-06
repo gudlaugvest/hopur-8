@@ -9,9 +9,9 @@ class Match_UI:
 
     def menu_output(self):
         print()
-        print("############################")
+        print("####################################")
         print()
-        print("Match Menu".rjust(18))
+        print("Match Menu".rjust(22))
         print()
         print("1. Create Match")
         print("2. Update Match")
@@ -32,13 +32,14 @@ class Match_UI:
             elif command == "2":
                 self.update_match_menu()
             else:
-                print("Invalid input, try again!")
+                print()
+                print("Invalid input, please try again!")
     
     def create_match_menu(self):
         print()
-        print("############################")
+        print("####################################")
         print()
-        print("Create Match".rjust(18))
+        print("Create Match".rjust(23))
         print()
         
         match_ = Match_Result_Model()
@@ -55,9 +56,9 @@ class Match_UI:
     def update_match_menu(self):
         
         print()
-        print("############################")
+        print("####################################")
         print()
-        print("Update Match".rjust(18))
+        print("Update Match".rjust(23))
         print()
         print("Enter id of the match you want to change")
 

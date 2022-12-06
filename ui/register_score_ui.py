@@ -7,9 +7,9 @@ class Register_Score:
 
     def menu_output(self):
         print()
-        print("############################")
+        print("####################################")
         print()
-        print("Register score".rjust(18))
+        print("Register score".rjust(23))
         print()
         
 
