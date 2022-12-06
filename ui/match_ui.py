@@ -21,7 +21,7 @@ class Match_UI:
         while True:
             self.menu_output()
             print()
-            command = input("Enter your command: ")
+            command = input("Enter Command: ")
             command = command.lower()
             if command == "b":
                 break
@@ -43,9 +43,9 @@ class Match_UI:
         print()
         
         match_ = Match_Result_Model()
-        match_.home_team = input("Enter home team: ")
-        match_.away_team = input("Enter away team: ")
-        match_.type_of_game = input("Enter type of game: ")
+        match_.home_team = input("Enter Home Team: ")
+        match_.away_team = input("Enter Away Team: ")
+        match_.type_of_game = input("Enter Type Of Game: ")
         match_.date = input("Enter date of match: ")
 
         self.logic_wrapper.create_match_result(match_)
@@ -77,7 +77,7 @@ class Match_UI:
         
         
         print()
-        new_date = input("Enter new date (dd.mm.yyyy): ")
+        new_date = input("Enter new date(dd.mm.yyyy): ")
         
         the_match.date = new_date
         self.logic_wrapper.update_match(the_match)

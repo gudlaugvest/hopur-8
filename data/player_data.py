@@ -19,7 +19,7 @@ class Player_Data:
         with open(self.file_name, newline="" ,encoding="utf-8") as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                player_list.append(Player(row["name"], row["id_number"],row["home_address"], row["phone_number"], row["email_address"], row["team_id"]))
+                player_list.append(Player(row["name"], row["ss_number"],row["home_address"], row["phone_number"], row["email_address"],row["role"], row["team_name"]))
         return player_list
 
 
