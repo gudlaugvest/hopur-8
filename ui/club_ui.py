@@ -11,20 +11,20 @@ class Club_UI:
         print()
         print("####################################\n")
         print("Club\n".rjust(19))
-        print("c. Continue to create Club")
-        print("b. Go back to Organizer Menu\n")
+        print("c. Continue To Create Club")
+        print("b. Go Back To Organizer Menu\n")
 
     def input_prompt(self):
         self.menu_output()
-        command = input("Enter command: ")
+        command = input("Enter Command: ")
         if command == "b":
             return "b"
         elif command == "c":
             club = Club()
             print()
-            club.name = input("Enter name: ")
-            club.home_address = input("Enter home address: ")
-            club.phone_number = input("Enter phone number: ")
+            club.name = input("Enter Name: ")
+            club.home_address = input("Enter Home Address: ")
+            club.phone_number = input("Enter Phone Number: ")
             self.logic_wrapper.create_club(club)
         else:
             print()

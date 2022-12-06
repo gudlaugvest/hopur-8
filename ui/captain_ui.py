@@ -10,9 +10,9 @@ class Captain_UI:
     def menu_output(self):
         print()
         print("####################################\n")
-        print("Captain menu\n".rjust(23))
-        print("1. Register score")
-        print("b. Go back")
+        print("Captain Nenu\n".rjust(23))
+        print("1. Register Score")
+        print("b. Go Back")
         print("q. Quit\n")
 
 
@@ -20,7 +20,7 @@ class Captain_UI:
     def input_prompt(self):
         while True:
             self.menu_output()
-            command = input("Enter your command: ")
+            command = input("Enter Command: ")
             command = command.lower()
             if command == "b":
                 break
