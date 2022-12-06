@@ -25,7 +25,7 @@ class Player_UI:
             return "b"
         elif command == "c":
             print()
-            how_many = int(input("How many players?: \n"))
+            how_many = int(input("How many players?: "))
             if how_many < 4:
                 print("Has to be at least 4\n")
                 how_many = int(input("How many players?: "))
