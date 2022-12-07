@@ -35,14 +35,41 @@ class Player_UI:
                     player = Player()
                     player.name = input("Enter Name: ")
                     player.ss_number = input("Enter Social Security Number(0000000000): ")
-                    while len(player.ss_number) != 10:
-                        print("Invalid ss number, try again")
-                        player.ss_number = input("Enter Social Security Number(0000000000): ")
+                    try:
+                        while len(player.ss_number)!= 10:
+                            raise ValueError("Not a valid ss number, try again")
+                    except ValueError as error:
+                        print(error)
+                        player.ss_number = input("Enter Social Security Number(0000000000): ")      
+                    
                     player.home_address = input("Enter Home Address: ")
-                    player.phone_number = input("Enter Phone Number: ")
+                    player.phone_number = input("Enter phone number: ")
+                    try:
+                        if len(player.phone_number) != 7:
+                            raise ValueError("Not a valid phone number, try again")  
+                    except ValueError as error:
+                        print(error)
+                        player.phone_number = input("Enter phone number: ")      
                     player.email_address = input("Enter Email Address: ")
                     player.role = input("Enter Players Role(Captain/Player): ")
-                    team_name = input("Enter Team Name: ")
+                    try:
+                        if player.role == "Player".lower() or "Captain".lower():
+                            raise ValueError("Not a valid role, try again")
+                    except ValueError as error:
+                        print(error)
+                        player.role = input("Enter Players Role(Captain/Player): ")
+
+
+                    
+        else:
+            print()
+            print("Invalid input, please try again!")
+
+"""while len(player.ss_number) != 10:
+                        print("Invalid ss number, try again")
+                        player.ss_number = input("Enter Social Security Number(0000000000): ")"""
+
+'''team_name = input("Enter Team Name: ")
                     team_name = team_name.lower()
                     team = self.logic_wrapper.get_team_by_name(team_name) 
                     while team is None:
@@ -53,7 +80,4 @@ class Player_UI:
 
                     print()          
                     player.team_name = team.name
-                    self.logic_wrapper.create_player(player)
-        else:
-            print()
-            print("Invalid input, please try again!")
+                    self.logic_wrapper.create_player(player)'''                        
