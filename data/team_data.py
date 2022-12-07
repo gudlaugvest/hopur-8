@@ -22,24 +22,33 @@ class Team_Data:
                 team_list.append(Team(row["id"], row["name"], row["club"]))
         return team_list
 
-    def get_captain(self, team_id):
+    def get_captain (self, team_id):
         teams = self.get_all_teams()
         correct_team = None
         for team in teams:
             if team.id == team_id:
                 correct_team = team
-                break
-        players = self.data_wrapper.get_all_players()
-        correct_player = None
-        for player in players:
-            if player.id == correct_team.team_captain:
-                correct_player = player
-                return correct_player
+                return correct_team.captain_id
         return None
+        
+
+
+    def get_all_captains(self):
+        '''Get the team captains id and team name'''
+        pass
+        
+
+
 
 
     def get_team_by_name(self, name):
         all_teams = self.get_all_teams()
         for team in all_teams:
             if team.name == name:
+                return team
+
+    def get_team_by_captain_id(self, captain_id):
+        all_teams = self.get_all_teams()
+        for team in all_teams:
+            if team.captain_id == captain_id:
                 return team

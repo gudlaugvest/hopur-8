@@ -23,9 +23,10 @@ class Player_logic:
 """
 
     def get_player_by_id(self, name):
-        all_players = self.get_all_players()
-        for player in all_players:
-            if player.name == name:
-                return player
+        return self.data_wrapper.get_player_by_id(name)
 
+    def get_player_by_name(self, name):
+        return self.data_wrapper.get_player_by_name(name)
 
+    def get_players_by_team_id(self, team_id):
+        return self.data_wrapper.get_player_by_team_id(team_id)
