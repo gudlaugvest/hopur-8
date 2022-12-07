@@ -10,7 +10,7 @@ class Captain_UI:
     def menu_output(self):
         print()
         print("####################################\n")
-        print("Captain Nenu\n".rjust(23))
+        print("Captain Menu\n".rjust(23))
         print("1. Register Score")
         print("b. Go Back")
         print("q. Quit\n")
