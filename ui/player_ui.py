@@ -17,7 +17,7 @@ class Player_UI:
 
 
     def input_prompt(self):
-        '''Counts how many players the Organizer wants to input and inputs the information 
+        '''The function counts how many players the Organizer wants to input and inputs the information 
         for each players and gives role for 1 captain and rest players'''
         self.menu_output()
         print()
