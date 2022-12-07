@@ -36,13 +36,16 @@ class Player_UI:
                     while True:
 
                         player.name = input("Enter Name: ")
-                        player.ss_number = input("Enter Social Security Number(000000-0000): ")
+                        
 
                         try:
+                            player.ss_number = input("Enter Social Security Number(000000-0000): ")
                             if len(player.ss_number) != 12:
-                                return player.ss_number
+                                continue
+                                
                         except:
-                            print("Invalid ss number, again")    
+                            print("Invalid ss number, try again")
+                            
                             
                 
                             
