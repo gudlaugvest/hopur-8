@@ -30,14 +30,15 @@ class Logic_Wrapper:
     def get_all_teams(self):
         return self.team_logic.get_all_teams()
 
-    def get_captain(self):
-        return self.team_logic.get_captain()
+    def get_captain(self, team_id):
+        return self.team_logic.get_captain(team_id)
     
     def get_player_by_id(self, id):
         return self.player_logic.get_player_by_id(id)
 
     
-    
+    def get_team_by_captain_id(self, captain_id):
+        return self.team_logic.get_team_by_captain_id(captain_id)
 
 
     def create_tournament(self, tournament):
@@ -94,3 +95,6 @@ class Logic_Wrapper:
 
     def unplayed_matches(self, date):
         return self.match_result.unplayed_matches(date)
+
+    def get_players_from_team_id(self, team_id):
+        return self.player_logic.get_players_from_team_id(team_id)
