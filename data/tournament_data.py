@@ -13,10 +13,10 @@ class Tournament_Data:
         '''this function creates a tournament''' 
         i = len(self.get_all_tournaments()) + 1
         with open(self.file_name, "a", newline="", encoding="utf-8") as csvfile:
-            fieldnames = ["id", "name", "number_of_rounds", "start_date", "end_date"] 
+            fieldnames = ["id", "name", "start_date", "end_date"] 
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
-            writer.writerow({"id": i,"name": tournament.name, "number_of_rounds": tournament.number_of_rounds, "start_date": tournament.start_date, "end_date": tournament.end_date})
+            writer.writerow({"id": i,"name": tournament.name, "start_date": tournament.start_date, "end_date": tournament.end_date})
 
     def get_all_tournaments(self):
         tournament_list = []
@@ -27,7 +27,7 @@ class Tournament_Data:
                 end_date = row['end_date']
                 #starting_date = datetime(year=start_date.split('.')[2], month=start_date.split('.')[1], day=start_date.split('.')[0])
                 #ending_date = datetime(year=end_date.split('.')[2], month=end_date.split('.')[1], day=end_date.split('.')[0])
-                tournament_list.append(Tournament(row["id"], row["name"], row["number_of_rounds"],row["start_date"], row["end_date"]))
+                tournament_list.append(Tournament(row["id"], row["name"],row["start_date"], row["end_date"]))
         return tournament_list
 
     def register_type_of_match(self):

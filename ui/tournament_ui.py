@@ -27,7 +27,6 @@ class Tournament_UI:
         elif command == "1":
             tournament = Tournament()
             tournament.name = input("Enter Tournament name: ")
-            tournament.number_of_rounds = input("Enter number of rounds: ")
             tournament.start_date = input("Enter start date(yyyy.mm.dd): ").split(".")
             while len(tournament.start_date) != 3:
                 print()
