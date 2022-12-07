@@ -36,8 +36,6 @@ class Player_UI:
                     while True:
 
                         player.name = input("Enter Name: ")
-                        
-
                         try:
                             player.ss_number = input("Enter Social Security Number(000000-0000): ")
                             if len(player.ss_number) != 12:
@@ -46,10 +44,6 @@ class Player_UI:
                         except:
                             print("Invalid ss number, try again")
                             
-                            
-                
-                            
-            
                     #ss_number = map(int, ss_number.split("-"))
                     #while len(ss_number) != 2:
                         #print()
