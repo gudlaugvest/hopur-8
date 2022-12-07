@@ -57,11 +57,18 @@ class Register_Score:
         for match in matches:
             if match.home_team == captain_team.name:
                 print("Match id: {:<6} | Home team: {:<6} :versus: Away team: {:<6}".format(match.id, match.home_team, match.away_team))
-        
-        
-        
+        print()
         
         # Velja síðan útfrá match id
+        match_id = input("Sláðu inn match id fyrir þinn leik: ")
+        print()
+        print("Players in this match".rjust(23))
+        print()
+        match = self.logic_wrapper.get_match_by_id(match_id)
+        players = self.logic_wrapper.get_all_players()
+        for player in players:
+            if player.team_name == match.home_team and player.team_name == match.away_team:
+                print("Player ssn: {:<6} | Player name: {:<6} | Role: {:<12}| Team: {:<6}".format(player.ss_number, player.name, player.role, player.team_name))
         # Fá síðan lista yfir leikmenn í báðum liðum
         # Síðan þarf að slá inn ssn fyrir hvaða leikmaður spilaði hvaða leik og líka ssn hjá player í away team
         # Svo þarf að slá inn result fyrir þann leik
