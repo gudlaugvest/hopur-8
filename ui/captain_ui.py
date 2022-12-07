@@ -16,7 +16,6 @@ class Captain_UI:
         print("q. Quit\n")
 
 
-
     def input_prompt(self):
         while True:
             self.menu_output()

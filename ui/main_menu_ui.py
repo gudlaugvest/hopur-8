@@ -29,7 +29,7 @@ class MainMenu_UI:
             command = command.lower()
             if command == "q":
                 print("Goodbye")
-                break
+                quit()
             elif command == "1":
                 organizer_menu = Organizer_Menu_UI(self.logic_wrapper)
                 back_method = organizer_menu.input_prompt()
