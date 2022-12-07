@@ -31,7 +31,7 @@ class General_User_UI:
             elif command == "1":
                 list_of_players_and_teams = self.logic_wrapper.get_all_players()
                 for elem in list_of_players_and_teams:
-                    print(elem.name)
+                    print(elem)
             elif command == "2":
                 pass
             elif command == "3":
@@ -40,8 +40,6 @@ class General_User_UI:
                 list_of_unplayed_matches = self.logic_wrapper.unplayed_matches(todays_date)
                 for matches in list_of_unplayed_matches:
                     print(matches)
-
-
             elif command == "4":
                 pass
             else:
