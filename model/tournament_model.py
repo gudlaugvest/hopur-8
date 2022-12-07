@@ -7,4 +7,4 @@ class Tournament:
         self.matches = matches
 
     def __str__(self):
-        return f"{self.id} {self.name} {self.number_of_rounds} {self.start_date} {self.end_date} {self.matches}"
+        return f"{self.id} {self.name} {self.start_date} {self.end_date} {self.matches}"

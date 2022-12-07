@@ -38,13 +38,6 @@ class Player_UI:
                     while len(player.ss_number) != 10:
                         print("Invalid ss number, try again")
                         player.ss_number = input("Enter Social Security Number(000000-0000): ")
-
-
-                #ss_number = map(int, ss_number.split("-"))
-                #while len(ss_number) != 2:
-                    #print()
-                    #print("Invalid Social Security Number!, Please Try Again!\n")
-                    #player.ss_number = input("Enter Social Security Number: ")
                     player.home_address = input("Enter Home Address: ")
                     player.phone_number = input("Enter Phone Number: ")
                     player.email_address = input("Enter Email Address: ")
