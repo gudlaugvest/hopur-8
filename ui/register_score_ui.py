@@ -1,5 +1,12 @@
+PLAYER_SSN = 'SSN'
+PLAYER_NAME = 'NAME'
+ROLE = 'ROLE'
+TEAM_NAME = 'TEAM'
+
+
 
 class Register_Score:
+
     def __init__(self, logic_connection):
         self.logic_wrapper = logic_connection
 
@@ -66,13 +73,42 @@ class Register_Score:
         print()
         match = self.logic_wrapper.get_match_by_id(match_id)
         players = self.logic_wrapper.get_all_players()
+        #teams = self.logic_wrapper.get_all_teams()
+        #self.logic_wrapper.get_players_from_team_id()
+        
+        
+        print("{:<24} {:<24} {:<24} {:<24}".format(PLAYER_SSN, PLAYER_NAME, ROLE, TEAM_NAME))
+        
+        print("Players in home team")
+        print()
+        # birta út lista af leikmönnum í home_team
         for player in players:
-            if player.team_name == match.home_team and player.team_name == match.away_team:
-                print("Player ssn: {:<6} | Player name: {:<6} | Role: {:<12}| Team: {:<6}".format(player.ss_number, player.name, player.role, player.team_name))
-        # Fá síðan lista yfir leikmenn í báðum liðum
+            if player.team_name == match.home_team:
+                print("{:<24} {:<24} {:<24} {:<24}".format(player.ss_number, player.name, player.role, player.team_name))
+        print()
+        
+        print("Players in Away team")
+        print()
+        # birta út lista af leikmönnum í away_team
+        for player in players:
+            if player.team_name == match.away_team:
+                print("{:<24} {:<24} {:<24} {:<24}".format(player.ss_number, player.name, player.role, player.team_name))
+        print()
+        
+        
         # Síðan þarf að slá inn ssn fyrir hvaða leikmaður spilaði hvaða leik og líka ssn hjá player í away team
+        
+        
+        
+        
         # Svo þarf að slá inn result fyrir þann leik
 
         # get_match_by_team_id?
 
 
+
+
+# ÞArf að sækja öll lið
+# Þarft að finna liðin eftir nöfnunum á liðunum
+# Svo getur þú kallað í get_players_by_team_id og kalla fyrir bæði liðin
+# Þetta mun skila tveimur listum þ.a 1 listi fyrir home team og annar fyrir away team
