@@ -38,14 +38,12 @@ class Team_Data:
         pass
         
 
-
-
-
     def get_team_by_name(self, name):
         all_teams = self.get_all_teams()
         for team in all_teams:
             if team.name == name:
                 return team
+
 
     def get_team_by_captain_id(self, captain_id):
         all_teams = self.get_all_teams()
