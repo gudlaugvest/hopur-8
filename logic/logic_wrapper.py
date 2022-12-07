@@ -98,3 +98,6 @@ class Logic_Wrapper:
 
     def get_players_from_team_id(self, team_id):
         return self.player_logic.get_players_from_team_id(team_id)
+
+    def get_match_by_id(self, match_id):
+        return self.match_result.get_match_by_id(match_id)

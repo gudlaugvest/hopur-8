@@ -24,4 +24,7 @@ class Match_Result_Logic:
         return self.data_wrapper.update_match(match)
 
     def delete_match_result(self, home_team, type_of_game, away_team):
-        return self.data_wrapper.delete_match_result(home_team, type_of_game, away_team)   
+        return self.data_wrapper.delete_match_result(home_team, type_of_game, away_team)
+
+    def get_match_by_id(self, match_id):
+        return self.data_wrapper.get_match_by_id(match_id)

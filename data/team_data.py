@@ -31,15 +31,7 @@ class Team_Data:
                 return correct_team.captain_id
         return None
         
-
-
-    def get_all_captains(self):
-        '''Get the team captains id and team name'''
-        pass
-        
-
-
-
+      
 
     def get_team_by_name(self, name):
         all_teams = self.get_all_teams()

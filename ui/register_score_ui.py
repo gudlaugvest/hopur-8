@@ -33,29 +33,39 @@ class Register_Score:
         all_teams = self.logic_wrapper.get_all_teams()
         for team in all_teams:
             captain = self.logic_wrapper.get_captain(team.id)
-            print(captain.captain_id, captain.name)
+            print("Captain ssn: {:<6} | Captain name: {:<6} | Team: {:<6}".format(captain.ss_number, captain.name, captain.team_name))
+            #print(captain.ss_number, captain.name)
         print()
 
         captain_id = input("Enter captain id: ")
-        captain = self.logic_wrapper.get_player_by_id(captain_id)
-        if captain == None:
-            print()
-            print("No captain with this id! Try again")
-            return
-        
-        team = self.logic_wrapper.get_team_by_captain_id(captain_id)
-        if team == None:
-            print()
-            print("No team found with this captain! Try again")
-            return
-        
-        team_players = self.logic_wrapper.get_players_by_team_id(team.id)
-        if len(team_players) < 4:
-            print()
-            print("Not enough players in this team!")
-            return
-        
-        print("Players in this team:")
-        for player in team_players:
-            print(player.ssn_number, player.name)
+        # Biðjum um captain_id og þá fáum við lista af öllum sem eru í liðinu hans
         print()
+        print("Players in this team".rjust(23))
+        print()
+
+        captain_team = self.logic_wrapper.get_team_by_captain_id(captain_id)
+        players = self.logic_wrapper.get_all_players()
+        for player in players:
+            if player.team_name == captain_team.name:
+                print("Player ssn: {:<6} | Player name: {:<6} | Role: {:<12}| Team: {:<6}".format(player.ss_number, player.name, player.role, player.team_name))
+          
+        # Finna hvaða leik þetta lið er að keppa í og birta upp eins og t.d.
+        print()
+        print()
+        print("Leikur sem liðið er að spila: ")
+        matches = self.logic_wrapper.get_all_match_results()
+        for match in matches:
+            if match.home_team == captain_team.name:
+                print("Match id: {:<6} | Home team: {:<6} :versus: Away team: {:<6}".format(match.id, match.home_team, match.away_team))
+        
+        
+        
+        
+        # Velja síðan útfrá match id
+        # Fá síðan lista yfir leikmenn í báðum liðum
+        # Síðan þarf að slá inn ssn fyrir hvaða leikmaður spilaði hvaða leik og líka ssn hjá player í away team
+        # Svo þarf að slá inn result fyrir þann leik
+
+        # get_match_by_team_id?
+
+

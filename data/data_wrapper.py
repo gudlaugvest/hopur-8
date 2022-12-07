@@ -40,6 +40,9 @@ class Data_Wrapper:
     def get_players_by_team_id(self, team_id):
         return self.team_data.get_players_by_team_id(team_id)
 
+    def get_player_by_id(self, id):
+        return self.player_data.get_player_by_id(id)
+
     def create_club(self, club):
         return self.club_data.create_club(club)
     
@@ -82,3 +85,6 @@ class Data_Wrapper:
     
     def delete_match_result(self, match_result):
         return self.match_result_data.delete_match_result(match_result)
+
+    def get_match_by_id(self, id):
+        return self.match_result_data.get_match_by_id(id)

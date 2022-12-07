@@ -63,3 +63,8 @@ class Match_Result_Data:
         pass
     
     
+    def get_match_by_id(self, id):
+        all_matches = self.get_all_match_results()
+        for match in all_matches:
+            if match.id == id:
+                return match
