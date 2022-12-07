@@ -28,19 +28,19 @@ class Tournament_UI:
             tournament = Tournament()
             tournament.name = input("Enter Tournament name: ")
             tournament.number_of_rounds = input("Enter number of rounds: ")
-            tournament.start_date = input("Enter start date(YYYY.MM.DD): ")
+            tournament.start_date = input("Enter start date(yyyy.mm.dd): ").split(".")
             while len(tournament.start_date) != 3:
                 print()
-                print("Date format is incorrect! Please Try again!\n")
+                print("Date format is incorrect! Please Try again!")
                 tournament.start_date = input("Enter start date(yyyy.mm.dd): ")
-            year, month, day =  map(int, tournament.start_date.split("."))
-            tournament.end_date = input("Enter end date(yyyy.mm.dd): ")
+            year, month, day =  [int(item) for item in tournament.start_date]
+            tournament.end_date = input("Enter end date(yyyy.mm.dd): ").split(".")
             while len(tournament.end_date) != 3:
-                print("Date format is incorrect! Please Try again!\n")
-                tournament.end_date = input("Enter end date(yyyy.mm.dd): ")
-            year, month, day = map(int, tournament.end_date.split("."))
-            starting_date = datetime(year, month, day)
-            ending_date = datetime(year, month, day)
+                print("Date format is incorrect! Please Try again!")
+                tournament.end_date = input("Enter end date(yyyy.mm.dd): ").split(".")
+            year, month, day = [int(item) for item in tournament.end_date]
+            tournament.start_date = datetime(year, month, day)
+            tournament.end_date = datetime(year, month, day)
             self.logic_wrapper.create_tournament(tournament)
 """
 
