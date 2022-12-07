@@ -25,9 +25,9 @@ class Team_UI:
         elif command == "c":
             print()
             team = Team()
-            team.name = input("Enter Name: ")
-            team.club = input("Enter Club: ")
-            captain_ssn = input("Enter captain id: ")
+            team.club = input("Enter Club name: ")
+            team.name = input("Enter Team name: ")
+            captain_ssn = input("Choose a captain for this team, enter captain SSN: ")
             captain = self.logic_wrapper.get_player_by_id(captain_ssn)
             if captain is None:
                 print()
