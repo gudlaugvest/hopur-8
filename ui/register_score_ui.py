@@ -29,16 +29,16 @@ class Register_Score:
         # á meðan counter er 4 þá er 301 leikur
         # á meðan counter er 5 þá er cricket 
         # á meðan counter er 6 þá er 501 leikur
-        all_teams = self.logic_wrapper.get_all_teams()
         print("Team captains:")
-        for team in all_teams:
-            captain = self.logic_wrapper.get_captain(team_id=team.id)
-            print(captain.ssn_number, captain.name)
+        all_teams = self.logic_wrapper.get_all_teams()
+        for captain in all_teams:
+            captain = self.logic_wrapper.get_captain(captain.captain_id)
+            print(captain)
         print()
 
         captain_id = input("Enter captain id: ")
         captain = self.logic_wrapper.get_player_by_id(captain_id)
-        if captain is None:
+        if captain == None:
             print()
             print("No captain with this id! Try again")
             return
@@ -59,17 +59,3 @@ class Register_Score:
         for player in team_players:
             print(player.ssn_number, player.name)
         print()
-
-        
-        
-
-       
-
-
-        
-   
-
-
-
-
-
