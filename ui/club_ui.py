@@ -24,13 +24,11 @@ class Club_UI:
             print()
             club.name = input("Enter Name: ")
             club.home_address = input("Enter Home Address: ")
-            club.phone_number = input("Enter Phone Number(000-0000): ").split("-")
-            while len(club.phone_number) != 2:
+            club.phone_number = input("Enter Phone Number(0000000): ")
+            while len(club.phone_number) != 7:
                 print()
                 print("Phone number incorrect! Please try again!")
-                club.phone_number = input("Enter Phone Number(000-0000): ").split("-")
-            number = [int(item) for item in club.phone_number]
-
+                club.phone_number = input("Enter Phone Number(0000000): ")
             self.logic_wrapper.create_club(club)
         else:
             print()

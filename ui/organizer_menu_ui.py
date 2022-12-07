@@ -17,8 +17,8 @@ class Organizer_Menu_UI:
         print()
         print("1. Tournament")
         print("2. Club")
-        print("3. Team")
-        print("4. Player")
+        print("3. Player")
+        print("4. Team")
         print("5. Matches")
         print("b. Go Back")
 
@@ -40,11 +40,11 @@ class Organizer_Menu_UI:
                 club = Club_UI(self.logic_wrapper)
                 club.input_prompt()
             elif command == "3":
-                team = Team_UI(self.logic_wrapper)
-                team.input_prompt()
-            elif command == "4":
                 player_ui = Player_UI(self.logic_wrapper)
                 player_ui.input_prompt()
+            elif command == "4":
+                team = Team_UI(self.logic_wrapper)
+                team.input_prompt()
             elif command == "5":
                 match_ui = Match_UI(self.logic_wrapper)
                 match_ui.input_prompt()
