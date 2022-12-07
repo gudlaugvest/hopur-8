@@ -42,6 +42,7 @@ class Tournament_UI:
             tournament.start_date = datetime(year, month, day)
             tournament.end_date = datetime(year, month, day)
             self.logic_wrapper.create_tournament(tournament)
+
             
 """
 
