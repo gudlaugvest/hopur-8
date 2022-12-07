@@ -39,7 +39,8 @@ class General_User_UI:
                 todays_date = '06.12.2022'
                 list_of_unplayed_matches = self.logic_wrapper.unplayed_matches(todays_date)
                 for matches in list_of_unplayed_matches:
-                    print(matches)
+                    if todays_date < matches.date:
+                        print(matches)
             elif command == "4":
                 pass
             else:

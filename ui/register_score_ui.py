@@ -31,9 +31,9 @@ class Register_Score:
         # á meðan counter er 6 þá er 501 leikur
         print("Team captains:")
         all_teams = self.logic_wrapper.get_all_teams()
-        for captain in all_teams:
-            captain = self.logic_wrapper.get_captain(captain.captain_id)
-            print(captain)
+        for team in all_teams:
+            captain = self.logic_wrapper.get_captain(team.id)
+            print(captain.captain_id, captain.name)
         print()
 
         captain_id = input("Enter captain id: ")
