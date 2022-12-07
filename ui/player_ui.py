@@ -34,10 +34,10 @@ class Player_UI:
                     print()
                     player = Player()
                     player.name = input("Enter Name: ")
-                    player.ss_number = input("Enter Social Security Number(000000-0000): ")
+                    player.ss_number = input("Enter Social Security Number(0000000000): ")
                     while len(player.ss_number) != 10:
                         print("Invalid ss number, try again")
-                        player.ss_number = input("Enter Social Security Number(000000-0000): ")
+                        player.ss_number = input("Enter Social Security Number(0000000000): ")
                     player.home_address = input("Enter Home Address: ")
                     player.phone_number = input("Enter Phone Number: ")
                     player.email_address = input("Enter Email Address: ")
@@ -45,14 +45,15 @@ class Player_UI:
                     team_name = input("Enter Team Name: ")
                     team_name = team_name.lower()
                     team = self.logic_wrapper.get_team_by_name(team_name) 
-                    print()          
-                    
-                    if team is None:
+                    while team is None:
                         print("No team found with that name")
-                        return
+                        team_name = input("Enter Team Name: ")
+                        team_name = team_name.lower()
+                        team = self.logic_wrapper.get_team_by_name(team_name) 
+
+                    print()          
                     player.team_name = team.name
                     self.logic_wrapper.create_player(player)
-
         else:
             print()
             print("Invalid input, please try again!")

@@ -28,10 +28,10 @@ class Player_Data:
             if player.name == name:
                 return player
     
-    def get_player_by_id(self, id):
+    def get_player_by_id(self, ss_number):
         all_players = self.read_all_players()
         for player in all_players:
-            if player.id == id:
+            if player.ss_number == ss_number:
                 return player
     
     def get_players_by_team_id(self, team_id):
