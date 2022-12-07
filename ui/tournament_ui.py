@@ -44,7 +44,6 @@ class Tournament_UI:
             self.logic_wrapper.create_tournament(tournament)
 
 
-            
 """
 
 year = 2021
@@ -65,4 +64,3 @@ else:
         
 """
             
-
