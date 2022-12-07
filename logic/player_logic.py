@@ -15,13 +15,6 @@ class Player_logic:
         return self.data_wrapper.get_all_players()
       
 
-    """def get_player_by_id(self, id):
-        all_players = self.get_all_players()
-        for player in all_players:
-            if player.id_number == id:
-                return player
-"""
-
     def get_player_by_id(self, name):
         return self.data_wrapper.get_player_by_id(name)
 
