@@ -36,7 +36,7 @@ class Player_UI:
                     player.name = input("Enter Name: ")
                     player.ss_number = input("Enter Social Security Number(0000000000): ")
                     try:
-                        if len(player.ss_number)!= 10:
+                        while len(player.ss_number)!= 10:
                             raise ValueError("Not a valid ss number, try again")
                     except ValueError as error:
                         print(error)
@@ -73,11 +73,11 @@ class Player_UI:
                     team_name = team_name.lower()
                     team = self.logic_wrapper.get_team_by_name(team_name) 
                     while team is None:
-                        print()
                         print("No team found with that name")
                         team_name = input("Enter Team Name: ")
                         team_name = team_name.lower()
-                        team = self.logic_wrapper.get_team_by_name(team_name)  
+                        team = self.logic_wrapper.get_team_by_name(team_name) 
+
                     print()          
                     player.team_name = team.name
                     self.logic_wrapper.create_player(player)'''                        
