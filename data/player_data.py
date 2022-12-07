@@ -22,4 +22,23 @@ class Player_Data:
                 player_list.append(Player(row["name"], row["ss_number"],row["home_address"], row["phone_number"], row["email_address"],row["role"], row["team_name"]))
         return player_list
 
+    def get_player_by_name(self, name):
+        all_players = self.read_all_players()
+        for player in all_players:
+            if player.name == name:
+                return player
+    
+    def get_player_by_id(self, id):
+        all_players = self.read_all_players()
+        for player in all_players:
+            if player.id == id:
+                return player
+    
+    def get_players_by_team_id(self, team_id):
+        all_players = self.read_all_players()
+        players = []
+        for player in all_players:
+            if player.team_id == team_id:
+                players.append(player)
+        return players
 

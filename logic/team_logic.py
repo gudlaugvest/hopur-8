@@ -20,3 +20,6 @@ class Team_Logic:
 
     def get_team_by_name(self, name):
         return self.data_wrapper.get_team_by_name(name)
+
+    def get_team_by_captain_id(self, captain_id):
+        return self.data_wrapper.get_team_by_captain_id(captain_id)
