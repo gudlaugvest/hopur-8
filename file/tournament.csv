@@ -11,3 +11,6 @@ id,name,number_of_rounds,start_date,end_date
 9,g,6,2023-11-08 00:00:00,2023-11-08 00:00:00
 10,dfghjk,3,2023-02-12 00:00:00,2023-02-12 00:00:00
 11,hgfd,3,<built-in method date of datetime.datetime object at 0x10eba9290>,<built-in method date of datetime.datetime object at 0x10eba92c0>
+12,Hr Bikarinn,3,2023-12-04 00:00:00,2023-12-04 00:00:00
+13,HR Bikarinn 2,3,2023-12-09 00:00:00,2023-12-09 00:00:00
+14,HR Bikarinn 6,3,0024-12-06 00:00:00,0024-12-06 00:00:00
