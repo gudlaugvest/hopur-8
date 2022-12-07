@@ -41,4 +41,6 @@ class Tournament_UI:
             year, month, day = [int(item) for item in tournament.end_date]
             tournament.end_date = datetime(year, month, day)
             self.logic_wrapper.create_tournament(tournament)
+        elif command == "2":
+            pass    
             
