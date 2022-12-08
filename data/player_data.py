@@ -11,7 +11,7 @@ class Player_Data:
         with open(self.file_name, "a", newline="", encoding="utf-8") as csvfile:
             fieldnames = ["name", "ss_number", "home_address", "phone_number", "email_address", "role", "team_id"]
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-            writer.writerow({"name": player.name, "ss_number": player.ss_number, "home_address": player.home_address, "phone_number": player.phone_number, "email_address": player.email_address, "role": player.role, "team_name": player.team_id })
+            writer.writerow({"name": player.name, "ss_number": player.ss_number, "home_address": player.home_address, "phone_number": player.phone_number, "email_address": player.email_address, "role": player.role, "team_id": player.team_id })
 
 
     def read_all_players(self):

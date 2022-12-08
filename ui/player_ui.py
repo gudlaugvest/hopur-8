@@ -71,7 +71,7 @@ class Player_UI:
                         team = self.logic_wrapper.get_team_by_name(team_name) 
 
                     print()          
-                    player.team_name = team.id
+                    player.team_id = team.id
                     self.logic_wrapper.create_player(player)   
                     
         else:
