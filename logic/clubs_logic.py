@@ -11,3 +11,7 @@ class Clubs_Logic:
 
     def get_all_clubs(self):
         return self.data_wrapper.get_all_clubs()
+    
+    def get_club_by_name(self, name):
+        return self.data_wrapper.get_club_by_name(name)
+

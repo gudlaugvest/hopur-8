@@ -115,3 +115,6 @@ class Logic_Wrapper:
     
     def get_all_games(self):
         return self.game_logic.get_all_games()
+
+    def get_club_by_name(self, name):
+        return self.data_wrapper.get_club_by_name(name)

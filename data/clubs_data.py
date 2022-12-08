@@ -22,3 +22,9 @@ class Clubs_Data:
         return club_list
 
 
+    def get_club_by_name(self, name):
+        all_clubs = self.get_all_teams()
+        for club in all_clubs:
+            if club.name == name:
+                return club
+        return None
