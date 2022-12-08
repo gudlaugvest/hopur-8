@@ -40,7 +40,7 @@ class Register_Score:
         all_teams = self.logic_wrapper.get_all_teams()
         for team in all_teams:
             captain = self.logic_wrapper.get_captain(team.id)
-            print("Captain ssn: {:<6} | Captain name: {:<6} | Team: {:<6}".format(captain.ss_number, captain.name, captain.team_name))
+            print("Captain ssn: {:<6} | Captain name: {:<6} | Team: {:<6}".format(captain.ss_number, captain.name, captain.team_id))
             #print(captain.ss_number, captain.name)
         print()
 
@@ -53,8 +53,8 @@ class Register_Score:
         captain_team = self.logic_wrapper.get_team_by_captain_id(captain_id)
         players = self.logic_wrapper.get_all_players()
         for player in players:
-            if player.team_name == captain_team.name:
-                print("Player ssn: {:<6} | Player name: {:<6} | Role: {:<12}| Team: {:<6}".format(player.ss_number, player.name, player.role, player.team_name))
+            if player.team_id == captain_team.id:
+                print("Player ssn: {:<6} | Player name: {:<6} | Role: {:<12}| Team: {:<6}".format(player.ss_number, player.name, player.role, player.team_id))
           
         # Finna hvaða leik þetta lið er að keppa í og birta upp eins og t.d.
         print()
@@ -83,16 +83,16 @@ class Register_Score:
         print()
         # birta út lista af leikmönnum í home_team
         for player in players:
-            if player.team_name == match.home_team:
-                print("{:<24} {:<24} {:<24} {:<24}".format(player.ss_number, player.name, player.role, player.team_name))
+            if player.team_id == match.home_team:
+                print("{:<24} {:<24} {:<24} {:<24}".format(player.ss_number, player.name, player.role, player.team_id))
         print()
         
         print("Players in Away team")
         print()
         # birta út lista af leikmönnum í away_team
         for player in players:
-            if player.team_name == match.away_team:
-                print("{:<24} {:<24} {:<24} {:<24}".format(player.ss_number, player.name, player.role, player.team_name))
+            if player.team_id == match.away_team:
+                print("{:<24} {:<24} {:<24} {:<24}".format(player.ss_number, player.name, player.role, player.team_id))
         print()
         
         
