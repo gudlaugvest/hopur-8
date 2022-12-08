@@ -10,6 +10,8 @@ class MainMenu_UI:
      
 
     def menu_output(self):
+        '''This function shows the menu bar for basement open which 
+        where the user has option to choose from'''
         print()
         print("####################################")
         print()
@@ -22,6 +24,8 @@ class MainMenu_UI:
 
 
     def input_prompt(self):
+        '''This function takes you to the selected option 
+        or gives error if the user inputs an incorrect information '''
         while True:
             self.menu_output()
             print()
