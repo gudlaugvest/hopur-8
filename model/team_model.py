@@ -6,4 +6,4 @@ class Team():
         self.captain_id = captain_id
 
     def __str__(self):
-        pass
+        return f"Name: {self.name}"
