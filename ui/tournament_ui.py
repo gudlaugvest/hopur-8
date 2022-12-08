@@ -18,6 +18,31 @@ class Tournament_UI:
 
 
     def input_prompt(self):
+    
+
+
+    def create_tournament():
+        pass
+
+
+    def update_tournament():
+        pass    
+        while True:
+            self.menu_output()
+            print()
+            command = input("Enter Command: ")
+            command = command.lower()
+            if command == "b":
+                break
+            elif command == "q":
+                return "q"
+            elif command == "1":
+                self.create_match_menu()
+            elif command == "2":
+                self.update_match_menu()
+            else:
+                print()
+                print("Invalid input, please try again!")    
         self.menu_output()
         print()
         command = input("Enter Command: ")
