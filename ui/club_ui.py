@@ -38,5 +38,4 @@ class Club_UI:
 
             self.logic_wrapper.create_club(club)
         else:
-            print()
             print("Invalid input, please try again!")
