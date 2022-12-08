@@ -48,8 +48,6 @@ class Team_Data:
     #    return None
 
 
-
-
     def get_team_by_name(self, name):
         all_teams = self.get_all_teams()
         for team in all_teams:
