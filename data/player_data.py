@@ -42,7 +42,8 @@ class Player_Data:
                 players.append(player)
         return players
 
-"""  def update_player(self, player):
+""" 
+    def update_player(self, player):
         players = self.read_all_players()
         for i in range(players):
             if players[i].id == player.id:
