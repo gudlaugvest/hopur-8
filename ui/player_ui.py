@@ -39,7 +39,7 @@ class Player_UI:
                     
                     
                     
-                    player.name = input("Enter Name: ")
+                    player.name = input("Enter Player name: ")
                     while True:
                         
                         try:

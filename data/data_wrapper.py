@@ -89,3 +89,6 @@ class Data_Wrapper:
 
     def get_match_by_id(self, id):
         return self.match_result_data.get_match_by_id(id)
+
+    def get_team_name_by_team_id(self, id):
+        return self.team_data.get_team_name_by_team_id(id)
