@@ -51,6 +51,8 @@ class Match_UI:
         match_.type_of_game = input("Enter Type Of Game: ")
         match_.date = input("Enter date of match: ")
 
+
+
         self.logic_wrapper.create_match_result(match_)
     
 
