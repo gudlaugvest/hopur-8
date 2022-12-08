@@ -20,6 +20,9 @@ class Team_Logic:
                 return player
         return None
 
+    def get_team_name_by_team_id(self, team_id):
+        return self.data_wrapper.get_team_name_by_team_id(team_id)
+
 
 
 

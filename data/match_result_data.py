@@ -9,17 +9,17 @@ class Match_Result_Data:
     def create_match_result(self, match):
         i = len(self.get_all_match_results()) + 1
         with open(self.file_name, "a", newline="", encoding="utf-8") as csvfile:
-            fieldnames = ["id", "home_team", "type_of_game", "away_team", "date"]
+            fieldnames = ["id", "home_team_id", "type_of_game", "away_team_id", "date"]
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
-            writer.writerow({"id": i, "home_team": match.home_team, "type_of_game": match.type_of_game, "away_team": match.away_team,"date": match.date})
+            writer.writerow({"id": i, "home_team_id": match.home_team_id, "type_of_game": match.type_of_game, "away_team_id": match.away_team_id,"date": match.date})
 
     def get_all_match_results(self):
         match_list = []
         with open(self.file_name, newline="" ,encoding="utf-8") as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                match_list.append(Match_Result_Model(row["id"], row["home_team"], row["type_of_game"], row["away_team"], row["date"]))
+                match_list.append(Match_Result_Model(row["id"], row["home_team_id"], row["type_of_game"], row["away_team_id"], row["date"]))
         return match_list
 
     def unplayed_matches(self, date):
@@ -39,9 +39,9 @@ class Match_Result_Data:
 
 
 
-    def get_match_result(self, home_team, type_of_game, away_team):
+    def get_match_result(self, home_team_id, type_of_game, away_team_id):
         for match_result in self.get_all_match_results():
-            if match_result.home_team == home_team and match_result.type_of_game == type_of_game and match_result.away_team == away_team:
+            if match_result.home_team_id == home_team_id and match_result.type_of_game == type_of_game and match_result.away_team_id == away_team_id:
                 return match_result
    
 
@@ -52,11 +52,11 @@ class Match_Result_Data:
                 all_matches[i] = match
         
         with open(self.file_name, "w", newline="", encoding="utf-8") as csvfile:
-            fieldnames = ["id", "home_team", "type_of_game", "away_team", "date"]
+            fieldnames = ["id", "home_team_id", "type_of_game", "away_team_id", "date"]
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             writer.writeheader()
             for i in range(len(all_matches)):
-                writer.writerow({"id": all_matches[i].id, "home_team": all_matches[i].home_team, "type_of_game": all_matches[i].type_of_game, "away_team": all_matches[i].away_team,"date": all_matches[i].date})
+                writer.writerow({"id": all_matches[i].id, "home_team_id": all_matches[i].home_team_id, "type_of_game": all_matches[i].type_of_game, "away_team_id": all_matches[i].away_team_id,"date": all_matches[i].date})
         
 
     def delete_match_result(self, match):
