@@ -100,7 +100,8 @@ class Register_Score:
                 print("{:<24} {:<24} {:<24} {:<24}".format(player.ss_number, player.name, player.role, player.team_id))
         print()
         
-        Game_UI() # Kalla á ui fall sem mun sjá um að setja inn stig fyrir hvern leik
+        game = Game_UI(self.logic_wrapper)
+        game.input_prompt() # Kalla á ui fall sem mun sjá um að setja inn stig fyrir hvern leik
         # Síðan þarf að slá inn ssn fyrir hvaða leikmaður spilaði hvaða leik og líka ssn hjá player í away team
         
         

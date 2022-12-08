@@ -2,3 +2,5 @@
 *.csv
 file/matches.csv
 file/game.csv
+file/game.csv
+ui/game_ui.py
