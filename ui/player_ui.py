@@ -69,7 +69,9 @@ class Player_UI:
                     while True:    
                         try:
                             player.role = input("Enter Players Role(Captain/Player): ")
-                            if player.role == "Player".lower() or "Captain".lower():
+                            if player.role == "Player".lower():
+                                break
+                            elif player.role =="Captain".lower():
                                 break
                             else:
                                 print("Not a valid role, try again")
@@ -78,14 +80,14 @@ class Player_UI:
                             ValueError
                             
                             
+                    team_name = input("Enter Team Name: ")
+                    team_name = team_name.lower()
+                    team = self.logic_wrapper.get_team_by_name(team_name) 
+                    while team is None:
+                        print("No team found with that name")
                         team_name = input("Enter Team Name: ")
                         team_name = team_name.lower()
                         team = self.logic_wrapper.get_team_by_name(team_name) 
-                        while team is None:
-                            print("No team found with that name")
-                            team_name = input("Enter Team Name: ")
-                            team_name = team_name.lower()
-                            team = self.logic_wrapper.get_team_by_name(team_name) 
 
 
                         print()          
@@ -101,4 +103,3 @@ class Player_UI:
             print()
             print("Invalid input, please try again!")
 
-            
