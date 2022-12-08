@@ -27,63 +27,67 @@ class Player_UI:
         elif command == "c":
             print()
             #villucheck
-            how_many = int(input("How many players?: "))
-            while how_many < 4:
-                print()
-                print("Players for each team has to be at least 4! Please try again!")
-                how_many = int(input("How many players?: "))
-                print()
-            else:
-                for i in range(how_many):
-                    print()
-                    player = Player()
-                    player.name = input("Enter Player name: ")
-                    while True:
-                        try:
-                            player.ss_number = input("Enter Social Security Number(0000000000): ")
-                            if len(player.ss_number) == 10:
-                                break
-                            else:
-                                print()
-                                print("Invalid ss number, try again")
-                        except:
-                            ValueError
-                           
-                    player.home_address = input("Enter Home Address: ")
-                    while True:
-                        try:
-                            player.phone_number = input("Enter phone number: ")
-                            if len(player.phone_number) == 7:
-                                break
-                            else:
-                                print()
-                                print("Not a valid phone number, try againn")
+            while True:
+                try:
+                    how_many = int(input("How many players?: "))
+                    while how_many < 4:
+                        break
+                    else:
+                        print()
+                        print("Players for each team has to be at least 4! Please try again!")
+                except:
+                    ValueError
+                    
+                    for i in range(how_many):
+                        print()
+                        player = Player()
+                        player.name = input("Enter Player name: ")
+                        while True:
+                            try:
+                                player.ss_number = input("Enter Social Security Number(0000000000): ")
+                                if len(player.ss_number) == 10:
+                                    break
+                                else:
+                                    print()
+                                    print("Invalid ss number, try again")
+                            except:
+                                ValueError
+                            
+                        player.home_address = input("Enter Home Address: ")
+                        while True:
+                            try:
+                                player.phone_number = input("Enter phone number: ")
+                                if len(player.phone_number) == 7:
+                                    break
+                                else:
+                                    print()
+                                    print("Not a valid phone number, try againn")
+                                    
+                            except:
+                                ValueError
+                        player.email_address = input("Enter Email Address: ")
+                        while True:    
+                            try:
+                                player.role = input("Enter Players Role(Captain/Player): ")
+                                if player.role == "Player".lower():
+                                    break
+                                elif player.role =="Captain".lower():
+                                    break
+                                else:
+                                    print()
+                                    print("Not a valid role, try again")
+                            except:
+                                ValueError
                                 
-                        except:
-                            ValueError
-                    player.email_address = input("Enter Email Address: ")
-                    while True:    
-                        try:
-                            player.role = input("Enter Players Role(Captain/Player): ")
-                            if player.role == "Player".lower():
-                                break
-                            elif player.role =="Captain".lower():
-                                break
-                            else:
-                                print()
-                                print("Not a valid role, try again")
-                        except:
-                            ValueError
-                            
-                            
-                    team_name = input("Enter Team Name: ")
-                    team_name = team_name.lower()
-                    team = self.logic_wrapper.get_team_by_name(team_name) 
-                    while team is None:
-                        print("No team found with that name")
+                                
                         team_name = input("Enter Team Name: ")
                         team_name = team_name.lower()
-                        team = self.logic_wrapper.get_team_by_name(team_name)  
+                        team = self.logic_wrapper.get_team_by_name(team_name) 
+                        while team is None:
+                            print("No team found with that name")
+                            team_name = input("Enter Team Name: ")
+                            team_name = team_name.lower()
+                            team = self.logic_wrapper.get_team_by_name(team_name)  
 
 
                     print()          

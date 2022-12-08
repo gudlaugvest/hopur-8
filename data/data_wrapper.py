@@ -55,6 +55,9 @@ class Data_Wrapper:
     def create_tournament(self, tournament):
         return self.tournament_data.create_tournament(tournament)
 
+    def update_tournament(self, tournament):
+        return self.tournament_data.update_tournament(tournament)    
+
     def get_all_tournaments(self):
         return self.tournament_data.get_all_tournaments()
 
