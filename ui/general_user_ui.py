@@ -29,11 +29,13 @@ class General_User_UI:
             elif command == "q":
                 quit()
             elif command == "1":
-                teams = self.logic_wrapper.get_team()
+                teams = self.logic_wrapper.get_all_teams()
                 players = self.logic_wrapper.get_all_players()
                 for team in teams:
-                    if team.id == players.team_id:
-                        return team.name
+                    print(f"Team name: {team.name}")
+                    for player in players:
+                        if team.id == player.team_id:
+                            print(player)
 
             elif command == "2":
                 pass

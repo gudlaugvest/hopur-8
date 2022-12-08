@@ -10,4 +10,5 @@ class Player:
 
 
     def __str__(self):
-        return f"{self.name:<12} {self.role:<12}  |  {self.team_name:<12}"
+        #return f"{self.name:<12} {self.role:<12}  |  {self.team_name:<12}"
+        return f"{self.name:<12} {self.role:<12}"
