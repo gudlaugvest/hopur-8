@@ -9,9 +9,9 @@ class Player_Data:
 
     def create_player(self, player):
         with open(self.file_name, "a", newline="", encoding="utf-8") as csvfile:
-            fieldnames = ["name", "ss_number", "home_address", "phone_number", "email_address", "role", "team_name"]
+            fieldnames = ["name", "ss_number", "home_address", "phone_number", "email_address", "role", "team_id"]
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-            writer.writerow({"name": player.name, "ss_number": player.ss_number, "home_address": player.home_address, "phone_number": player.phone_number, "email_address": player.email_address, "role": player.role, "team_name": player.team_name })
+            writer.writerow({"name": player.name, "ss_number": player.ss_number, "home_address": player.home_address, "phone_number": player.phone_number, "email_address": player.email_address, "role": player.role, "team_id": player.team_id })
 
 
     def read_all_players(self):
@@ -19,7 +19,7 @@ class Player_Data:
         with open(self.file_name, newline="" ,encoding="utf-8") as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                player_list.append(Player(row["name"], row["ss_number"],row["home_address"], row["phone_number"], row["email_address"],row["role"], row["team_name"]))
+                player_list.append(Player(row["name"], row["ss_number"],row["home_address"], row["phone_number"], row["email_address"],row["role"], row["team_id"]))
         return player_list
 
     def get_player_by_name(self, name):
@@ -42,7 +42,9 @@ class Player_Data:
                 players.append(player)
         return players
 
-"""  def update_player(self, player):
+
+""" 
+    def update_player(self, player):
         players = self.read_all_players()
         for i in range(players):
             if players[i].id == player.id:

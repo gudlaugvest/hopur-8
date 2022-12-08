@@ -1,12 +1,13 @@
 name,ss_number,home_address,phone_number,email_address,role,team_id
-Jonni,0320002345,Laufrimi 13,8889999,jonni@ru.is,player,lið1
-Gunni,0303032345,Gustav 13,565657585,gunni@ru.is,captain,lið1
-Patti,0402012343,Vik 12,54642453,patti@ru.is,player,lið1
-Stebbi,0912993456,Vikuvegur 98,8454675,stebbi@ru.is,player,lið1
-gulla,9384758475,grenasbrau 12,0987678,lotta@gmail.com,Captain,
-johann,6546543234,sfdgfhfjh 12,9384757,dfghj,Player,
-lotta,3049890987,djsnfldkgfmhjk,7382555,dfghj,player,
-daniel,3342424242,sadfgjk,2678765,sadfgh,Player,
-dsfgh,3456787656,dasgfhfg,3454345,dsfdgfhg,player,lið2
-sdfgf,3454345434,dsfgh,4565456,efdsghj,player,lið2
+Jonni,0320002345,Laufrimi 13,8889999,jonni@ru.is,player,3
+Gunni,0303032345,Gustav 13,565657585,gunni@ru.is,captain,3
+Patti,0000000002,Vik 12,54642453,patti@ru.is,captain,1
+Stebbi,0912993456,Vikuvegur 98,8454675,stebbi@ru.is,player,1
+gulla,9384758475,grenasbrau 12,0987678,lotta@gmail.com,player,3
+johann,6546543234,sfdgfhfjh 12,9384757,dfghj,Player,2
+lotta,3049890987,djsnfldkgfmhjk,7382555,dfghj,player,3
+daniel,3342424242,sadfgjk,2678765,sadfgh,captain,2
+dsfgh,3456787656,dasgfhfg,3454345,dsfdgfhg,player,3
+sdfgf,3454345434,dsfgh,4565456,efdsghj,player,2
 sdfghj,1234555555,dfbgfnhg,4444444,dsgfhj,player,2
+gulla,0303030303,fadsgfdhg,9494944,sdsfdbg,player,1

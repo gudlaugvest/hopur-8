@@ -7,14 +7,10 @@ class Team_Logic:
         
 
     def create_team(self, team):
-        self.data_wrapper.create_team(team)
+        return self.data_wrapper.create_team(team)
 
     def get_team_by_Id(self, team_id):
-        teams = self.data_wrapper.get_all_teams()
-        for team in teams:
-            if team.id == team_id:
-                return team
-        return None
+        return self.data_wrapper.get_team_by_Id(team_id)
     
     def get_captain(self, team_id):
         the_team = self.get_team_by_Id(team_id)
@@ -23,6 +19,7 @@ class Team_Logic:
             if player.ss_number == the_team.captain_id:
                 return player
         return None
+
 
 
 

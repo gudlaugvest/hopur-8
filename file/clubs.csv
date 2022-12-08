@@ -5,11 +5,9 @@ id,name,home_address,phone_number
 4,Tviund,sdfgh 5,"['772', '7236']"
 5,Tviund,asdfgf 6,7890954
 6,hgfd,hgfd,123
-<<<<<<< HEAD
 7,jhgfd,jhgfd,1234567
-=======
 7,dsfgh,erghtyu,3232
 8,sadfg,gfdsa,321
 9,gfrsd,feds,32
 10,dfg,hngfd,23
->>>>>>> 72ce487da0aff08614158b0567dda42106099cd1
+11,dsfg,safdghj,3434

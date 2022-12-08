@@ -87,36 +87,17 @@ class Player_UI:
                             team_name = team_name.lower()
                             team = self.logic_wrapper.get_team_by_name(team_name) 
 
+
                         print()          
                         player.team_name = team.id
                         self.logic_wrapper.create_player(player)   
+
+                    print()          
+                    player.team_id = team.id
+                    self.logic_wrapper.create_player(player)   
+
                     
         else:
             print()
             print("Invalid input, please try again!")
-'''while True:
-  try:
-    number = int(input("Please enter an integer: "))
-    break
-  except ValueError:
-    print("Oops! That was not a valid number. Try again...")
-
-    while True:
-    try:
-        user_input = input("Enter your input: ")
-        if len(user_input) == 7:
-            break
-        else:
-            print("Invalid input - must be 7 characters long")
-    except:
-        print("Error - please enter a valid input")'''         
-
-'''while True:
-    try:
-        myInput = input("Please enter a 7-digit number: ")
-        if len(myInput) != 7:
-            raise ValueError
-    except ValueError:
-        print("The number must have exactly 7 digits")
-    else:
-        break'''        
+       
