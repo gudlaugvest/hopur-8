@@ -26,6 +26,7 @@ class Player_UI:
             return "b"
         elif command == "c":
             print()
+            #villucheck
             how_many = int(input("How many players?: "))
             while how_many < 4:
                 print()
@@ -36,12 +37,8 @@ class Player_UI:
                 for i in range(how_many):
                     print()
                     player = Player()
-                    
-                    
-                    
                     player.name = input("Enter Player name: ")
                     while True:
-                        
                         try:
                             player.ss_number = input("Enter Social Security Number(0000000000): ")
                             if len(player.ss_number) == 10:
@@ -52,7 +49,6 @@ class Player_UI:
                             ValueError
                            
                     player.home_address = input("Enter Home Address: ")
-                        
                     while True:
                         try:
                             player.phone_number = input("Enter phone number: ")
@@ -63,8 +59,6 @@ class Player_UI:
                                 
                         except:
                             ValueError
-                            
-                                
                     player.email_address = input("Enter Email Address: ")
                     while True:    
                         try:
