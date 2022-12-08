@@ -6,7 +6,7 @@ class Game_data:
     def __init__(self):
         self.file_name = "file/game.csv"
     
-    def create_game(self, club):
+    def create_game(self, game):
         i = len(self.get_all_games()) + 1
         with open(self.file_name, "a", newline="", encoding="utf-8") as csvfile:
             fieldnames = ["id", "home_team_player_ssn", "away_team_player_ssn", "score", "type_of_game"]
