@@ -63,6 +63,7 @@ class Register_Score:
         matches = self.logic_wrapper.get_all_match_results()
         for match in matches:
             if match.home_team == captain_team.name:
+
                 print("Match id: {:<6} | Home team: {:<6} :versus: Away team: {:<6}".format(match.id, match.home_team, match.away_team))
         print()
         
