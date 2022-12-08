@@ -116,3 +116,6 @@ class Register_Score:
 # Þarft að finna liðin eftir nöfnunum á liðunum
 # Svo getur þú kallað í get_players_by_team_id og kalla fyrir bæði liðin
 # Þetta mun skila tveimur listum þ.a 1 listi fyrir home team og annar fyrir away team
+
+
+#
