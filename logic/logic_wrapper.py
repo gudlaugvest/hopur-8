@@ -44,6 +44,9 @@ class Logic_Wrapper:
     def create_tournament(self, tournament):
         return self.tournament_logic.create_tournament(tournament)
 
+    def update_tournament(self, tournament):
+        return self.tournament_logic.update_tournament(tournament)    
+
 
     def register_team_to_match(self):
         return self.tournament_logic.register_team_to_match()        

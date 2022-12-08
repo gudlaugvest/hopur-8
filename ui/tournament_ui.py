@@ -42,5 +42,7 @@ class Tournament_UI:
             tournament.end_date = datetime(year, month, day)
             self.logic_wrapper.create_tournament(tournament)
         elif command == "2":
-            pass    
-            
+            tournament = Tournament()
+            update_tournamnet = self.logic_wrapper.update_tournament(tournament)
+            for info in update_tournamnet:
+                print(info)    
