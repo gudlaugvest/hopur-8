@@ -33,6 +33,7 @@ class Club_UI:
                     else:
                         raise ValueError
                 except ValueError:
+                    print()
                     print ("Invalid phone number, try again")
 
             self.logic_wrapper.create_club(club)

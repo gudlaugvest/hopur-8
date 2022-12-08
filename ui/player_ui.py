@@ -30,7 +30,7 @@ class Player_UI:
             how_many = int(input("How many players?: "))
             while how_many < 4:
                 print()
-                print("Players for each team has to be at least 4! Please try again!\n")
+                print("Players for each team has to be at least 4! Please try again!")
                 how_many = int(input("How many players?: "))
                 print()
             else:
@@ -44,6 +44,7 @@ class Player_UI:
                             if len(player.ss_number) == 10:
                                 break
                             else:
+                                print()
                                 print("Invalid ss number, try again")
                         except:
                             ValueError
@@ -55,7 +56,8 @@ class Player_UI:
                             if len(player.phone_number) == 7:
                                 break
                             else:
-                                print("Not a valid phone number, try again")
+                                print()
+                                print("Not a valid phone number, try againn")
                                 
                         except:
                             ValueError
@@ -68,6 +70,7 @@ class Player_UI:
                             elif player.role =="Captain".lower():
                                 break
                             else:
+                                print()
                                 print("Not a valid role, try again")
                         except:
                             ValueError
