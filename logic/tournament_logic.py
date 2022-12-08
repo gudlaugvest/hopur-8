@@ -11,6 +11,9 @@ class Tournament_Logic:
         '''this function creates a tournament'''
         self.data_wrapper.create_tournament(tournament)
 
+    def update_tournament(self,tournament):
+        self.data_wrapper.update_tournament(tournament)    
+
 
     def get_all_tournaments(self):
         '''This function gets all tournaments'''

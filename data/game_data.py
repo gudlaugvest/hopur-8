@@ -1,5 +1,5 @@
 import csv
-from model.game_model import Game
+from model.game_model import Game_Model
 
 class Game_data:
     
@@ -18,7 +18,7 @@ class Game_data:
         with open(self.file_name, newline="" ,encoding="utf-8") as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                game_list.append(Game(row["home_team_player_ssn"], row["away_team_player_ssn"], row["score"], row["type_of_game"]))
+                game_list.append(Game_Model(row["home_team_player_ssn"], row["away_team_player_ssn"], row["score"], row["type_of_game"]))
         return game_list
 
 

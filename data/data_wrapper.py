@@ -3,6 +3,7 @@ from data.team_data import Team_Data
 from data.tournament_data import Tournament_Data
 from data.clubs_data import Clubs_Data
 from data.match_result_data import Match_Result_Data
+from data.game_data import Game_data
 
 
 class Data_Wrapper:
@@ -12,6 +13,7 @@ class Data_Wrapper:
         self.tournament_data = Tournament_Data()
         self.club_data = Clubs_Data()
         self.match_result_data = Match_Result_Data()
+        self.game_data = Game_data()
 
 
     def create_player(self, player):
@@ -53,6 +55,9 @@ class Data_Wrapper:
     def create_tournament(self, tournament):
         return self.tournament_data.create_tournament(tournament)
 
+    def update_tournament(self, tournament):
+        return self.tournament_data.update_tournament(tournament)    
+
     def get_all_tournaments(self):
         return self.tournament_data.get_all_tournaments()
 
@@ -92,3 +97,9 @@ class Data_Wrapper:
 
     def get_team_name_by_team_id(self, id):
         return self.team_data.get_team_name_by_team_id(id)
+
+    def create_game(self, game):
+        return self.game_data.create_game(game)
+    
+    def get_all_games(self):
+        return self.game_data.get_all_games()

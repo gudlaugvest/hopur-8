@@ -17,7 +17,8 @@ class Tournament_Data:
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
             writer.writerow({"id": i,"name": tournament.name, "start_date": tournament.start_date, "end_date": tournament.end_date})
-
+       
+        
     def get_all_tournaments(self):
         tournament_list = []
         with open(self.file_name, newline="" ,encoding="utf-8") as csvfile:
@@ -29,6 +30,24 @@ class Tournament_Data:
                 #ending_date = datetime(year=end_date.split('.')[2], month=end_date.split('.')[1], day=end_date.split('.')[0])
                 tournament_list.append(Tournament(row["id"], row["name"],row["start_date"], row["end_date"]))
         return tournament_list
+
+    def update_tournament(self, tournament):
+        tournament_list = self.get_all_tournaments()
+        for i in range(len(tournament_list)):
+            if tournament.id == tournament_list[i].id:
+                tournament_list[i] = tournament
+        
+
+        with open(self.file_name, "w", newline="", encoding="utf-8") as csvfile:
+            fieldnames = ["id", "name", "start_date", "end_date"]
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writeheader()
+            for i in range(len(tournament_list)):
+                writer.writerow({"id": tournament_list[i].id, "name": tournament_list[i].name, "start_date": tournament_list[i].start_date, "end_date": tournament_list[i].end_date})
+                
+        
+        
+               
 
     def register_type_of_match(self):
         '''This function specifies what type of match'''

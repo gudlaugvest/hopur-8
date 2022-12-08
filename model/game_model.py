@@ -9,4 +9,4 @@ class Game_Model:
         self.type_of_game = type_of_game
 
     def __str__(self):
-        return f"{self.home_team_player_ssn:<24} {self.score} {self.away_team_players_ssn:<24} {self.type_of_game:<24}"
+        return f"{self.home_team_player_ssn:<24} {self.score} {self.away_team_player_ssn:<24} {self.type_of_game:<24}"
