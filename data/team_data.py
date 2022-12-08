@@ -22,7 +22,7 @@ class Team_Data:
                 team_list.append(Team(row["id"], row["name"], row["club"], row["captain_id"]))
         return team_list
 
-    def get_captain (self, team_id):
+    def get_captain(self, team_id):
         teams = self.get_all_teams()
         correct_team = None
         for team in teams:
