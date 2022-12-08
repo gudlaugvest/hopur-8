@@ -17,7 +17,7 @@ class MainMenu_UI:
         print()
         print("Basement-Open".rjust(23))
         print()
-        print("1. Tournament Orginizer")
+        print("1. Tournament Organizer")
         print("2. General User")
         print("3. Captain Menu")
         print("q. Quit")
