@@ -24,14 +24,13 @@ class Club_UI:
             print()
             club.name = input("Enter Name: ")
             club.home_address = input("Enter Home Address: ")
-            club.phone_number = input("Enter Phone Number(0000000): ")
             try:
+                club.phone_number = input("Enter Phone Number(0000000): ")
                 while len(club.phone_number) != 7:
+                    club.phone_number = input("Enter Phone Number(0000000): ")
                     raise ValueError("Invalid phone number, try again")
             except ValueError as error:
-                print(error)
-                club.phone_number = input("Enter Phone Number(0000000): ")
-                
+                print(error)                
             self.logic_wrapper.create_club(club)
         else:
             print()
