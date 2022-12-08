@@ -30,6 +30,7 @@ class Register_Score:
         # Birta lista af öllum team captains
         # Velja úr þeim lista eftir kennitölu eða id fyrir framan
         # Hver team captain ætti aðeins að gera einu sinni results (held ég skildi þetta sem þannig)
+        # Birta lista af spilurum í home team og away team
         # Svo er spurt hver spilaði hvaða leik 4x501...... hafa lista af spilurum úr baðum liðum
         # Svo er beðið um result (for loopa sem er farið í gegnum 7 sinnum) (wihle loopu með counter upp í 7 (0-6))
         # á meðan counter er á milli 0-3 þá eru 501 leikir
@@ -99,7 +100,7 @@ class Register_Score:
                 print("{:<24} {:<24} {:<24} {:<24}".format(player.ss_number, player.name, player.role, player.team_id))
         print()
         
-        
+        game_ui() # Kalla á ui fall sem mun sjá um að setja inn stig fyrir hvern leik
         # Síðan þarf að slá inn ssn fyrir hvaða leikmaður spilaði hvaða leik og líka ssn hjá player í away team
         
         
