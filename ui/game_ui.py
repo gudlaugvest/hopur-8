@@ -19,7 +19,7 @@ class Game_UI:
             while game_counter != 4:
                 home_team_player_ssn = input("Enter Home Team Player SSN: ")
                 away_team_players_ssn = input("Enter Away Team Player SSN: ")
-                score = input("Enter Score: ")
+                score = input("Enter Score (0-0): ")
                 type_of_game = input("Enter Type of Game: ")
                 game = Game_Model(home_team_player_ssn, away_team_players_ssn, score, type_of_game)
                 game_counter += 1
