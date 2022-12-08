@@ -29,5 +29,4 @@ class Captain_UI:
                 register_score = Register_Score(self.logic_wrapper)
                 register_score.input_prompt()
             else:
-                print()
                 print("Invalid input, try again!")
