@@ -3,7 +3,7 @@ PLAYER_NAME = 'NAME'
 ROLE = 'ROLE'
 TEAM_NAME = 'TEAM'
 
-
+from ui.game_ui import Game_UI
 
 class Register_Score:
 
@@ -100,7 +100,7 @@ class Register_Score:
                 print("{:<24} {:<24} {:<24} {:<24}".format(player.ss_number, player.name, player.role, player.team_id))
         print()
         
-        game_ui() # Kalla á ui fall sem mun sjá um að setja inn stig fyrir hvern leik
+        Game_UI() # Kalla á ui fall sem mun sjá um að setja inn stig fyrir hvern leik
         # Síðan þarf að slá inn ssn fyrir hvaða leikmaður spilaði hvaða leik og líka ssn hjá player í away team
         
         

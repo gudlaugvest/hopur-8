@@ -5,6 +5,7 @@ from logic.team_logic import Team_Logic
 from logic.tournament_logic import Tournament_Logic
 from logic.clubs_logic import Clubs_Logic
 from logic.match_result_logic import Match_Result_Logic
+from logic.game_logic import Game_Logic
 
 
 class Logic_Wrapper:
@@ -15,6 +16,7 @@ class Logic_Wrapper:
         self.tournament_logic = Tournament_Logic(self.data_wrapper)
         self.clubs_logic = Clubs_Logic(self.data_wrapper)
         self.match_result = Match_Result_Logic(self.data_wrapper)
+        self.game_logic = Game_Logic(self.data_wrapper)
 
     def create_player(self, player):
         """Takes in customer object and forwards it to the data layer"""
@@ -104,3 +106,9 @@ class Logic_Wrapper:
 
     def get_team_name_by_team_id(self, team_id):
         return self.team_logic.get_team_name_by_team_id(team_id)
+
+    def create_game(self, game):
+        return self.game_logic.create_game(game)
+    
+    def get_all_games(self):
+        return self.game_logic.get_all_games()
