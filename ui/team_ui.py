@@ -28,13 +28,12 @@ class Team_UI:
             team.club = input("Enter Club name: ")
             team.name = input("Enter Team name: ")
             captain_ssn = input("Choose a captain for this team, enter captain SSN: ")
-            self.logic_wrapper.update_player()
             captain = self.logic_wrapper.get_player_by_id(captain_ssn)
             if captain is None:
                 print()
                 print("No player found with that id! Please Try again!")
                 return
-            team.captain_id = captain.ssn_number
+            team.captain_id = captain.ss_number
             self.logic_wrapper.create_team(team)
         else:
             print()

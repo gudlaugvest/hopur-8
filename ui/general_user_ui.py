@@ -32,11 +32,12 @@ class General_User_UI:
                 teams = self.logic_wrapper.get_all_teams()
                 players = self.logic_wrapper.get_all_players()
                 for team in teams:
+                    print()
                     print(f"Team name: {team.name}")
+                    print()
                     for player in players:
                         if team.id == player.team_id:
                             print(player)
-
             elif command == "2":
                 pass
             elif command == "3":
