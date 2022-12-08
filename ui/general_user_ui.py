@@ -29,9 +29,12 @@ class General_User_UI:
             elif command == "q":
                 quit()
             elif command == "1":
-                list_of_players_and_teams = self.logic_wrapper.get_all_players()
-                for elem in list_of_players_and_teams:
-                    print(elem)
+                teams = self.logic_wrapper.get_team()
+                players = self.logic_wrapper.get_all_players()
+                for team in teams:
+                    if team.id == players.team_id:
+                        return team.name
+
             elif command == "2":
                 pass
             elif command == "3":
