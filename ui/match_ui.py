@@ -8,6 +8,7 @@ class Match_UI:
         
 
     def menu_output(self):
+        """Print out Match Menu and options that user picks on what to do next"""
         print()
         print("####################################")
         print()
@@ -18,6 +19,7 @@ class Match_UI:
         print("b. Go Back")
 
     def input_prompt(self):
+        """Get user input on what option they picked"""
         while True:
             self.menu_output()
             print()
@@ -36,6 +38,7 @@ class Match_UI:
                 print("Invalid input, please try again!")
     
     def create_match_menu(self):
+        """Prints out header and gets user input on creating a match"""
         print()
         print("####################################")
         print()
@@ -54,7 +57,7 @@ class Match_UI:
     
 
     def update_match_menu(self):
-        
+        """Prints out header and gets user input on updating a match"""
         print()
         print("####################################")
         print()

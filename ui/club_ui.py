@@ -8,6 +8,7 @@ class Club_UI:
         self.logic_wrapper = logic_connection
 
     def menu_output(self):
+        """Print out Club Menu with options on what the user wants to do next"""
         print()
         print("####################################\n")
         print("Club\n".rjust(19))
@@ -15,6 +16,7 @@ class Club_UI:
         print("b. Go Back To Organizer Menu\n")
 
     def input_prompt(self):
+        """Get user input"""
         self.menu_output()
         command = input("Enter Command: ")
         if command == "b":

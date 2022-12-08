@@ -8,6 +8,7 @@ class Player_Data:
             
 
     def create_player(self, player):
+        """Create Player and write into a csvfile named player.csv"""
         with open(self.file_name, "a", newline="", encoding="utf-8") as csvfile:
             fieldnames = ["name", "ss_number", "home_address", "phone_number", "email_address", "role", "team_id"]
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
@@ -15,6 +16,7 @@ class Player_Data:
 
 
     def read_all_players(self):
+        """Return all player attributes that are in player.csv file"""
         player_list = []
         with open(self.file_name, newline="" ,encoding="utf-8") as csvfile:
             reader = csv.DictReader(csvfile)
@@ -23,18 +25,21 @@ class Player_Data:
         return player_list
 
     def get_player_by_name(self, name):
+        """Loop through player.csv and get name of player"""
         all_players = self.read_all_players()
         for player in all_players:
             if player.name == name:
                 return player
     
     def get_player_by_id(self, ss_number):
+        """Loop through player.csv and get social security number"""
         all_players = self.read_all_players()
         for player in all_players:
             if player.ss_number == ss_number:
                 return player
     
     def get_players_by_team_id(self, team_id):
+        """Loop through player.csv and get players with the same team id"""
         all_players = self.read_all_players()
         players = []
         for player in all_players:

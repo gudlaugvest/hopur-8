@@ -7,6 +7,7 @@ class Game_data:
         self.file_name = "file/game.csv"
     
     def create_game(self, game):
+        """Create Game and write into csv file named game.csv"""
         i = len(self.get_all_games()) + 1
         with open(self.file_name, "a", newline="", encoding="utf-8") as csvfile:
             fieldnames = ["id", "home_team_player_ssn", "away_team_player_ssn", "score", "type_of_game"]
@@ -14,6 +15,7 @@ class Game_data:
             writer.writerow({"id" : i, "home_team_player_ssn": game.home_team_player_ssn, "away_team_player_ssn": game.away_team_player_ssn, "score": game.score, "type_of_game": game.type_of_game})
 
     def get_all_games(self):
+        """Return all game attributes that are in game.csv file """
         game_list = []
         with open(self.file_name, newline="" ,encoding="utf-8") as csvfile:
             reader = csv.DictReader(csvfile)

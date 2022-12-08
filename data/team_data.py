@@ -7,6 +7,7 @@ class Team_Data:
         self.file_name = "file/team.csv"
 
     def create_team(self, team: Team):
+        """Create Team and write into a csv file named team.csv"""
         i = len(self.get_all_teams()) + 1
         with open(self.file_name, "a", newline="", encoding="utf-8") as csvfile:
             fieldnames = ["id", "name", "club", "captain_id"] 
@@ -15,6 +16,7 @@ class Team_Data:
             writer.writerow({"id": i, "name": team.name, "club": team.club, "captain_id": team.captain_id})
 
     def get_all_teams(self):
+        """Return all team attributes that are in teams.csv"""
         team_list = []
         with open(self.file_name, newline="" ,encoding="utf-8") as csvfile:
             reader = csv.DictReader(csvfile)
@@ -23,6 +25,7 @@ class Team_Data:
         return team_list
 
     def get_captain(self, team_id):
+        """Get captain ssn number from player.csv file and return that player if captain is not found return None"""
         the_team = self.get_team_by_Id(team_id)
         players = self.data_wrapper.get_all_players()
         for player in players:
@@ -31,6 +34,7 @@ class Team_Data:
         return None
     
     def get_team_by_Id(self, team_id):
+        """Loop through team.csv and get team id"""
         all_teams = self.get_all_teams()
         for team in all_teams:
             if team.id == team_id:
@@ -49,6 +53,7 @@ class Team_Data:
 
 
     def get_team_by_name(self, name):
+        """Loop through team.csv and get team name"""
         all_teams = self.get_all_teams()
         for team in all_teams:
             if team.name == name:
@@ -56,12 +61,14 @@ class Team_Data:
 
 
     def get_team_by_captain_id(self, captain_id):
+        """Loop through team.csv and get captain ssn"""
         all_teams = self.get_all_teams()
         for team in all_teams:
             if team.captain_id == captain_id:
                 return team
 
     def get_team_name_by_team_id(self, team_id):
+        """Loop through team.csv and get team name using team id"""
         all_teams = self.get_all_teams()
         for team in all_teams:
             if team.id == team_id:

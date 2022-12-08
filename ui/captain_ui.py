@@ -8,6 +8,7 @@ class Captain_UI:
 
 
     def menu_output(self):
+        """Print out Captain Menu with options on what Captain can do"""
         print()
         print("####################################\n")
         print("Captain Menu\n".rjust(23))
@@ -17,6 +18,7 @@ class Captain_UI:
 
 
     def input_prompt(self):
+        """Get input from user"""
         while True:
             self.menu_output()
             command = input("Enter Command: ")
