@@ -101,3 +101,6 @@ class Logic_Wrapper:
 
     def get_match_by_id(self, match_id):
         return self.match_result.get_match_by_id(match_id)
+
+    def get_team_name_by_team_id(self, team_id):
+        return self.team_logic.get_team_name_by_team_id(team_id)

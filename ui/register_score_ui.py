@@ -53,8 +53,9 @@ class Register_Score:
         captain_team = self.logic_wrapper.get_team_by_captain_id(captain_id)
         players = self.logic_wrapper.get_all_players()
         for player in players:
+            #captain_team_name = self.logic_wrapper.get_team_name_by_team_id(captain_team.id)
             if player.team_id == captain_team.id:
-                print("Player ssn: {:<6} | Player name: {:<6} | Role: {:<12}| Team: {:<6}".format(player.ss_number, player.name, player.role, player.team_id))
+                print("Player ssn: {:<6} | Player name: {:<6} | Role: {:<12}| Team: {:<6}".format(player.ss_number, player.name, player.role, captain_team.name))
           
         # Finna hvaða leik þetta lið er að keppa í og birta upp eins og t.d.
         print()
@@ -62,9 +63,11 @@ class Register_Score:
         print("Leikur sem liðið er að spila: ")
         matches = self.logic_wrapper.get_all_match_results()
         for match in matches:
-            if match.home_team == captain_team.name:
-
-                print("Match id: {:<6} | Home team: {:<6} :versus: Away team: {:<6}".format(match.id, match.home_team, match.away_team))
+            #captain_team_name = self.logic_wrapper.get_team_by_name(captain_team.id)
+            if match.home_team_id == captain_team.id:
+                home_team_name = self.logic_wrapper.get_team_name_by_team_id(match.home_team_id)
+                away_team_name = self.logic_wrapper.get_team_name_by_team_id(match.away_team_id)
+                print("Match id: {:<6} | Home team: {:<6} :versus: Away team: {:<6}".format(match.id, home_team_name, away_team_name))
         print()
         
         # Velja síðan útfrá match id
@@ -84,7 +87,7 @@ class Register_Score:
         print()
         # birta út lista af leikmönnum í home_team
         for player in players:
-            if player.team_id == match.home_team:
+            if player.team_id == match.home_team_id:
                 print("{:<24} {:<24} {:<24} {:<24}".format(player.ss_number, player.name, player.role, player.team_id))
         print()
         
@@ -92,7 +95,7 @@ class Register_Score:
         print()
         # birta út lista af leikmönnum í away_team
         for player in players:
-            if player.team_id == match.away_team:
+            if player.team_id == match.away_team_id:
                 print("{:<24} {:<24} {:<24} {:<24}".format(player.ss_number, player.name, player.role, player.team_id))
         print()
         

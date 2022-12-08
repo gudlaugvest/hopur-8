@@ -62,3 +62,9 @@ class Team_Data:
         for team in all_teams:
             if team.captain_id == captain_id:
                 return team
+
+    def get_team_name_by_team_id(self, team_id):
+        all_teams = self.get_all_teams()
+        for team in all_teams:
+            if team.id == team_id:
+                return team.name
