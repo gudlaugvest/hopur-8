@@ -28,26 +28,23 @@ class MainMenu_UI:
         or gives error if the user inputs an incorrect information '''
         while True:
             self.menu_output()
-            print()
-            try:
-                command = input("Enter in command: ")
-                command = command.lower()
-                if command == "q":
-                    print("Goodbye")
-                    quit()
-                elif command == "1":
-                    organizer_menu = Organizer_Menu_UI(self.logic_wrapper)
-                    back_method = organizer_menu.input_prompt()
-                    if back_method == "q":
-                        return "q"
-                elif command == "2":
-                    general_user = General_User_UI(self.logic_wrapper)
-                    general_user.input_prompt()
-                elif command == "3":
-                    captain_menu = Captain_UI(self.logic_wrapper)
-                    captain_menu.input_prompt()
-                else:
-                    print("Invalid input, try again!")
-            except:
-                ValueError       
+            command = input("Enter in command: ")
+            command = command.lower()
+            if command == "q":
+                print("Goodbye")
+                quit()
+            elif command == "1":
+                organizer_menu = Organizer_Menu_UI(self.logic_wrapper)
+                back_method = organizer_menu.input_prompt()
+                if back_method == "q":
+                    return "q"
+            elif command == "2":
+                general_user = General_User_UI(self.logic_wrapper)
+                general_user.input_prompt()
+            elif command == "3":
+                captain_menu = Captain_UI(self.logic_wrapper)
+                captain_menu.input_prompt()
+            else:
+                print("Invalid input, try again!")
+                 
 
