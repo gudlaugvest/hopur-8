@@ -50,5 +50,4 @@ class General_User_UI:
             elif command == "4":
                 pass
             else:
-                print()
                 print("Invalid input, try again!")

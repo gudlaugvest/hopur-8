@@ -52,5 +52,4 @@ class Organizer_Menu_UI:
                 match_ui = Match_UI(self.logic_wrapper)
                 match_ui.input_prompt()
             else:
-                print()
                 print("Invalid input, please try again!")
