@@ -10,6 +10,9 @@ class Organizer_Menu_UI:
 
 
     def menu_output(self):
+        '''This function shows the menu output for the tournament organizer
+        and the organizer can choose which option he wants to go into and this 
+        function gives an error if the organizer gives an incorrect input '''
         print()
         print("####################################")
         print()
@@ -49,5 +52,4 @@ class Organizer_Menu_UI:
                 match_ui = Match_UI(self.logic_wrapper)
                 match_ui.input_prompt()
             else:
-                print()
                 print("Invalid input, please try again!")

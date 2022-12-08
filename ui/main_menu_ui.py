@@ -17,7 +17,7 @@ class MainMenu_UI:
         print()
         print("Basement-Open".rjust(23))
         print()
-        print("1. Tournament Orginizer")
+        print("1. Tournament Organizer")
         print("2. General User")
         print("3. Captain Menu")
         print("q. Quit")
@@ -28,7 +28,6 @@ class MainMenu_UI:
         or gives error if the user inputs an incorrect information '''
         while True:
             self.menu_output()
-            print()
             command = input("Enter in command: ")
             command = command.lower()
             if command == "q":
@@ -46,5 +45,6 @@ class MainMenu_UI:
                 captain_menu = Captain_UI(self.logic_wrapper)
                 captain_menu.input_prompt()
             else:
-                ("Invalid input, try again!")
+                print("Invalid input, try again!")
+                 
 
