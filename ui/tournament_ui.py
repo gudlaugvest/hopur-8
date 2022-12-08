@@ -22,11 +22,41 @@ class Tournament_UI:
 
 
     def create_tournament():
-        pass
+        print()
+        print("####################################")
+        print()
+        print("Create Tournament".rjust(23))
+        print()
 
 
     def update_tournament():
-        pass    
+        print()
+        print("####################################")
+        print()
+        print("Update Tournament".rjust(23))
+        print()
+        print("Enter id of the tournament you want to change")
+        print()
+
+        the_tournament = None
+        tournament_id = input("Enter tournament id: ")
+        tournament_list = self.logic_wrapper.get_all_tournaments()
+        for tournament in tournament_list:
+            if tournament.id == tournament_id:
+                the_tournament = tournament
+        if the_tournament == None:
+            print("No tournament found with tournament id:{}".format(tournament))
+            return
+
+        print()
+        new_date = input("Enter new date(yyy.mm.dd): ")
+        
+        the_tournament.date = new_date
+        self.logic_wrapper.update_tournament(the_tournament)   
+        
+        
+        
+       ''' 
         while True:
             self.menu_output()
             print()
@@ -71,3 +101,4 @@ class Tournament_UI:
             update_tournamnet = self.logic_wrapper.update_tournament(tournament)
             for info in update_tournamnet:
                 print(info)    
+                '''
