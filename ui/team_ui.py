@@ -25,6 +25,11 @@ class Team_UI:
         elif command == "c":
             print()
             team = Team()
+            #Fá lista af öllum klúbbum og prenta út
+            all_clubs = self.logic_wrapper.get_all_clubs()
+            print("Name of clubs:\n".rjust(10))
+            for club in all_clubs:
+                print("Club name:{:<10}\n".format(club.name))
             team.club = input("Enter Club name: ")
             team.name = input("Enter Team name: ")
             captain_ssn = input("Choose a captain for this team, enter captain SSN: ")
