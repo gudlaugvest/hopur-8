@@ -42,7 +42,7 @@ class Player_Data:
                 players.append(player)
         return players
 
-    def update_player(self, player):
+"""  def update_player(self, player):
         players = self.read_all_players()
         for i in range(players):
             if players[i].id == player.id:
@@ -54,6 +54,7 @@ class Player_Data:
             writer.writeheader()
             for p in players:
                 writer.writerow({"name": p.name, "ss_number": p.ss_number, "home_address": p.home_address, "phone_number": p.phone_number, "email_address": p.email_address, "role": p.role, "team_name": p.team_name })
+"""
         
     
 """

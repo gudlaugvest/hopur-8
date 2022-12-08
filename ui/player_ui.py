@@ -61,18 +61,7 @@ class Player_UI:
                     except ValueError as error:
                         print(error)
                         player.role = input("Enter Players Role(Captain/Player): ")
-
-
-                    
-        else:
-            print()
-            print("Invalid input, please try again!")
-
-"""while len(player.ss_number) != 10:
-                        print("Invalid ss number, try again")
-                        player.ss_number = input("Enter Social Security Number(0000000000): ")"""
-
-'''team_name = input("Enter Team Name: ")
+                    team_name = input("Enter Team Name: ")
                     team_name = team_name.lower()
                     team = self.logic_wrapper.get_team_by_name(team_name) 
                     while team is None:
@@ -83,4 +72,9 @@ class Player_UI:
 
                     print()          
                     player.team_name = team.name
-                    self.logic_wrapper.create_player(player)'''                        
+                    self.logic_wrapper.create_player(player)   
+                    
+        else:
+            print()
+            print("Invalid input, please try again!")
+                   
