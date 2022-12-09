@@ -77,17 +77,12 @@ class Team_Data:
 
     def assign_captain_to_team(self, p):
         """Assign captain to team"""
-        player_list = self.read_all_players()
-        
-        for player in player_list:
-            player.role = p.role
+        team_list = self.get_all_teams()
+        for team in team_list:
+            team.captain_id = p.ss_number
         with open(self.file_name,mode='w', newline="" ,encoding="utf-8") as csvfile:
-            fieldnames = ['name','ss_number','home_address','phone_number','email_address','role','team_id']
+            fieldnames = ["id", "name", "club", "captain_id"] 
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             writer.writeheader()
-            for player in player_list:
-                writer.writerow({"name": player.name, "ss_number": player.ss_number, "home_address": player.home_address, "phone_number": player.phone_number, "email_address": player.email_address, "role": player.role, "team_id": player.team_id })
-
-       
-
-            
+            for team in team_list:
+                writer.writerow({"name": team.name, "club": team.club, "captain_id": team.captain_id})

@@ -90,7 +90,7 @@ class Player_UI:
             first = True
             for i in range(4):
                 if first:
-                    team.captain = ssn 
+                    team.captain_id = check_player
                     captain = "Captain"
                     all_players = self.logic_wrapper.get_all_players()
                     for player in all_players:
