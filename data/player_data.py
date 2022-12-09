@@ -47,6 +47,14 @@ class Player_Data:
                 players.append(player)
         return players
 
+    def update_player(self, player):
+        """Update player attributes in player.csv"""
+        all_players = self.read_all_players()
+        for i in range(len(all_players)):
+            if all_players[i].ss_number == player.ss_number:
+                all_players[i] = player
+                break
+        self.write_players(all_players)
 
 """'
 name,ss_number,home_address,phone_number,email_address,role,team_name

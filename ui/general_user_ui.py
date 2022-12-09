@@ -49,8 +49,12 @@ class General_User_UI:
                 print()
                 print()
                 for game in all_games:
-                    team_names = self.logic_wrapper.get_match_name_by_id(game.match_id)
-                    print(team_names.name)
+                    matches = self.logic_wrapper.get_all_match_results()
+                    
+                    
+
+                    #team_names = self.logic_wrapper.get_match_name_by_id(game.match_id)
+                    #print(team_names.name)
                     print(game)
                     
            
