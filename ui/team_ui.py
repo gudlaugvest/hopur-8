@@ -30,6 +30,7 @@ class Team_UI:
         elif command == "c":
             print()
             team = Team()
+            player = Player()
             #Fá lista af öllum klúbbum og prenta út
             all_clubs = self.logic_wrapper.get_all_clubs()
             print("Name of clubs:\n".rjust(10))
@@ -42,17 +43,26 @@ class Team_UI:
                 #return
             #team.club == club.name
             team.name = input("Enter Team Name: ")
-            # Fá lista af öllum captainum og prenta út
-            print("Team Captains:\n")
-            all_teams = self.logic_wrapper.get_all_teams()
-            for team in all_teams:
-                captain = self.logic_wrapper.get_captain(team.id)
-                team_name = self.logic_wrapper.get_team_by_Id(team.id)
-                print("Captain ssn: {:<6} | Captain Name: {:<6} | Team: {:<6}".format(captain.ss_number, captain.name, team_name.name))
-            #print(captain.ss_number, captain.name)
             print()
-            player = Player()
+            print("Choose a captain for this Team: ")
+            print()
+            player.name = input("Enter Captain name: ")
+            player.ss_number = input("Enter Captain SSN: ")
+            player.home_address = input("Enter Captain home address: ")
+            player.phone_number = input("Enter Captain phone number: ")
+            player.email_address = input("Enter Captain email address: ")
+            player.role = "Captain"
+            self.logic_wrapper.create_player(player)
 
+            # Fá lista af öllum captainum og prenta út
+            #print("Team Captains:\n")
+            #all_teams = self.logic_wrapper.get_all_teams()
+            #for team in all_teams:
+                #captain = self.logic_wrapper.get_captain(team.id)
+                #team_name = self.logic_wrapper.get_team_by_Id(team.id)
+                #print("Captain ssn: {:<6} | Captain Name: {:<6} | Team: {:<6}".format(captain.ss_number, captain.name, team_name.name))
+            #print(captain.ss_number, captain.name)
+            #print()
             captain_ssn = input("Choose a captain for this team, enter captain SSN: ")
             captain = self.logic_wrapper.get_player_by_id(captain_ssn)
             while captain is None:
