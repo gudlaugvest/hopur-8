@@ -95,7 +95,10 @@ class Data_Wrapper:
     def update_match(self, match):
         '''Updates a match and writes it into the csv file'''
         return self.match_result_data.update_match(match)
+
     
+    def unplayed_matches(self, date):
+        return self.match_result_data.unplayed_matches(date)
 
     def get_match_by_id(self, id):
         '''Gets a match by its id'''
