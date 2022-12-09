@@ -31,20 +31,8 @@ class Team_UI:
             elif command == "c":
                 print()
                 team = Team()
-                player = Player()
-                #Fá lista af öllum klúbbum og prenta út
-                all_clubs = self.logic_wrapper.get_all_clubs()
-                print("Name of clubs:\n".rjust(10))
-                for club in all_clubs:
-                    print("Club Name:{:<10}\n".format(club.name))
-                    
-                team.club = input("Enter Club name: ")
-                #club = self.logic_wrapper.get_club_by_name(team.club)
-                #while club is None:
-                    #print("No club found with that name! Please try again!")
-                    #return
-                #team.club == club.name
                 team.name = input("Enter Team Name: ")
+                self.logic_wrapper.create_team(team)
 
             else:
                 print()
