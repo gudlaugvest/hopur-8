@@ -119,3 +119,5 @@ class Data_Wrapper:
     def get_club_by_name(self, name):
         '''Gets a club by its name'''
         return self.get_club_by_name(name)
+
+    
