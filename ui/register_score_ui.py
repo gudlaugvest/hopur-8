@@ -101,7 +101,7 @@ class Register_Score:
         print()
         
         game = Game_UI(self.logic_wrapper)
-        game.input_prompt() # Kalla á ui fall sem mun sjá um að setja inn stig fyrir hvern leik
+        game.input_prompt(match_id) # Kalla á ui fall sem mun sjá um að setja inn stig fyrir hvern leik
         # Síðan þarf að slá inn ssn fyrir hvaða leikmaður spilaði hvaða leik og líka ssn hjá player í away team
         
         
