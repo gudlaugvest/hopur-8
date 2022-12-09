@@ -6,5 +6,3 @@ from ui.club_ui import Club_UI
 
 mainmenu = MainMenu_UI()
 mainmenu.input_prompt()
-
-
