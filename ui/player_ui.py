@@ -19,7 +19,7 @@ class Player_UI:
     def input_prompt(self):
         '''The function counts how many players the Organizer wants to input and inputs the information 
         for each players and gives role for 1 captain and rest players'''
-
+        
         self.menu_output()
         print()
         command = input("Enter Command: ")
@@ -32,14 +32,9 @@ class Player_UI:
                 try:
                     how_many = int(input("How many players?: "))
 
-
-                                        
-                                        
-
                     if how_many < 4:
                         return
 
-                    
                     for i in range(how_many):
                         print()
                         player = Player()
@@ -80,9 +75,6 @@ class Player_UI:
                                     print("Not a valid role, try again")
                             except:
                                 ValueError
-                                
-                                
-
                         team_name = input("Enter Team Name: ")
                         team_name = team_name.lower()
                         team = self.logic_wrapper.get_team_by_name(team_name) 
@@ -90,9 +82,6 @@ class Player_UI:
                             print("No team found with that name")
                             team_name = input("Enter Team Name: ")
                             team_name = team_name.lower()
-
-
-
                     else:
                         print()
                         print("Players for each team has to be at least 4! Please try again!")
@@ -100,9 +89,6 @@ class Player_UI:
                     ValueError
                     print() 
                     ("Invalid input, can't be a string") 
-
-
-     
         else:
             print()
             print("Invalid input, please try again!")
