@@ -30,14 +30,12 @@ class Club_UI:
                 try:
                     club.phone_number = input("Enter Phone Number(0000000): ")
                     if len(club.phone_number) == 7:
-                        
                         break
                     else:
                         raise ValueError
                 except ValueError:
                     print()
                     print ("Invalid phone number, try again")
-
             self.logic_wrapper.create_club(club)
         else:
             print("Invalid input, please try again!")

@@ -27,7 +27,6 @@ class Player_UI:
             return "b"
         elif command == "c":
             print()
-            #villucheck
             while True:
                 try:
                     how_many = int(input("How many players?: "))
@@ -72,6 +71,7 @@ class Player_UI:
                                         print("Not a valid role, try again")
                                 except:
                                     ValueError
+                        self.logic_wrapper.create_player(player)
                     else:
                         print()
                         print("Players for each team has to be at least 4! Please try again!")
@@ -82,6 +82,4 @@ class Player_UI:
         else:
             print()
             print("Invalid input, please try again!")
-
-            self.logic_wrapper.create_player(player)
 
