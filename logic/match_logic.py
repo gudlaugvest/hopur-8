@@ -1,4 +1,4 @@
-class Match_Result_Logic:
+class Match_Logic:
 
     def __init__(self, data_connections):
         self.data_wrapper = data_connections

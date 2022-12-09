@@ -4,7 +4,7 @@ from logic.player_logic import Player_logic
 from logic.team_logic import Team_Logic
 from logic.tournament_logic import Tournament_Logic
 from logic.clubs_logic import Clubs_Logic
-from logic.match_result_logic import Match_Result_Logic
+from logic.match_logic import Match_Result_Logic
 from logic.game_logic import Game_Logic
 
 

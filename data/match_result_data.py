@@ -1,5 +1,5 @@
 import csv
-from model.match_results_model import Match_Result_Model
+from model.match_model import Match_Result_Model
 
 class Match_Result_Data:
 
