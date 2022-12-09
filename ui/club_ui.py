@@ -24,7 +24,7 @@ class Club_UI:
         elif command == "c":
             club = Club()
             print()
-            club.name = input("Enter Name: ")
+            club.name = input("Enter Club Name: ")
             club.home_address = input("Enter Home Address: ") 
             while True:
                 try:

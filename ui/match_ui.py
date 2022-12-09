@@ -60,10 +60,16 @@ class Match_UI:
 
     def update_match_menu(self):
         """Prints out header and gets user input on updating a match"""
+        # Fáum lista af öllum matches og hvaða id þau eru og hverjir eru að spila
+        print()
         print()
         print("####################################")
         print()
         print("Update Match".rjust(23))
+        print()
+        all_matches = self.logic_wrapper.get_all_match_results()
+        for match in all_matches:
+            print(f"Match ID: {match.id:<12} Home Team: {match.home_team_id:<12} Away Team: {match.away_team_id:<12} Date: {match.date:<12}")
         print()
         print("Enter id of the match you want to change")
         print()
@@ -77,12 +83,11 @@ class Match_UI:
         if the_match == None:
             print("No match found with match id:{}".format(match_id))
             return
-        #if match_id in self.logic_wrapper.get_all_match_results():
-        #match_list = self.logic_wrapper.get_all_match_results(match_id)
+        
         
         
         print()
-        new_date = input("Enter New Date(dd.mm.yyyy): ")
+        new_date = input("Enter New Date(yyyy.mm.dd): ")
         
         the_match.date = new_date
         self.logic_wrapper.update_match(the_match)
@@ -90,4 +95,3 @@ class Match_UI:
 
         
     
-        #self.logic_wrapper.update_match(match_list)           
