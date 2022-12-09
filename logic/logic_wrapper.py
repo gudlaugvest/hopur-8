@@ -9,6 +9,7 @@ from logic.game_logic import Game_Logic
 
 
 class Logic_Wrapper:
+    '''This function takes all the class logics'''
     def __init__(self):
         self.data_wrapper = Data_Wrapper()
         self.player_logic = Player_logic(self.data_wrapper)

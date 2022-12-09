@@ -25,12 +25,11 @@ class Team_UI:
         while True:
             self.menu_output()
             print()
-
             command = input("Enter Command: ")
             if command == "b":
                 return "b"
             elif command == "c":
-
+                print()
                 team = Team()
                 player = Player()
                 #Fá lista af öllum klúbbum og prenta út
@@ -54,8 +53,6 @@ class Team_UI:
                 player.phone_number = input("Enter Captain phone number: ")
                 player.email_address = input("Enter Captain email address: ")
                 player.role = "Captain"
-                player.team_id = team.id
-                self.logic_wrapper.create_player(player)
 
                 # Fá lista af öllum captainum og prenta út
                 #print("Team Captains:\n")
@@ -66,13 +63,14 @@ class Team_UI:
                     #print("Captain ssn: {:<6} | Captain Name: {:<6} | Team: {:<6}".format(captain.ss_number, captain.name, team_name.name))
                 #print(captain.ss_number, captain.name)
                 #print()
-                captain_ssn = input("Choose a captain for this team, enter captain SSN: ")
+                captain_ssn = input("Verify Captain with captain id: ")
                 captain = self.logic_wrapper.get_player_by_id(captain_ssn)
                 while captain is None:
                     print()
                     print("No player found with that id! Please Try again!")
                     return
                 team.captain_id = captain.ss_number
+                player.team_id = team.id
                 self.logic_wrapper.create_team(team)
             else:
                 print()
