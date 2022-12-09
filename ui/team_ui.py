@@ -52,6 +52,7 @@ class Team_UI:
             player.phone_number = input("Enter Captain phone number: ")
             player.email_address = input("Enter Captain email address: ")
             player.role = "Captain"
+            player.team_id = team.id
             self.logic_wrapper.create_player(player)
 
             # Fá lista af öllum captainum og prenta út
