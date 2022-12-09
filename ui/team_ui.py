@@ -71,7 +71,9 @@ class Team_UI:
                         ValueError        
                 player.email_address = input("Enter Captain email address: ")
                 player.role = "Captain"
-                
+                player.team_id = team.id
+                self.logic_wrapper.create_player(player)
+
                 captain_ssn = input("Verify Captain with captain id: ")
                 captain = self.logic_wrapper.get_player_by_id(captain_ssn)
                 while captain is None:
@@ -80,11 +82,12 @@ class Team_UI:
                     return
                 team.captain_id = captain.ss_number
                 player.team_id = team.id
-                self.logic_wrapper.create_team(team)
+                #self.logic_wrapper.create_team(team)
                 allteams = self.logic_wrapper.get_all_teams()
                 newest_team = allteams[-1]
                 player.team_id = newest_team.id
-                self.logic_wrapper.create_player(player)
+                self.logic_wrapper.create_team(team)
+
             else:
                 print()
                 print("Invalid input, please try again!")
