@@ -63,9 +63,14 @@ class Player_Data:
     
     def assign_captain(self, p):
         """Assign Captain"""
+
+        # This function should allow user to assign a captain to a team
+        # The captain should be a player in the team
+        # 
+
         player_list = self.read_all_players()
         for player in player_list:
-            if player.ss_number == p.ss_number:
+            if p.ss_number == player.ss_number:
                 player.role = p.role
         with open(self.file_name,mode='w', newline="" ,encoding="utf-8") as csvfile:
             fieldnames = ['name','ss_number','home_address','phone_number','email_address','role','team_id']
@@ -73,5 +78,5 @@ class Player_Data:
             writer.writeheader()
             for player in player_list:
                 writer.writerow({"name": player.name, "ss_number": player.ss_number, "home_address": player.home_address, "phone_number": player.phone_number, "email_address": player.email_address, "role": player.role, "team_id": player.team_id })
-        
-        return True             
+
+       

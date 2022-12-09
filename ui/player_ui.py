@@ -33,45 +33,43 @@ class Player_UI:
         elif command == "c":
             print()
             while True:
-                try:
-                    how_many = int(input("How many players?: "))
-                    while how_many >= 4:
-                        for i in range(how_many):
-                            print()
-                            player = Player()
-                            player.name = input("Enter Player name: ")
-                            while True:
-                                try:
-                                    player.ss_number = input("Enter Social Security Number(0000000000): ")
-                                    if len(player.ss_number) == 10:
-                                        break
-                                    else:
-                                        print()
-                                        print("Invalid ss number, try again")
-                                except:
-                                    ValueError
-                                
-                            player.home_address = input("Enter Home Address: ")
-                            while True:
-                                try:
-                                    player.phone_number = input("Enter phone number: ")
-                                    if len(player.phone_number) == 7:
-                                        break
-                                    else:
-                                        print()
-                                        print("Not a valid phone number, try againn")
-                                except:
-                                    ValueError
-                            player.email_address = input("Enter Email Address: ")
-                            player.role = "Player"
-                            self.logic_wrapper.create_player(player)
-                    else:
-                        print()
-                        print("Players for each team has to be at least 4! Please try again!")
-                except:
-                    ValueError
-                    print() 
-                    ("Invalid input, can't be a string") 
+                
+                how_many = int(input("How many players?: "))
+                counter = 0
+                while counter != how_many:
+                    
+                    print()
+                    player = Player()
+                    player.name = input("Enter Player name: ")
+                    while True:
+                        try:
+                            player.ss_number = input("Enter Social Security Number(0000000000): ")
+                            if len(player.ss_number) == 10:
+                                break
+                            else:
+                                print()
+                                print("Invalid ss number, try again")
+                        except:
+                            ValueError
+                        
+                    player.home_address = input("Enter Home Address: ")
+                    while True:
+                        try:
+                            player.phone_number = input("Enter phone number: ")
+                            if len(player.phone_number) == 7:
+                                break
+                            else:
+                                print()
+                                print("Not a valid phone number, try againn")
+                        except:
+                            ValueError
+                    player.email_address = input("Enter Email Address: ")
+                    player.role = "Player"
+                    self.logic_wrapper.create_player(player)
+                    counter += 1
+                print()
+                return
+            
         else:
             print()
             print("Invalid input, please try again!")

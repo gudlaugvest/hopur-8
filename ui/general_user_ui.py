@@ -59,11 +59,11 @@ class General_User_UI:
                     print(game)
                 
 
-                for match in all_matches:
-                    for game in all_games:
-                        if match.id == game.match_id:
+                # for match in all_matches:
+                #     for game in all_games:
+                #         if match.id == game.match_id:
                          
-                            print(match)
+                #             print(match)
                     
                     
            
