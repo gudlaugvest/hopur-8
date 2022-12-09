@@ -63,18 +63,8 @@ class Player_UI:
                             except:
                                 ValueError
                         player.email_address = input("Enter Email Address: ")
-                        while True:    
-                            try:
-                                player.role = input("Enter Players Role(Captain/Player): ")
-                                if player.role == "Player".lower():
-                                    break
-                                elif player.role =="Captain".lower():
-                                    break
-                                else:
-                                    print()
-                                    print("Not a valid role, try again")
-                            except:
-                                ValueError
+
+                        player.role = "Player"
                         team_name = input("Enter Team Name: ")
                         team_name = team_name.lower()
                         team = self.logic_wrapper.get_team_by_name(team_name) 
