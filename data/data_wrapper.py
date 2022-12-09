@@ -120,4 +120,7 @@ class Data_Wrapper:
         '''Gets a club by its name'''
         return self.get_club_by_name(name)
 
+    def update_player(self, player):
+        '''Updates a player and writes it into the csv file'''
+        return self.player_data.update_player(player)
     

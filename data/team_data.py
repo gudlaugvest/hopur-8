@@ -31,7 +31,7 @@ class Team_Data:
         for player in players:
             if player.ss_number == the_team.captain_id:
                 return player
-        return None
+        return 
     
     def get_team_by_Id(self, team_id):
         """Loop through team.csv and get team id"""
