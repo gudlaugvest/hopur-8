@@ -17,27 +17,28 @@ class Club_UI:
 
     def input_prompt(self):
         """Get user input"""
-        self.menu_output()
-        command = input("Enter Command: ")
-        if command == "b":
-            return "b"
-        elif command == "c":
-            club = Club()
-            print()
-            club.name = input("Enter Name: ")
-            club.home_address = input("Enter Home Address: ") 
-            while True:
-                try:
-                    club.phone_number = input("Enter Phone Number(0000000): ")
-                    if len(club.phone_number) == 7:
-                        
-                        break
-                    else:
-                        raise ValueError
-                except ValueError:
-                    print()
-                    print ("Invalid phone number, try again")
+        while True:
+            self.menu_output()
+            command = input("Enter Command: ")
+            if command == "b":
+                return "b"
+            elif command == "c":
+                club = Club()
+                print()
+                club.name = input("Enter Name: ")
+                club.home_address = input("Enter Home Address: ") 
+                while True:
+                    try:
+                        club.phone_number = input("Enter Phone Number(0000000): ")
+                        if len(club.phone_number) == 7:
+                            
+                            break
+                        else:
+                            raise ValueError
+                    except ValueError:
+                        print()
+                        print ("Invalid phone number, try again")
 
-            self.logic_wrapper.create_club(club)
-        else:
-            print("Invalid input, please try again!")
+                self.logic_wrapper.create_club(club)
+            else:
+                print("Invalid input, please try again!")
