@@ -23,4 +23,3 @@ class Game_data:
                 game_list.append(Game_Model(row["id"], row["home_team_player_ssn"], row["away_team_player_ssn"], row["score"], row["type_of_game"], row["match_id"]))
         return game_list
 
-

@@ -47,9 +47,12 @@ class General_User_UI:
                 all_games = self.logic_wrapper.get_all_games()
                 print("Home team players SSN", "Scores".rjust(32), "Away team players SSN".rjust(40), "Type of game".rjust(30), "Match ID".rjust(20))
                 print()
+                print()
                 for game in all_games:
+                    team_names = self.logic_wrapper.get_match_name_by_id(game.match_id)
+                    print(team_names.name)
                     print(game)
-                    print()
+                    
            
             elif command == "3":
             # Á að geta fengið lista af óspiluðum leikjum þ.þ.e.a.s leikir sem date > current date
