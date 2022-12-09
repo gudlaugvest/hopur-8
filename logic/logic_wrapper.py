@@ -114,5 +114,7 @@ class Logic_Wrapper:
     def get_team_by_Id(self, id):
         return self.data_wrapper.get_team_by_Id(id)
 
-    def update_player(self, player):
-        return self.player_logic.update_player(player)
+    def update_player(self, p):
+        """Update player attributes in player.csv"""
+        return self.data_wrapper.update_player(p)
+

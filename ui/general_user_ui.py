@@ -65,7 +65,11 @@ class General_User_UI:
                     print()
             
             elif command == "4":
-                pass
+                list_of_status_tournament = self.logic_wrapper.get_all_tournaments()
+                print("Tournament:", "begins:".rjust(10), "ends:".rjust(20))
+                print()
+                for status in list_of_status_tournament:
+                    print(status)
             
             else:
                 print("Invalid input, try again!")
