@@ -30,14 +30,13 @@ class Player_UI:
             while True:
                 try:
                     how_many = int(input("How many players?: "))
-                    while how_many < 4:
-                        break
+                    if how_many < 4:
+                        return
                     else:
                         print()
                         print("Players for each team has to be at least 4! Please try again!")
                 except:
                     ValueError
-                    
                     for i in range(how_many):
                         print()
                         player = Player()
