@@ -90,7 +90,7 @@ class Match_UI:
         
         
         print()
-        new_date = input("Enter New Date(dd.mm.yyyy): ")
+        new_date = input("Enter New Date(yyyy.mm.dd): ")
         
         the_match.date = new_date
         self.logic_wrapper.update_match(the_match)
