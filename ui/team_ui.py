@@ -1,5 +1,6 @@
 from model.team_model import Team
 from logic.logic_wrapper import Logic_Wrapper
+from model.player_model import Player
 
 
 class Team_UI:
@@ -50,7 +51,8 @@ class Team_UI:
                 print("Captain ssn: {:<6} | Captain Name: {:<6} | Team: {:<6}".format(captain.ss_number, captain.name, team_name.name))
             #print(captain.ss_number, captain.name)
             print()
-            
+            player = Player()
+
             captain_ssn = input("Choose a captain for this team, enter captain SSN: ")
             captain = self.logic_wrapper.get_player_by_id(captain_ssn)
             while captain is None:

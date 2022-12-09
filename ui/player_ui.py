@@ -32,6 +32,7 @@ class Player_UI:
                     how_many = int(input("How many players?: "))
                     if how_many < 4:
                         return
+
                     else:
                         print()
                         print("Players for each team has to be at least 4! Please try again!")
@@ -55,7 +56,7 @@ class Player_UI:
                         player.home_address = input("Enter Home Address: ")
                         while True:
                             try:
-                                player.phone_number = input("Enter Phone Number: ")
+                                player.phone_number = input("Enter phone number: ")
                                 if len(player.phone_number) == 7:
                                     break
                                 else:
