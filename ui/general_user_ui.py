@@ -24,7 +24,7 @@ class General_User_UI:
         while True:
             self.menu_output()
             print()
-            command = input("Enter your command: ")
+            command = input("Enter Command: ")
             command = command.lower()
             if command == "b":
                 break

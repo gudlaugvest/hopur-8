@@ -56,7 +56,7 @@ class Player_UI:
                         player.home_address = input("Enter Home Address: ")
                         while True:
                             try:
-                                player.phone_number = input("Enter phone number: ")
+                                player.phone_number = input("Enter Phone Number: ")
                                 if len(player.phone_number) == 7:
                                     break
                                 else:
