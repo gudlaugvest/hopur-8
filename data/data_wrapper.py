@@ -37,78 +37,82 @@ class Data_Wrapper:
         return self.team_data.get_captain(team_id)
 
     def get_team_by_Id(self, id):
-
+        '''Gets team information from their id'''
         return self.team_data.get_team_by_Id(id)
 
     def get_team_by_name(self, name):
         return self.team_data.get_team_by_name(name)
 
     def get_team_by_captain_id(self, captain_id):
+        '''Gets information about the team that contains the captains id'''
         return self.team_data.get_team_by_captain_id(captain_id)
 
     def get_players_by_team_id(self, team_id):
+        '''Gets all players with the same team id'''
         return self.team_data.get_players_by_team_id(team_id)
 
     def get_player_by_id(self, id):
         return self.player_data.get_player_by_id(id)
 
     def create_club(self, club):
+        '''Creates a club and writes it into the csv file'''
         return self.club_data.create_club(club)
     
     def get_all_clubs(self):
+        '''Gets all clubs from the csv file'''
         return self.club_data.get_all_clubs()
         
     def create_tournament(self, tournament):
+        '''Creates a tournament and writes it into the csv file'''
         return self.tournament_data.create_tournament(tournament)
 
     def update_tournament(self, tournament):
         return self.tournament_data.update_tournament(tournament)    
 
     def get_all_tournaments(self):
+        '''Gets all tournaments from the csv file'''
         return self.tournament_data.get_all_tournaments()
 
-    def create_match(self, match):
-        return self.match_data.create_match(match)
-
-    def get_all_matches(self):
-        return self.match_data.get_all_matches()
 
     def create_match_result(self, match_result):
+        '''Creates a match and writes it into the csv file'''
         return self.match_result_data.create_match_result(match_result)
     
     def get_all_match_results(self):
+        '''Gets all matches from the csv file'''
         return self.match_result_data.get_all_match_results()
     
-    def unplayed_matches(self, date):
-        return self.match_result_data.unplayed_matches(date)
+    # def unplayed_matches(self, date):
+    #     '''Gets all matches that are not played yet'''
+    #     return self.match_result_data.unplayed_matches(date)
     
-    def played_matches(self, match_list, date):
-        return self.match_result_data.played_matches(match_list, date)
+    # def played_matches(self, match_list, date):
+    #     '''Gets all matches that are played'''
+    #     return self.match_result_data.played_matches(match_list, date)
     
-      
-    
-    
-    def create_match_result(self, match_result):
-        return self.match_result_data.create_match_result(match_result)
     
     
     def update_match(self, match):
+        '''Updates a match and writes it into the csv file'''
         return self.match_result_data.update_match(match)
     
-    def delete_match_result(self, match_result):
-        return self.match_result_data.delete_match_result(match_result)
 
     def get_match_by_id(self, id):
+        '''Gets a match by its id'''
         return self.match_result_data.get_match_by_id(id)
 
     def get_team_name_by_team_id(self, id):
+        '''Gets a team name by its id'''
         return self.team_data.get_team_name_by_team_id(id)
 
     def create_game(self, game):
+        '''Creates a game and writes it into the csv file'''
         return self.game_data.create_game(game)
     
     def get_all_games(self):
+        '''Gets all games from the csv file'''
         return self.game_data.get_all_games()
 
     def get_club_by_name(self, name):
+        '''Gets a club by its name'''
         return self.get_club_by_name(name)

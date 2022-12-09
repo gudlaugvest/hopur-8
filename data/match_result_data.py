@@ -63,12 +63,7 @@ class Match_Result_Data:
             writer.writeheader()
             for i in range(len(all_matches)):
                 writer.writerow({"id": all_matches[i].id, "home_team_id": all_matches[i].home_team_id, "type_of_game": all_matches[i].type_of_game, "away_team_id": all_matches[i].away_team_id,"date": all_matches[i].date})
-        
-
-    def delete_match_result(self, match):
-        """Delete match"""
-        pass
-    
+            
     
     def get_match_by_id(self, id):
         """Loop through mathes.csv file and get match id"""

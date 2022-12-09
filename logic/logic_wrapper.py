@@ -122,3 +122,6 @@ class Logic_Wrapper:
 
     def get_club_by_name(self, name):
         return self.data_wrapper.get_club_by_name(name)
+
+    def get_team_by_Id(self, id):
+        return self.data_wrapper.get_team_by_Id(id)
