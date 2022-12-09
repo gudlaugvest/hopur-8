@@ -42,13 +42,13 @@ class General_User_UI:
                             print(player)
             
             elif command == "2":
-                # Hér fáum við lista af öllum leikjum sem eru í gagnagrunninum
+                # Hér fáum við lista af öllum leikjum sem eru í gagnagrunninum í listum
                 print("Played Matches: \n".rjust(60))
                 all_games = self.logic_wrapper.get_all_games()
                 for game in all_games:
-                    #print(all_matches.date)
-                    print()
-                    print(game)
+                    print(game).join()
+                
+                
            
             elif command == "3":
             # Á að geta fengið lista af óspiluðum leikjum þ.þ.e.a.s leikir sem date > current date

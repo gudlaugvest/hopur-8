@@ -24,8 +24,11 @@ class Game_UI:
             game_counter = 0
         
             while game_counter != 4:
-                game.home_team_player_ssn = input("Enter Home Team Player SSN: ")
-                game.away_team_player_ssn = input("Enter Away Team Player SSN: ")
+                game.home_team_player_ssn = []
+                game.home_team_player_ssn.append(input("Enter Home Team Player SSN: "))
+                
+                game.away_team_player_ssn = []
+                game.away_team_player_ssn.append(input("Enter Away Team Player SSN: "))
                 
                 game.type_of_game = input("Enter Type of Game: ")
                 while game.type_of_game != '501':
