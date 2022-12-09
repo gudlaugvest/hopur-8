@@ -10,6 +10,7 @@ class MainMenu_UI:
      
 
     def menu_output(self):
+        """Print out Main Menu with options on what user wants to do next"""
         '''This function shows the menu bar for basement open which 
         where the user has option to choose from'''
         print()

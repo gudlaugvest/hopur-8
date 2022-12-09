@@ -42,6 +42,10 @@ class Logic_Wrapper:
     def get_team_by_captain_id(self, captain_id):
         return self.team_logic.get_team_by_captain_id(captain_id)
 
+    def get_all_tournaments(self):
+        '''This function gets all tournaments'''
+        return self.data_wrapper.get_all_tournaments()    
+
 
     def create_tournament(self, tournament):
         return self.tournament_logic.create_tournament(tournament)
@@ -115,3 +119,6 @@ class Logic_Wrapper:
     
     def get_all_games(self):
         return self.game_logic.get_all_games()
+
+    def get_club_by_name(self, name):
+        return self.data_wrapper.get_club_by_name(name)

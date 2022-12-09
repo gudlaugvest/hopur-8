@@ -17,21 +17,27 @@ class Data_Wrapper:
 
 
     def create_player(self, player):
+        """Create Player and write into a csv file named player.csv"""
         return self.player_data.create_player(player)
 
     def get_all_players(self):
+        """Return all Player attributes that are in player.csv file """
         return self.player_data.read_all_players()
 
     def create_team(self, team):
+        """Create Team and write into csv file named team.csv"""
         return self.team_data.create_team(team)
 
     def get_all_teams(self):
+        """Return all Team attributes that are in team.csv file"""
         return self.team_data.get_all_teams()
 
     def get_captain(self, team_id):
+        """Get captain ssn number from player.csv file and return that player if captain is not found return None"""
         return self.team_data.get_captain(team_id)
 
     def get_team_by_Id(self, id):
+
         return self.team_data.get_team_by_Id(id)
 
     def get_team_by_name(self, name):
@@ -103,3 +109,6 @@ class Data_Wrapper:
     
     def get_all_games(self):
         return self.game_data.get_all_games()
+
+    def get_club_by_name(self, name):
+        return self.get_club_by_name(name)

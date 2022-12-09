@@ -31,6 +31,11 @@ class Team_UI:
             for club in all_clubs:
                 print("Club name:{:<10}\n".format(club.name))
             team.club = input("Enter Club name: ")
+            #club = self.logic_wrapper.get_club_by_name(team.club)
+            #if club is None:
+                #print("No club found with that name! Please try again!")
+                #return
+            #team.club == club.name
             team.name = input("Enter Team name: ")
             captain_ssn = input("Choose a captain for this team, enter captain SSN: ")
             captain = self.logic_wrapper.get_player_by_id(captain_ssn)

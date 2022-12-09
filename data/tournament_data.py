@@ -10,7 +10,7 @@ class Tournament_Data:
 
       
     def create_tournament(self, tournament: Tournament):
-        '''this function creates a tournament''' 
+        '''Create Tournament and write into a csv file named clubs.csv''' 
         i = len(self.get_all_tournaments()) + 1
         with open(self.file_name, "a", newline="", encoding="utf-8") as csvfile:
             fieldnames = ["id", "name", "start_date", "end_date"] 
@@ -20,6 +20,7 @@ class Tournament_Data:
        
         
     def get_all_tournaments(self):
+        """Return all tournament attributes that are in tournament.csv file"""
         tournament_list = []
         with open(self.file_name, newline="" ,encoding="utf-8") as csvfile:
             reader = csv.DictReader(csvfile)
@@ -32,6 +33,7 @@ class Tournament_Data:
         return tournament_list
 
     def update_tournament(self, tournament):
+        """Update Tournament"""
         tournament_list = self.get_all_tournaments()
         for i in range(len(tournament_list)):
             if tournament.id == tournament_list[i].id:

@@ -7,6 +7,7 @@ class Game_UI:
         self.logic_wrapper = logic_wrapper
 
     def menu_output(self):
+        """Print out header"""
         print()
         print("####################################\n")
         print("Registering Scores\n".rjust(23))

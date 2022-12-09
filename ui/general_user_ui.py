@@ -5,6 +5,7 @@ class General_User_UI:
 
 
     def menu_output(self):
+        """Print out General User Menu and options"""
         print()
         print("####################################")
         print()
@@ -19,6 +20,7 @@ class General_User_UI:
 
 
     def input_prompt(self):
+        """Get user input"""
         while True:
             self.menu_output()
             print()
