@@ -14,7 +14,6 @@ class Tournament_UI:
         print()
         print("Tournament\n".rjust(23))
         print("1. Create Tournament")
-        #print("2. Update Tournament")
         print("b. Go Back")
 
 
@@ -46,8 +45,7 @@ class Tournament_UI:
                 year, month, day = [int(item) for item in tournament.end_date]
                 tournament.end_date = datetime(year, month, day)
                 self.logic_wrapper.create_tournament(tournament)
-            elif command == "2":
-                pass
+            
             else:
                 print("Invalid input, please try again!")
             
