@@ -29,7 +29,8 @@ class MainMenu_UI:
         or gives error if the user inputs an incorrect information '''
         while True:
             self.menu_output()
-            command = input("Enter in command: ")
+            print()
+            command = input("Enter Command: ")
             command = command.lower()
             if command == "q":
                 print("Goodbye")

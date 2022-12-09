@@ -37,15 +37,15 @@ class Register_Score:
         # á meðan counter er 4 þá er 301 leikur
         # á meðan counter er 5 þá er cricket 
         # á meðan counter er 6 þá er 501 leikur
-        print("Team captains:")
+        print("Team Captains:")
         all_teams = self.logic_wrapper.get_all_teams()
         for team in all_teams:
             captain = self.logic_wrapper.get_captain(team.id)
-            print("Captain ssn: {:<6} | Captain name: {:<6} | Team: {:<6}".format(captain.ss_number, captain.name, captain.team_id))
+            print("Captain ssn: {:<6} | Captain Name: {:<6} | Team: {:<6}".format(captain.ss_number, captain.name, captain.team_id))
             #print(captain.ss_number, captain.name)
         print()
 
-        captain_id = input("Enter captain id: ")
+        captain_id = input("Enter Captain id: ")
         # Biðjum um captain_id og þá fáum við lista af öllum sem eru í liðinu hans
         print()
         print("Players in this team".rjust(23))
@@ -56,23 +56,23 @@ class Register_Score:
         for player in players:
             #captain_team_name = self.logic_wrapper.get_team_name_by_team_id(captain_team.id)
             if player.team_id == captain_team.id:
-                print("Player ssn: {:<6} | Player name: {:<6} | Role: {:<12}| Team: {:<6}".format(player.ss_number, player.name, player.role, captain_team.name))
+                print("Player ssn: {:<6} | Player Name: {:<6} | Role: {:<12}| Team: {:<6}".format(player.ss_number, player.name, player.role, captain_team.name))
           
         # Finna hvaða leik þetta lið er að keppa í og birta upp eins og t.d.
         print()
         print()
-        print("Leikur sem liðið er að spila: ")
+        print("Matches that the team is playing: ")
         matches = self.logic_wrapper.get_all_match_results()
         for match in matches:
             #captain_team_name = self.logic_wrapper.get_team_by_name(captain_team.id)
             if match.home_team_id == captain_team.id:
                 home_team_name = self.logic_wrapper.get_team_name_by_team_id(match.home_team_id)
                 away_team_name = self.logic_wrapper.get_team_name_by_team_id(match.away_team_id)
-                print("Match id: {:<6} | Home team: {:<6} :versus: Away team: {:<6}".format(match.id, home_team_name, away_team_name))
+                print("Match id: {:<6} | Home Team: {:<6} :versus: Away Team: {:<6}".format(match.id, home_team_name, away_team_name))
         print()
         
         # Velja síðan útfrá match id
-        match_id = input("Sláðu inn match id fyrir þinn leik: ")
+        match_id = input("Enter match-id for your game: ")
         print()
         print("Players in this match".rjust(23))
         print()
