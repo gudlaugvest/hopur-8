@@ -74,4 +74,3 @@ class Team_Data:
             if team.id == team_id:
                 return team.name
             
-    
