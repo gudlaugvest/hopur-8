@@ -20,7 +20,7 @@ class Register_Score:
         
 
     def input_prompt(self):
-        
+
         self.menu_output()
         print()          
         
@@ -85,17 +85,19 @@ class Register_Score:
         
         print("Players in home team")
         print()
-        
+        hometeamplayers = []
         for player in players:
             if player.team_id == match.home_team_id:
+                hometeamplayers.append(player.ss_number)
                 print("{:<24} {:<24} {:<24} {:<24}".format(player.ss_number, player.name, player.role, player.team_id))
         print()
         
         print("Players in Away team")
         print()
-        
+        awayteamplayers = []
         for player in players:
             if player.team_id == match.away_team_id:
+                awayteamplayers.append(player.ss_number)
                 print("{:<24} {:<24} {:<24} {:<24}".format(player.ss_number, player.name, player.role, player.team_id))
         print()
         

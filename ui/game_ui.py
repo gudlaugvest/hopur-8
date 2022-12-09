@@ -23,13 +23,38 @@ class Game_UI:
             print("Registering results for 501 games\n")
             game_counter = 0
         
+            players = self.logic_wrapper.get_all_players() # Fá alla leikmenn
+            match = self.logic_wrapper.get_match_by_id(match_id) # Fá alla leiki en með match_id fyrir þennan leik
+
+            hometeamplayers = []
+            for player in players:
+                if player.team_id == match.home_team_id:
+                    hometeamplayers.append(player)
+                
+            
+            
+            awayteamplayers = []
+            for player in players:
+                if player.team_id == match.away_team_id:
+                    awayteamplayers.append(player)
+                
+
             while game_counter != 4:
                 game.home_team_player_ssn = []
+                print()
                 game.home_team_player_ssn.append(input("Enter Home Team Player SSN: "))
-                
+                while game.home_team_player_ssn not in hometeamplayers:
+                    print("This player is not in this team, try again!")
+                    game.home_team_player_ssn.append(input("Enter Home Team Player SSN: "))
+
+                print()
+
                 game.away_team_player_ssn = []
                 game.away_team_player_ssn.append(input("Enter Away Team Player SSN: "))
-                
+                while game.away_team_player_ssn not in awayteamplayers:
+                    print("This player is not in this team, try again!")
+                    game.away_team_player_ssn.append("Enter Away Team Player SSN: ")
+
                 game.type_of_game = input("Enter Type of Game: ")
                 while game.type_of_game != '501':
                     print("Þarft að byrja að skrá 501 leikina fyrst!")
@@ -56,7 +81,15 @@ class Game_UI:
             while game_counter != 1:
                 game.home_team_player_ssn = []
                 game.home_team_player_ssn.append(input("Enter Home Team Player1 SSN: "))
+                while game.home_team_player_ssn not in hometeamplayers:
+                    print("This player is not in this team, try again!")
+                    game.home_team_player_ssn.append(input("Enter Home Team Player1 SSN: "))
+
                 game.home_team_player_ssn.append(input("Enter Home Team Player2 SSN: "))
+                while game.home_team_player_ssn not in hometeamplayers:
+                    print("This player is not in this team, try again!")
+                    game.home_team_player_ssn.append(input("Enter Home Team Player2 SSN: "))
+                
                 game.away_team_player_ssn = []
                 game.away_team_player_ssn.append(input("Enter Away Team Player1 SSN: "))
                 game.away_team_player_ssn.append(input("Enter Away Team Player2 SSN: "))
