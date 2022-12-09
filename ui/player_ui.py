@@ -19,27 +19,20 @@ class Player_UI:
     def input_prompt(self):
         '''The function counts how many players the Organizer wants to input and inputs the information 
         for each players and gives role for 1 captain and rest players'''
-        while True:
-            self.menu_output()
+        
+            
+        self.menu_output()
+        print()
+        command = input("Enter Command: ")
+        if command == "b":
+            return "b"
+        elif command == "c":
             print()
-            command = input("Enter Command: ")
-            if command == "b":
-                return "b"
-            elif command == "c":
-                print()
-                #villucheck
-                while True:
-                    try:
-                        how_many = int(input("How many players?: "))
-
-                        if how_many >= 4:
-                            break    
-
-                        else:
-                            print()
-                            print("Players for each team has to be at least 4! Please try again!")
-                    except:
-                        ValueError
+            #villucheck
+            while True:
+                try:
+                    how_many = int(input("How many players?: "))
+                    if how_many >= 4:    
                         for i in range(how_many):
                             print()
                             player = Player()
@@ -54,7 +47,7 @@ class Player_UI:
                                         print("Invalid ss number, try again")
                                 except:
                                     ValueError
-                                
+                                    
                             player.home_address = input("Enter Home Address: ")
                             while True:
                                 try:
@@ -64,7 +57,7 @@ class Player_UI:
                                     else:
                                         print()
                                         print("Not a valid phone number, try againn")
-                                        
+                                            
                                 except:
                                     ValueError
                             player.email_address = input("Enter Email Address: ")
@@ -80,23 +73,30 @@ class Player_UI:
                                         print("Not a valid role, try again")
                                 except:
                                     ValueError
-                                    
-                                    
+                                        
+                                        
+                        team_name = input("Enter Team Name: ")
+                        team_name = team_name.lower()
+                        team = self.logic_wrapper.get_team_by_name(team_name) 
+                        while team is None:
+                            print("No team found with that name")
                             team_name = input("Enter Team Name: ")
                             team_name = team_name.lower()
                             team = self.logic_wrapper.get_team_by_name(team_name) 
-                            while team is None:
-                                print("No team found with that name")
-                                team_name = input("Enter Team Name: ")
-                                team_name = team_name.lower()
-                                team = self.logic_wrapper.get_team_by_name(team_name)  
+                            player.team_id = team.id
+                            self.logic_wrapper.create_player(player)   
 
+                    else:
+                        print()
+                        print("Players for each team has to be at least 4! Please try again!")
+                except:
+                    ValueError
+                    print() 
+                    ("Invalid input, can't be a string") 
 
-                        print()          
-                        player.team_id = team.id
-                        self.logic_wrapper.create_player(player)   
+ 
      
-            else:
-                print()
-                print("Invalid input, please try again!")
+        else:
+            print()
+            print("Invalid input, please try again!")
 
