@@ -39,7 +39,7 @@ class Team_UI:
                     print("Club Name:{:<10}\n".format(club.name))
                 team.club = input("Enter Club name: ")
                 #club = self.logic_wrapper.get_club_by_name(team.club)
-                #if club is None:
+                #while club is None:
                     #print("No club found with that name! Please try again!")
                     #return
                 #team.club == club.name
@@ -53,16 +53,8 @@ class Team_UI:
                 player.phone_number = input("Enter Captain phone number: ")
                 player.email_address = input("Enter Captain email address: ")
                 player.role = "Captain"
+                
 
-                # Fá lista af öllum captainum og prenta út
-                #print("Team Captains:\n")
-                #all_teams = self.logic_wrapper.get_all_teams()
-                #for team in all_teams:
-                    #captain = self.logic_wrapper.get_captain(team.id)
-                    #team_name = self.logic_wrapper.get_team_by_Id(team.id)
-                    #print("Captain ssn: {:<6} | Captain Name: {:<6} | Team: {:<6}".format(captain.ss_number, captain.name, team_name.name))
-                #print(captain.ss_number, captain.name)
-                #print()
                 captain_ssn = input("Verify Captain with captain id: ")
                 captain = self.logic_wrapper.get_player_by_id(captain_ssn)
                 while captain is None:
@@ -72,6 +64,10 @@ class Team_UI:
                 team.captain_id = captain.ss_number
                 player.team_id = team.id
                 self.logic_wrapper.create_team(team)
+                allteams = self.logic_wrapper.get_all_teams()
+                newest_team = allteams[-1]
+                player.team_id = newest_team.id
+                self.logic_wrapper.create_player(player)
             else:
                 print()
                 print("Invalid input, please try again!")
