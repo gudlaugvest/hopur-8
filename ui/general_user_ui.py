@@ -45,10 +45,9 @@ class General_User_UI:
                 # Hér fáum við lista af öllum leikjum sem eru í gagnagrunninum í listum
                 print("Played Matches: \n".rjust(60))
                 all_games = self.logic_wrapper.get_all_games()
+                print("Home team players SSN", "Scores".rjust(32), "Away team players SSN".rjust(40), "Type of game".rjust(30), "Match ID".rjust(20))
                 for game in all_games:
-                    print(game).join()
-                
-                
+                    print(game)
            
             elif command == "3":
             # Á að geta fengið lista af óspiluðum leikjum þ.þ.e.a.s leikir sem date > current date

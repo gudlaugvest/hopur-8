@@ -20,7 +20,7 @@ class Game_data:
         with open(self.file_name, newline="" ,encoding="utf-8") as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                game_list.append(Game_Model(row["home_team_player_ssn"], row["away_team_player_ssn"], row["score"], row["type_of_game"], row["match_id"]))
+                game_list.append(Game_Model(row["id"], row["home_team_player_ssn"], row["away_team_player_ssn"], row["score"], row["type_of_game"], row["match_id"]))
         return game_list
 
 

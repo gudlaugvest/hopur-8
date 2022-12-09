@@ -10,9 +10,8 @@ class Organizer_Menu_UI:
 
 
     def menu_output(self):
-        '''This function shows the menu output for the tournament organizer
-        and the organizer can choose which option he wants to go into and this 
-        function gives an error if the organizer gives an incorrect input '''
+        '''This function shows the menu output for the tournament organizer,
+         the organizer can choose which option he wants to go into.'''
         print()
         print("####################################")
         print()
@@ -27,6 +26,9 @@ class Organizer_Menu_UI:
 
 
     def input_prompt(self):
+        ''' This function runs the output to a next function and gives 
+        an error if the organizer gives an incorrect input that is not in the option. 
+        The organizer can input a lower or bigger case while not getting an error. '''
         while True:
             self.menu_output()
             print()
@@ -37,7 +39,7 @@ class Organizer_Menu_UI:
             elif command == "q":
                 quit()
             elif command == "1":
-                tournament_ui = Tournament_UI(self.logic_wrapper)
+                tournament_ui = Tournament_UI(self.logic_wrapper) 
                 tournament_ui.input_prompt()
             elif command == "2":
                 club = Club_UI(self.logic_wrapper)

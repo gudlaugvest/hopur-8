@@ -11,4 +11,19 @@ class Game_Model:
 
 
     def __str__(self):
-        return f"{self.home_team_player_ssn:<24} {self.score:<24} {self.type_of_game:<24} {self.score:<24} {self.away_team_player_ssn:<24} {self.match_id:<24}"
+        homestr = str(self.home_team_player_ssn)
+        homestr = homestr.replace("[", "")
+        homestr = homestr.replace("'", "")
+        homestr = homestr.replace("\"", "")
+        homestr = homestr.replace("]", "")
+        awaystr = str(self.away_team_player_ssn)
+        awaystr = awaystr.replace("[", "")
+        awaystr = awaystr.replace("'", "")
+        awaystr = awaystr.replace("\"", "")
+        awaystr = awaystr.replace("]", "")
+        scorestr = str(self.score)
+        scorestr = scorestr.replace("[", "")
+        scorestr = scorestr.replace("'", "")
+        scorestr = scorestr.replace("]", "")
+        
+        return f"{homestr:<48} {scorestr:<24}  {awaystr:<48} {self.type_of_game:<24} {self.match_id:<24}"
