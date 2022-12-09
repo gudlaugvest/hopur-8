@@ -20,7 +20,8 @@ class Tournament_UI:
 
     def input_prompt(self):
         '''This function shows the create tournament option and the tournament
-        organizer can input name of the tournament, start date and end date  '''
+        organizer can input name of the tournament, start date and end date. 
+        The split function seperate the dot  '''
         while True:
             self.menu_output()
             print()
