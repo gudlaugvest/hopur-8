@@ -71,6 +71,7 @@ class Team_UI:
                 print("No player found with that id! Please Try again!")
                 return
             team.captain_id = captain.ss_number
+            player.team_id = team.id
             self.logic_wrapper.create_team(team)
         else:
             print()
