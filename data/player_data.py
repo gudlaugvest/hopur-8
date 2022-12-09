@@ -55,6 +55,7 @@ class Player_Data:
                 all_players[i] = player
                 break
         self.write_players(all_players)
+        
     def check_if_ssn_is_same(self, ssn):
         all_players = self.read_all_players()
         for player in all_players:

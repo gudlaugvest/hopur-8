@@ -27,7 +27,6 @@ class Player_UI:
             return "b"
         elif command == "c":
             print()
-            #villucheck
             while True:
                 try:
                     how_many = int(input("How many players?: "))
@@ -60,14 +59,19 @@ class Player_UI:
                                 except:
                                     ValueError
                             player.email_address = input("Enter Email Address: ")
-                            player.role = "Player"
-                            team_name = input("Enter Team Name: ")
-                            team_name = team_name.lower()
-                            team = self.logic_wrapper.get_team_by_name(team_name) 
-                            while team is None:
-                                print("No team found with that name")
-                                team_name = input("Enter Team Name: ")
-                                team_name = team_name.lower()
+                            while True:    
+                                try:
+                                    player.role = input("Enter Players Role(Captain/Player): ")
+                                    if player.role == "Player".lower():
+                                        break
+                                    elif player.role =="Captain".lower():
+                                        break
+                                    else:
+                                        print()
+                                        print("Not a valid role, try again")
+                                except:
+                                    ValueError
+                        self.logic_wrapper.create_player(player)
                     else:
                         print()
                         print("Players for each team has to be at least 4! Please try again!")
