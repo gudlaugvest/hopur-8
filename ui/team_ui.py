@@ -25,11 +25,12 @@ class Team_UI:
         while True:
             self.menu_output()
             print()
+
             command = input("Enter Command: ")
             if command == "b":
                 return "b"
             elif command == "c":
-                print()
+
                 team = Team()
                 player = Player()
                 #Fá lista af öllum klúbbum og prenta út
