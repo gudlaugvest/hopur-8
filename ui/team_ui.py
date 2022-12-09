@@ -64,7 +64,7 @@ class Team_UI:
                 #print("Captain ssn: {:<6} | Captain Name: {:<6} | Team: {:<6}".format(captain.ss_number, captain.name, team_name.name))
             #print(captain.ss_number, captain.name)
             #print()
-            captain_ssn = input("Choose a captain for this team, enter captain SSN: ")
+            captain_ssn = input("Verify Captain with captain id: ")
             captain = self.logic_wrapper.get_player_by_id(captain_ssn)
             while captain is None:
                 print()
