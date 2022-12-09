@@ -1,4 +1,5 @@
 from model.player_model import Player
+from model.team_model import Team
 
 
 class Player_UI:
@@ -15,6 +16,7 @@ class Player_UI:
         print("c. Continue To Input Player Info")
         print("u. Update Player Info")
         print("b. Go Back To Organizer Menu")
+
 
 
     def input_prompt(self):
@@ -84,11 +86,13 @@ class Player_UI:
         print()
         command = input("Enter command: ")
         if command == "a":
-            first = True
+            p = None
+            t = None
+            team_players_ssn = []
+            all_players = ""
             for i in range(4):
-                p = None
-                t = None
                 check_player = input("Input Player SSN: ")
+                team_players_ssn.append(check_player)
                 all_players = self.logic_wrapper.get_all_players()
                 for player in all_players:
                     if player.ss_number == check_player:
@@ -99,9 +103,19 @@ class Player_UI:
                     if team.id == team_id:
                         t = team
                         p.team_id = t.id
-                if first:
-                    self.logic_wrapper.assign_captain_to_team(p, t)
-                    p.role = "Captain"
-                    first = False
-                self.logic_wrapper.assign_captain(p)
-        self.logic_wrapper.add_player_to_team(p)
+                self.logic_wrapper.add_player_to_team(p)
+            
+            #show the ssn's of all players
+            for i in team_players_ssn:
+                print(i)
+
+            # ask for the ssn of the captain
+            captain_ssn = input("Pick captain for team: ")
+            cap = "Captain"
+            # validate that the input is an actuall ssn of one of the players
+            for player in all_players:
+                if player.ss_number == captain_ssn:
+                    ret_val = self.logic_wrapper.assign_captain(player)
+                    break
+            if ret_val:
+                print("Captain changed successfully")

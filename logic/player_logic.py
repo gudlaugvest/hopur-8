@@ -24,7 +24,7 @@ class Player_logic:
     def get_players_by_team_id(self, team_id):
         return self.data_wrapper.get_player_by_team_id(team_id)
 
-    def add_player__to_team(self, p):
+    def add_player_to_team(self, p):
         """Update player attributes in player.csv"""
         return self.data_wrapper.add_player_to_team(p)
 

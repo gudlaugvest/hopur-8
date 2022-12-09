@@ -40,8 +40,7 @@ class Team_Data:
             if team.id == team_id:
                 return team
 
-    
-    
+
     
     #    teams = self.get_all_teams()
     #    correct_team = None

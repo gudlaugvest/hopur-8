@@ -60,7 +60,7 @@ class Player_Data:
             for player in player_list:
                 writer.writerow({"name": player.name, "ss_number": player.ss_number, "home_address": player.home_address, "phone_number": player.phone_number, "email_address": player.email_address, "role": player.role, "team_id": player.team_id })
 
-
+    
     def assign_captain(self, p):
         """Assign Captain"""
         player_list = self.read_all_players()
@@ -73,4 +73,5 @@ class Player_Data:
             writer.writeheader()
             for player in player_list:
                 writer.writerow({"name": player.name, "ss_number": player.ss_number, "home_address": player.home_address, "phone_number": player.phone_number, "email_address": player.email_address, "role": player.role, "team_id": player.team_id })
-
+        
+        return True             
