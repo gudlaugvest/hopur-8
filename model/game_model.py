@@ -25,5 +25,5 @@ class Game_Model:
         scorestr = scorestr.replace("[", "")
         scorestr = scorestr.replace("'", "")
         scorestr = scorestr.replace("]", "")
-        
-        return f"{homestr:<48} {scorestr:<24}  {awaystr:<48} {self.type_of_game:<24} {self.match_id:<24}"
+        # 48
+        return f"{homestr:<52} {scorestr:<24} {awaystr:<48} {self.type_of_game:<24} {self.match_id:<24}"

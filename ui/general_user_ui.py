@@ -44,20 +44,27 @@ class General_User_UI:
             elif command == "2":
                 print("Played Matches: \n".rjust(72))
                 print()
-                all_games = self.logic_wrapper.get_all_games()
                 all_matches = self.logic_wrapper.get_all_match_results()
+                all_games = self.logic_wrapper.get_all_games()
                 # Þarf að fá þá ssn hjá einum af home team og einum af away team til að skrifa fyrir ofan hvert match sem prentast út
-                print("Home team players SSN", "Scores".rjust(32), "Away team players SSN".rjust(40), "Type of game".rjust(30), "Match ID".rjust(20))
+                print("Home team players SSN", "Scores".rjust(36), "Away team players SSN".rjust(40), "Type of game".rjust(30), "Match ID".rjust(20))
                 print()
                 print()
-                correct_match = None
-                for match in all_matches:
-                    if match.id == all_games.match_id:
-                        correct_match = match
-                        print(f"{correct_match.home_team_player_id} vs {correct_match.away_team_player_id}".rjust(50))
-                    for game in all_games:
-                        print(game)
+                # correct_match = None
+                # for match in all_matches:
+                #     if match.id == all_games.match_id:
+                #         correct_match = match
+                #         print(f"{correct_match.home_team_player_id} vs {correct_match.away_team_player_id}".rjust(50))
+                for game in all_games:
+                    print(game)
                 
+
+                for match in all_matches:
+                    for game in all_games:
+                        if match.id == game.match_id:
+                         
+                            print(match)
+                    
                     
            
             elif command == "3":
