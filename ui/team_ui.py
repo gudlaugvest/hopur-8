@@ -37,6 +37,7 @@ class Team_UI:
                 print("Name of clubs:\n".rjust(10))
                 for club in all_clubs:
                     print("Club Name:{:<10}\n".format(club.name))
+                    
                 team.club = input("Enter Club name: ")
                 #club = self.logic_wrapper.get_club_by_name(team.club)
                 #while club is None:
@@ -48,9 +49,26 @@ class Team_UI:
                 print("Choose a captain for this Team: ")
                 print()
                 player.name = input("Enter Captain name: ")
-                player.ss_number = input("Enter Captain SSN: ")
+                while True:
+                    try:
+                        player.ss_number = input("Enter Captain SSN: ")
+                        if len(player.ss_number) == 10:
+                            break
+                        else:
+                            print("Invalid ss number, please try again!")
+                    except:
+                        ValueError        
+
                 player.home_address = input("Enter Captain home address: ")
-                player.phone_number = input("Enter Captain phone number: ")
+                while True:
+                    try:
+                        player.phone_number = input("Enter Captain phone number: ")
+                        if len(player.phone_number) == 7:
+                            break
+                        else: 
+                            print("Invalid phone number, try again!")
+                    except:
+                        ValueError        
                 player.email_address = input("Enter Captain email address: ")
                 player.role = "Captain"
                 
