@@ -75,14 +75,16 @@ class Team_Data:
                 return team.name
 
 
-    def assign_captain_to_team(self, p):
+    def assign_captain_to_team(self, p, t):
         """Assign captain to team"""
+        i = len(self.get_all_teams()) + 1
         team_list = self.get_all_teams()
         for team in team_list:
-            team.captain_id = p.ss_number
+            if team.id == t.id:
+                team.captain_id = p.ss_number
         with open(self.file_name,mode='w', newline="" ,encoding="utf-8") as csvfile:
             fieldnames = ["id", "name", "club", "captain_id"] 
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             writer.writeheader()
             for team in team_list:
-                writer.writerow({"name": team.name, "club": team.club, "captain_id": team.captain_id})
+                writer.writerow({"id": i, "name": team.name, "club": team.club, "captain_id": team.captain_id})

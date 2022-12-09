@@ -48,7 +48,7 @@ class Player_Data:
         return players
 
     def add_player_to_team(self, p):
-        """Update player attributes in player.csv"""
+        """Add player to team"""
         player_list = self.read_all_players()
         for player in player_list:
             if p.ss_number == player.ss_number:
@@ -65,14 +65,12 @@ class Player_Data:
         """Assign Captain"""
         player_list = self.read_all_players()
         for player in player_list:
-            player.role = p.ss_number
+            if player.ss_number == p.ss_number:
+                player.role = p.role
         with open(self.file_name,mode='w', newline="" ,encoding="utf-8") as csvfile:
             fieldnames = ['name','ss_number','home_address','phone_number','email_address','role','team_id']
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             writer.writeheader()
             for player in player_list:
                 writer.writerow({"name": player.name, "ss_number": player.ss_number, "home_address": player.home_address, "phone_number": player.phone_number, "email_address": player.email_address, "role": player.role, "team_id": player.team_id })
-
-      
-
 

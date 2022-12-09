@@ -1,5 +1,4 @@
 from model.player_model import Player
-from model.team_model import Team
 
 
 class Player_UI:
@@ -85,19 +84,10 @@ class Player_UI:
         print()
         command = input("Enter command: ")
         if command == "a":
-            p = None
-            t = None
             first = True
             for i in range(4):
-                if first:
-                    team.captain_id = check_player
-                    captain = "Captain"
-                    all_players = self.logic_wrapper.get_all_players()
-                    for player in all_players:
-                        player.role = captain
-                    self.logic_wrapper.change_player_to_captain(captain)
-                    self.c
-                    first = False
+                p = None
+                t = None
                 check_player = input("Input Player SSN: ")
                 all_players = self.logic_wrapper.get_all_players()
                 for player in all_players:
@@ -108,6 +98,10 @@ class Player_UI:
                 for team in all_teams:
                     if team.id == team_id:
                         t = team
-                p.team_id = t.id
-                self.logic_wrapper.add_player_to_team(p)
-                
+                        p.team_id = t.id
+                if first:
+                    self.logic_wrapper.assign_captain_to_team(p, t)
+                    p.role = "Captain"
+                    first = False
+                self.logic_wrapper.assign_captain(p)
+        self.logic_wrapper.add_player_to_team(p)

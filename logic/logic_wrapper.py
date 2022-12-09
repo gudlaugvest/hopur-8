@@ -116,15 +116,15 @@ class Logic_Wrapper:
 
     def add_player_to_team(self, p):
         """Update player attributes in player.csv"""
-        return self.data_wrapper.update_player(p)
+        return self.data_wrapper.add_player_to_team(p)
 
     def assign_captain(self, p):
         """Update player attributes in player.csv"""
         return self.data_wrapper.assign_captain(p)
 
-    def assign_captain_to_team(self, p):
+    def assign_captain_to_team(self, p, t):
         """Assign captain to team"""
-        return self.data_wrapper.assign_captain(p)
+        return self.data_wrapper.assign_captain_to_team(p, t)
 
        
 

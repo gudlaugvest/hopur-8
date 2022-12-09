@@ -129,9 +129,10 @@ class Data_Wrapper:
         """Assign captain"""
         return self.player_data.assign_captain(p)
 
-    def assign_captain_to_team(self, p):
+
+    def assign_captain_to_team(self, p, t):
         """Assign captain to team"""
-        return self.player_data.assign_captain_to_team(p)
+        return self.team_data.assign_captain_to_team(p, t)
 
        
 
