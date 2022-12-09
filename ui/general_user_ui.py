@@ -50,8 +50,13 @@ class General_User_UI:
                 print("Home team players SSN", "Scores".rjust(32), "Away team players SSN".rjust(40), "Type of game".rjust(30), "Match ID".rjust(20))
                 print()
                 print()
-                for game in all_games:
-                    print(game)
+                correct_match = None
+                for match in all_matches:
+                    if match.id == all_games.match_id:
+                        correct_match = match
+                        print(f"{correct_match.home_team_player_id} vs {correct_match.away_team_player_id}".rjust(50))
+                    for game in all_games:
+                        print(game)
                 
                     
            
