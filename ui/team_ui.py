@@ -22,56 +22,57 @@ class Team_UI:
 # Síðan afþví að það er beðið um captain id í team.csv-inu þá þarf að hafa þannig að sá sem er captain í liðinu þarf að hafa sömu kennitölu og er í team csv-inu
 
     def input_prompt(self):
-        self.menu_output()
-        print()
-        command = input("Enter Command: ")
-        if command == "b":
-            return "b"
-        elif command == "c":
+        while True:
+            self.menu_output()
             print()
-            team = Team()
-            player = Player()
-            #Fá lista af öllum klúbbum og prenta út
-            all_clubs = self.logic_wrapper.get_all_clubs()
-            print("Name of clubs:\n".rjust(10))
-            for club in all_clubs:
-                print("Club Name:{:<10}\n".format(club.name))
-            team.club = input("Enter Club name: ")
-            #club = self.logic_wrapper.get_club_by_name(team.club)
-            #if club is None:
-                #print("No club found with that name! Please try again!")
-                #return
-            #team.club == club.name
-            team.name = input("Enter Team Name: ")
-            print()
-            print("Choose a captain for this Team: ")
-            print()
-            player.name = input("Enter Captain name: ")
-            player.ss_number = input("Enter Captain SSN: ")
-            player.home_address = input("Enter Captain home address: ")
-            player.phone_number = input("Enter Captain phone number: ")
-            player.email_address = input("Enter Captain email address: ")
-            player.role = "Captain"
-            player.team_id = team.id
-            self.logic_wrapper.create_player(player)
-
-            # Fá lista af öllum captainum og prenta út
-            #print("Team Captains:\n")
-            #all_teams = self.logic_wrapper.get_all_teams()
-            #for team in all_teams:
-                #captain = self.logic_wrapper.get_captain(team.id)
-                #team_name = self.logic_wrapper.get_team_by_Id(team.id)
-                #print("Captain ssn: {:<6} | Captain Name: {:<6} | Team: {:<6}".format(captain.ss_number, captain.name, team_name.name))
-            #print(captain.ss_number, captain.name)
-            #print()
-            captain_ssn = input("Choose a captain for this team, enter captain SSN: ")
-            captain = self.logic_wrapper.get_player_by_id(captain_ssn)
-            while captain is None:
+            command = input("Enter Command: ")
+            if command == "b":
+                return "b"
+            elif command == "c":
                 print()
-                print("No player found with that id! Please Try again!")
-                return
-            team.captain_id = captain.ss_number
-            self.logic_wrapper.create_team(team)
-        else:
-            print()
-            print("Invalid input, please try again!")
+                team = Team()
+                player = Player()
+                #Fá lista af öllum klúbbum og prenta út
+                all_clubs = self.logic_wrapper.get_all_clubs()
+                print("Name of clubs:\n".rjust(10))
+                for club in all_clubs:
+                    print("Club Name:{:<10}\n".format(club.name))
+                team.club = input("Enter Club name: ")
+                #club = self.logic_wrapper.get_club_by_name(team.club)
+                #if club is None:
+                    #print("No club found with that name! Please try again!")
+                    #return
+                #team.club == club.name
+                team.name = input("Enter Team Name: ")
+                print()
+                print("Choose a captain for this Team: ")
+                print()
+                player.name = input("Enter Captain name: ")
+                player.ss_number = input("Enter Captain SSN: ")
+                player.home_address = input("Enter Captain home address: ")
+                player.phone_number = input("Enter Captain phone number: ")
+                player.email_address = input("Enter Captain email address: ")
+                player.role = "Captain"
+                player.team_id = team.id
+                self.logic_wrapper.create_player(player)
+
+                # Fá lista af öllum captainum og prenta út
+                #print("Team Captains:\n")
+                #all_teams = self.logic_wrapper.get_all_teams()
+                #for team in all_teams:
+                    #captain = self.logic_wrapper.get_captain(team.id)
+                    #team_name = self.logic_wrapper.get_team_by_Id(team.id)
+                    #print("Captain ssn: {:<6} | Captain Name: {:<6} | Team: {:<6}".format(captain.ss_number, captain.name, team_name.name))
+                #print(captain.ss_number, captain.name)
+                #print()
+                captain_ssn = input("Choose a captain for this team, enter captain SSN: ")
+                captain = self.logic_wrapper.get_player_by_id(captain_ssn)
+                while captain is None:
+                    print()
+                    print("No player found with that id! Please Try again!")
+                    return
+                team.captain_id = captain.ss_number
+                self.logic_wrapper.create_team(team)
+            else:
+                print()
+                print("Invalid input, please try again!")
