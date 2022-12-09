@@ -14,7 +14,7 @@ class Game_UI:
         
     
     
-    def input_prompt(self): # DEBUG og finna afh þetta er skritið
+    def input_prompt(self, match_id): # DEBUG og finna afh þetta er skritið
         self.menu_output()
         game = Game_Model()
         while True:
@@ -22,6 +22,7 @@ class Game_UI:
             
             print("Registering results for 501 games\n")
             game_counter = 0
+        
             while game_counter != 4:
                 game.home_team_player_ssn = input("Enter Home Team Player SSN: ")
                 game.away_team_player_ssn = input("Enter Away Team Player SSN: ")
@@ -44,17 +45,18 @@ class Game_UI:
                     game.away_team_score = int(game.score[1])
                 
                 game_counter += 1
-            
-                #self.logic_wrapper.create_game(game)
+                game.match_id = match_id
+                self.logic_wrapper.create_game(game)
             
             game_counter = 0
             print("Registering results for 301 games\n")
             while game_counter != 1:
-                game.home_team_player_ssn = input("Enter Home Team Player1 SSN: ")
-                game.home_team_player_ssn = input("Enter Home Team Player2 SSN: ")
-                
-                game.away_team_player_ssn = input("Enter Away Team Player1 SSN: ")
-                game.away_team_player_ssn = input("Enter Away Team Player2 SSN: ")
+                game.home_team_player_ssn = []
+                game.home_team_player_ssn.append(input("Enter Home Team Player1 SSN: "))
+                game.home_team_player_ssn.append(input("Enter Home Team Player2 SSN: "))
+                game.away_team_player_ssn = []
+                game.away_team_player_ssn.append(input("Enter Away Team Player1 SSN: "))
+                game.away_team_player_ssn.append(input("Enter Away Team Player2 SSN: "))
 
                 game.type_of_game = input("Enter Type of Game: ")
                 while game.type_of_game != '301':
@@ -71,6 +73,7 @@ class Game_UI:
                     game.away_team_score = int(game.score[1])
                 
                 game_counter += 1
+                self.logic_wrapper.create_game(game)
             
             
                 
@@ -79,8 +82,12 @@ class Game_UI:
             game_counter = 0
             print("Registering results for cricket games\n")
             while game_counter != 1:
-                game.home_team_player_ssn = input("Enter Home Team Player SSN: ")
-                game.away_team_player_ssn = input("Enter Away Team Player SSN: ")
+                game.home_team_player_ssn = []
+                game.home_team_player_ssn.append(input("Enter Home Team Player1 SSN: "))
+                game.home_team_player_ssn.append(input("Enter Home Team Player2 SSN: "))
+                game.away_team_player_ssn = []
+                game.away_team_player_ssn.append(input("Enter Away Team Player1 SSN: "))
+                game.away_team_player_ssn.append(input("Enter Away Team Player2 SSN: "))
 
                 game.type_of_game = input("Type of game: ").lower()
                 while game.type_of_game != 'cricket':
@@ -97,20 +104,21 @@ class Game_UI:
                     game.away_team_score = int(game.score[1])    
                 
                 game_counter += 1
-                
+                self.logic_wrapper.create_game(game)
                 #self.logic_wrapper.create_game(game)
             game_counter = 0
             print("Registering results for last 501 game\n")
             while game_counter != 1:
-                game.home_team_player_ssn = input("Enter Home Team Player 1 SSN: ")
-                game.home_team_player_ssn = input("Enter Home Team Player 2 SSN: ")
-                game.home_team_player_ssn = input("Enter Home Team Player 3 SSN: ")
-                game.home_team_player_ssn = input("Enter Home Team Player 4 SSN: ")
-                
-                game.away_team_player_ssn = input("Enter Away Team Player 1 SSN: ")
-                game.away_team_player_ssn = input("Enter Away Team Player 2 SSN: ")
-                game.away_team_player_ssn = input("Enter Away Team Player 3 SSN: ")
-                game.away_team_player_ssn = input("Enter Away Team Player 4 SSN: ")
+                game.home_team_player_ssn = []
+                game.home_team_player_ssn.append(input("Enter Home Team Player1 SSN: "))
+                game.home_team_player_ssn.append(input("Enter Home Team Player2 SSN: "))
+                game.home_team_player_ssn.append(input("Enter Home Team Player3 SSN: "))
+                game.home_team_player_ssn.append(input("Enter Home Team Player4 SSN: "))
+                game.away_team_player_ssn = []
+                game.away_team_player_ssn.append(input("Enter Away Team Player1 SSN: "))
+                game.away_team_player_ssn.append(input("Enter Away Team Player2 SSN: "))
+                game.away_team_player_ssn.append(input("Enter Away Team Player3 SSN: "))
+                game.away_team_player_ssn.append(input("Enter Away Team Player4 SSN: "))
 
 
                 game.type_of_game = input("Enter type of game: ")
@@ -128,8 +136,9 @@ class Game_UI:
                     game.away_team_score = int(game.score[1])
 
                 game_counter += 1        
+                self.logic_wrapper.create_game(game)
             
-            self.logic_wrapper.create_game(game)
+            #self.logic_wrapper.create_game(game)
             return
             # Vandamálið er að í staðinn fyrir að það bætist við spilari og leikur og þannig að þá er forritið
             # að yfirskrifa hvert gildi í hverju skrefi þannig aðeins síðasti home team player og away team player eru skrifaðir
