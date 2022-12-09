@@ -8,16 +8,19 @@ class Tournament_UI:
         self.logic_wrapper = logic_connection
 
     def menu_output(self):
+        '''This function shows a menu bar in the tournament'''
         print()
         print("####################################")
         print()
         print("Tournament\n".rjust(23))
         print("1. Create Tournament")
-        print("2. Update Tournament")
+        #print("2. Update Tournament")
         print("b. Go Back")
 
 
     def input_prompt(self):
+        '''This function shows the create tournament option and the tournament
+        organizer can input name of the tournament, start date and end date  '''
         while True:
             self.menu_output()
             print()
