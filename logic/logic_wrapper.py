@@ -4,7 +4,7 @@ from logic.player_logic import Player_logic
 from logic.team_logic import Team_Logic
 from logic.tournament_logic import Tournament_Logic
 from logic.clubs_logic import Clubs_Logic
-from logic.match_result_logic import Match_Result_Logic
+from logic.match_logic import Match_Logic
 from logic.game_logic import Game_Logic
 
 
@@ -15,7 +15,7 @@ class Logic_Wrapper:
         self.team_logic = Team_Logic(self.data_wrapper)
         self.tournament_logic = Tournament_Logic(self.data_wrapper)
         self.clubs_logic = Clubs_Logic(self.data_wrapper)
-        self.match_result = Match_Result_Logic(self.data_wrapper)
+        self.match_result = Match_Logic(self.data_wrapper)
         self.game_logic = Game_Logic(self.data_wrapper)
 
     def create_player(self, player):
@@ -24,8 +24,7 @@ class Logic_Wrapper:
 
     def get_all_players(self):
         return self.player_logic.get_all_players()
- 
-   
+  
     def create_team(self, team):
         return self.team_logic.create_team(team)
 
@@ -38,7 +37,6 @@ class Logic_Wrapper:
     def get_player_by_id(self, id):
         return self.player_logic.get_player_by_id(id)
 
-    
     def get_team_by_captain_id(self, captain_id):
         return self.team_logic.get_team_by_captain_id(captain_id)
 
@@ -46,13 +44,11 @@ class Logic_Wrapper:
         '''This function gets all tournaments'''
         return self.data_wrapper.get_all_tournaments()    
 
-
     def create_tournament(self, tournament):
         return self.tournament_logic.create_tournament(tournament)
 
     def update_tournament(self, tournament):
         return self.tournament_logic.update_tournament(tournament)    
-
 
     def register_team_to_match(self):
         return self.tournament_logic.register_team_to_match()        
@@ -60,10 +56,8 @@ class Logic_Wrapper:
     def register_type_of_match(self):
         return self.tournament_logic.register_type_of_match()
         
-
     def display_final_match(self):
         return self.tournament_logic.display_final_match()
-
 
     def create_club(self, club):
         return self.clubs_logic.create_club(club)
@@ -74,27 +68,20 @@ class Logic_Wrapper:
     def get_team_by_name(self, name):
         return self.team_logic.get_team_by_name(name)
 
-    
     def get_club_by_name(self, name):
         return self.clubs_logic.get_club_by_name(name)
 
     def unplayed_matches(self, match_list, date):
         return self.match_result.unplayed_matches(match_list, date)
         
-
     def played_matches(self, match_list, date):
         return self.match_result.played_matches(match_list, date)
-        
-
     
     def get_all_match_results(self):
         return self.match_result.get_all_match_results() 
-        
-                
-
+             
     def create_match_result(self, match):
         return self.match_result.create_match_result(match)
-        
 
     def update_match(self, match):
         return self.match_result.update_match(match)

@@ -1,7 +1,7 @@
 import csv
-from model.match_results_model import Match_Result_Model
+from model.match_model import Match_Model
 
-class Match_Result_Data:
+class Match_Data:
 
     def __init__(self):
         self.file_name = "file/matches.csv"
@@ -21,7 +21,7 @@ class Match_Result_Data:
         with open(self.file_name, newline="" ,encoding="utf-8") as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                match_list.append(Match_Result_Model(row["id"], row["home_team_id"], row["type_of_game"], row["away_team_id"], row["date"]))
+                match_list.append(Match_Model(row["id"], row["home_team_id"], row["type_of_game"], row["away_team_id"], row["date"]))
         return match_list
 
     def unplayed_matches(self, date):
