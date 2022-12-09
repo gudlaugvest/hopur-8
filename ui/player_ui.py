@@ -1,4 +1,5 @@
 from model.player_model import Player
+from model.team_model import Team
 
 
 class Player_UI:
@@ -13,6 +14,7 @@ class Player_UI:
         print("Player".rjust(18))
         print()
         print("c. Continue To Input Player Info")
+        print("u. Update Player Info")
         print("b. Go Back To Organizer Menu")
 
 
@@ -25,6 +27,8 @@ class Player_UI:
         command = input("Enter Command: ")
         if command == "b":
             return "b"
+        elif command == "u":
+            self.update_player_info()
         elif command == "c":
             print()
             while True:
@@ -83,3 +87,25 @@ class Player_UI:
             print()
             print("Invalid input, please try again!")
 
+    def update_player_info(self):
+        print()
+        print("Update Player".rjust(18))
+        print("a. Add player to Team")
+        print()
+        command = input("Enter command")
+        if command == "a":
+            p = None
+            t = None
+            check_player = input("Input Player SSN: ")
+            all_players = self.logic_wrapper.get_all_players()
+            for player in all_players:
+                if player.ss_number == check_player:
+                    p = player
+            team_id = input("Enter ID of Team: ")
+            all_teams = self.logic_wrapper.get_all_teams()
+            for team in all_teams:
+                if team.id == team_id:
+                    t = team
+            p.team_id = t.id
+            self.logic_wrapper.update_player(p)
+            

@@ -47,23 +47,18 @@ class Player_Data:
                 players.append(player)
         return players
 
-    def update_player(self, player):
+    def update_player(self, p):
         """Update player attributes in player.csv"""
-        all_players = self.read_all_players()
-        for i in range(len(all_players)):
-            if all_players[i].ss_number == player.ss_number:
-                all_players[i] = player
-                break
-        self.create_player(all_players)
+        player_list = self.read_all_players()
+        for player in player_list:
+            if p.ss_number == player.ss_number:
+                player.team_id = p.team_id
+        with open(self.file_name,mode='w', newline="" ,encoding="utf-8") as csvfile:
+            fieldnames = ['name','ss_number','home_address','phone_number','email_address','role','team_id']
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writeheader()
+            for player in player_list:
+                writer.writerow({"name": player.name, "ss_number": player.ss_number, "home_address": player.home_address, "phone_number": player.phone_number, "email_address": player.email_address, "role": player.role, "team_id": player.team_id })
+        
 
 
-
-
-"""'
-name,ss_number,home_address,phone_number,email_address,role,team_name
-Jonni,0320002345,Laufrimi 13,8889999,jonni@ru.is,player,lið1
-Gunni,0303032345,Gustav 13,565657585,gunni@ru.is,captain,lið1
-Patti,0402012343,Vik 12,54642453,patti@ru.is,player,lið1
-Stebbi,0912993456,Vikuvegur 98,8454675,stebbi@ru.is,player,lið1
-
-"""
