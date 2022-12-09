@@ -59,23 +59,11 @@ class Player_UI:
                                     else:
                                         print()
                                         print("Not a valid phone number, try againn")
-                                        
                                 except:
                                     ValueError
                             player.email_address = input("Enter Email Address: ")
-                            while True:    
-                                try:
-                                    player.role = input("Enter Players Role(Captain/Player): ")
-                                    if player.role == "Player".lower():
-                                        break
-                                    elif player.role =="Captain".lower():
-                                        break
-                                    else:
-                                        print()
-                                        print("Not a valid role, try again")
-                                except:
-                                    ValueError
-                        self.logic_wrapper.create_player(player)
+                            player.role = "Player"
+                            self.logic_wrapper.create_player(player)
                     else:
                         print()
                         print("Players for each team has to be at least 4! Please try again!")
@@ -88,24 +76,38 @@ class Player_UI:
             print("Invalid input, please try again!")
 
     def update_player_info(self):
+        """Add 4 players to Team"""
+        print("####################################")
         print()
         print("Update Player".rjust(18))
+        print()
         print("a. Add player to Team")
         print()
-        command = input("Enter command")
+        command = input("Enter command: ")
         if command == "a":
             p = None
             t = None
-            check_player = input("Input Player SSN: ")
-            all_players = self.logic_wrapper.get_all_players()
-            for player in all_players:
-                if player.ss_number == check_player:
-                    p = player
-            team_id = input("Enter ID of Team: ")
-            all_teams = self.logic_wrapper.get_all_teams()
-            for team in all_teams:
-                if team.id == team_id:
-                    t = team
-            p.team_id = t.id
-            self.logic_wrapper.update_player(p)
-            
+            first = True
+            for i in range(4):
+                if first:
+                    team.captain = ssn 
+                    captain = "Captain"
+                    all_players = self.logic_wrapper.get_all_players()
+                    for player in all_players:
+                        player.role = captain
+                    self.logic_wrapper.change_player_to_captain(captain)
+                    self.c
+                    first = False
+                check_player = input("Input Player SSN: ")
+                all_players = self.logic_wrapper.get_all_players()
+                for player in all_players:
+                    if player.ss_number == check_player:
+                        p = player
+                team_id = input("Enter ID of Team: ")
+                all_teams = self.logic_wrapper.get_all_teams()
+                for team in all_teams:
+                    if team.id == team_id:
+                        t = team
+                p.team_id = t.id
+                self.logic_wrapper.add_player_to_team(p)
+                

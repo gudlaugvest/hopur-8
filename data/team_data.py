@@ -73,4 +73,21 @@ class Team_Data:
         for team in all_teams:
             if team.id == team_id:
                 return team.name
+
+
+    def assign_captain_to_team(self, p):
+        """Assign captain to team"""
+        player_list = self.read_all_players()
+        
+        for player in player_list:
+            player.role = p.role
+        with open(self.file_name,mode='w', newline="" ,encoding="utf-8") as csvfile:
+            fieldnames = ['name','ss_number','home_address','phone_number','email_address','role','team_id']
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writeheader()
+            for player in player_list:
+                writer.writerow({"name": player.name, "ss_number": player.ss_number, "home_address": player.home_address, "phone_number": player.phone_number, "email_address": player.email_address, "role": player.role, "team_id": player.team_id })
+
+       
+
             

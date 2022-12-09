@@ -24,9 +24,6 @@ class Team_Logic:
         return self.data_wrapper.get_team_name_by_team_id(team_id)
 
 
-
-
-
     def get_all_teams(self):
         return self.data_wrapper.get_all_teams()
 
@@ -36,3 +33,10 @@ class Team_Logic:
 
     def get_team_by_captain_id(self, captain_id):
         return self.data_wrapper.get_team_by_captain_id(captain_id)
+
+
+    def assign_captain_to_team(self, p):
+        """Assign captain to team"""
+        return self.data_wrapper.assign_captain_to_team(p)
+
+            

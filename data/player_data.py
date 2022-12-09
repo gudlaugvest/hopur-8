@@ -47,7 +47,7 @@ class Player_Data:
                 players.append(player)
         return players
 
-    def update_player(self, p):
+    def add_player_to_team(self, p):
         """Update player attributes in player.csv"""
         player_list = self.read_all_players()
         for player in player_list:
@@ -59,6 +59,20 @@ class Player_Data:
             writer.writeheader()
             for player in player_list:
                 writer.writerow({"name": player.name, "ss_number": player.ss_number, "home_address": player.home_address, "phone_number": player.phone_number, "email_address": player.email_address, "role": player.role, "team_id": player.team_id })
-        
+
+
+    def assign_captain(self, p):
+        """Assign Captain"""
+        player_list = self.read_all_players()
+        for player in player_list:
+            player.role = p.role
+        with open(self.file_name,mode='w', newline="" ,encoding="utf-8") as csvfile:
+            fieldnames = ['name','ss_number','home_address','phone_number','email_address','role','team_id']
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writeheader()
+            for player in player_list:
+                writer.writerow({"name": player.name, "ss_number": player.ss_number, "home_address": player.home_address, "phone_number": player.phone_number, "email_address": player.email_address, "role": player.role, "team_id": player.team_id })
+
+      
 
 

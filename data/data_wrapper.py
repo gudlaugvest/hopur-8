@@ -120,9 +120,21 @@ class Data_Wrapper:
         '''Gets a club by its name'''
         return self.get_club_by_name(name)
 
-    def update_player(self, p):
+    def add_player_to_team(self, p):
         """Update player attributes in player.csv"""
-        return self.player_data.update_player(p)
+        return self.player_data.add_player_to_team(p)
 
     
+    def assign_captain(self, p):
+        """Assign captain"""
+        return self.player_data.assign_captain(p)
 
+    def assign_captain_to_team(self, p):
+        """Assign captain to team"""
+        return self.player_data.assign_captain_to_team(p)
+
+       
+
+            
+
+        

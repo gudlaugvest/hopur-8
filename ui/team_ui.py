@@ -31,9 +31,10 @@ class Team_UI:
             elif command == "c":
                 print()
                 team = Team()
+                team.club = input("Enter Club Name: ")
                 team.name = input("Enter Team Name: ")
                 self.logic_wrapper.create_team(team)
-
             else:
                 print()
                 print("Invalid input, please try again!")
+                
