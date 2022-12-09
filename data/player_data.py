@@ -48,23 +48,7 @@ class Player_Data:
         return players
 
 
-""" 
-    def update_player(self, player):
-        players = self.read_all_players()
-        for i in range(players):
-            if players[i].id == player.id:
-                players[i] = player
-
-        with open(self.file_name, "w", newline="", encoding="utf-8") as csvfile:
-            fieldnames = ["name", "ss_number", "home_address", "phone_number", "email_address", "role", "team_name"]
-            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-            writer.writeheader()
-            for p in players:
-                writer.writerow({"name": p.name, "ss_number": p.ss_number, "home_address": p.home_address, "phone_number": p.phone_number, "email_address": p.email_address, "role": p.role, "team_name": p.team_name })
-"""
-        
-    
-"""
+"""'
 name,ss_number,home_address,phone_number,email_address,role,team_name
 Jonni,0320002345,Laufrimi 13,8889999,jonni@ru.is,player,lið1
 Gunni,0303032345,Gustav 13,565657585,gunni@ru.is,captain,lið1

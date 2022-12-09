@@ -16,6 +16,10 @@ class Team_UI:
         print("b. Go Back To Organizer Menu")
 
 
+
+# Þurfum að breyta þessu þannig að það er fyrst beðið um team_id/team_name og síðan venjulegt
+# Síðan afþví að það er beðið um captain id í team.csv-inu þá þarf að hafa þannig að sá sem er captain í liðinu þarf að hafa sömu kennitölu og er í team csv-inu
+
     def input_prompt(self):
         self.menu_output()
         print()
@@ -37,6 +41,16 @@ class Team_UI:
                 #return
             #team.club == club.name
             team.name = input("Enter Team Name: ")
+            # Fá lista af öllum captainum og prenta út
+            print("Team Captains:\n")
+            all_teams = self.logic_wrapper.get_all_teams()
+            for team in all_teams:
+                captain = self.logic_wrapper.get_captain(team.id)
+                team_name = self.logic_wrapper.get_team_by_Id(team.id)
+                print("Captain ssn: {:<6} | Captain Name: {:<6} | Team: {:<6}".format(captain.ss_number, captain.name, team_name.name))
+            #print(captain.ss_number, captain.name)
+            print()
+            
             captain_ssn = input("Choose a captain for this team, enter captain SSN: ")
             captain = self.logic_wrapper.get_player_by_id(captain_ssn)
             while captain is None:

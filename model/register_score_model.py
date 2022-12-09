@@ -1,4 +1,5 @@
 class Captain:
+    
     def __init__(self, id = "", name="", club="", captain_id = ""):
         self.captain_id = captain_id
         self.id = id
