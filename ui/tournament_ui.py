@@ -48,6 +48,11 @@ class Tournament_UI:
                 self.logic_wrapper.create_tournament(tournament)
             elif command == "2":
                 the_tournament = None
+                # Fáum lista af tournaments sem eru til og hvaða id þau eru
+                tournament_list = self.logic_wrapper.get_all_tournaments()
+                for tournament in tournament_list:
+                    print("Tournament id: {} Tournament name: {}".format(tournament.id, tournament.name))
+                print()
                 tournament_id = input("Enter Tournament id: ")
                 tournament_list = self.logic_wrapper.get_all_tournaments()
                 for tournament in tournament_list:

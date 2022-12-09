@@ -60,10 +60,18 @@ class Match_UI:
 
     def update_match_menu(self):
         """Prints out header and gets user input on updating a match"""
+        # Fáum lista af öllum matches og hvaða id þau eru og hverjir eru að spila
+
+        
+        print()
         print()
         print("####################################")
         print()
         print("Update Match".rjust(23))
+        print()
+        all_matches = self.logic_wrapper.get_all_match_results()
+        for match in all_matches:
+            print(f"Match ID: {match.id:<12} Home Team: {match.home_team_id:<12} Away Team: {match.away_team_id:<12} Date: {match.date:<12}")
         print()
         print("Enter id of the match you want to change")
         print()
