@@ -47,6 +47,13 @@ class Player_Data:
                 players.append(player)
         return players
 
+    def check_if_ssn_is_same(self, ssn):
+        all_players = self.read_all_players()
+        for player in all_players:
+            if player.ss_number == ssn:
+                return ssn
+
+
 
 """'
 name,ss_number,home_address,phone_number,email_address,role,team_name
