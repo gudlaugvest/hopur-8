@@ -45,35 +45,6 @@ class Team_UI:
                     #return
                 #team.club == club.name
                 team.name = input("Enter Team Name: ")
-                print()
-                print("Choose a captain for this Team: ")
-                print()
-                player.name = input("Enter Captain name: ")
-                while True:
-                    try:
-                        player.ss_number = input("Enter Captain SSN: ")
-                        if len(player.ss_number) == 10:
-                            break
-                        else:
-                            print("Invalid ss number, please try again!")
-                    except:
-                        ValueError        
-
-                player.home_address = input("Enter Captain home address: ")
-                while True:
-                    try:
-                        player.phone_number = input("Enter Captain phone number: ")
-                        if len(player.phone_number) == 7:
-                            break
-                        else: 
-                            print("Invalid phone number, try again!")
-                    except:
-                        ValueError        
-                player.email_address = input("Enter Captain email address: ")
-                player.role = "Captain"
-                player.team_id = team.id
-                self.logic_wrapper.create_player(player)
-
                 captain_ssn = input("Verify Captain with captain id: ")
                 captain = self.logic_wrapper.get_player_by_id(captain_ssn)
                 while captain is None:
@@ -81,11 +52,6 @@ class Team_UI:
                     print("No player found with that id! Please Try again!")
                     return
                 team.captain_id = captain.ss_number
-                player.team_id = team.id
-                #self.logic_wrapper.create_team(team)
-                allteams = self.logic_wrapper.get_all_teams()
-                newest_team = allteams[-1]
-                player.team_id = newest_team.id
                 self.logic_wrapper.create_team(team)
 
             else:
