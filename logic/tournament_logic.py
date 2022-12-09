@@ -11,20 +11,8 @@ class Tournament_Logic:
         '''this function creates a tournament'''
         self.data_wrapper.create_tournament(tournament)
 
-    def update_tournament(self,tournament):
-        self.data_wrapper.update_tournament(tournament)    
-
 
     def get_all_tournaments(self):
         '''This function gets all tournaments'''
         return self.data_wrapper.get_all_tournaments()
         
-
-
-    def register_type_of_match(self):
-        '''This function specifies what type of match'''
-        pass
-
-
-    def get_all_games_in_tournament(self, tournament):
-        pass
