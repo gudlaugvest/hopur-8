@@ -65,7 +65,7 @@ class Player_Data:
         """Assign Captain"""
         player_list = self.read_all_players()
         for player in player_list:
-            player.role = p.role
+            player.role = p.ss_number
         with open(self.file_name,mode='w', newline="" ,encoding="utf-8") as csvfile:
             fieldnames = ['name','ss_number','home_address','phone_number','email_address','role','team_id']
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
