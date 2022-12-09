@@ -61,8 +61,6 @@ class Match_UI:
     def update_match_menu(self):
         """Prints out header and gets user input on updating a match"""
         # Fáum lista af öllum matches og hvaða id þau eru og hverjir eru að spila
-
-        
         print()
         print()
         print("####################################")
@@ -85,8 +83,7 @@ class Match_UI:
         if the_match == None:
             print("No match found with match id:{}".format(match_id))
             return
-        #if match_id in self.logic_wrapper.get_all_match_results():
-        #match_list = self.logic_wrapper.get_all_match_results(match_id)
+        
         
         
         print()
@@ -98,4 +95,3 @@ class Match_UI:
 
         
     
-        #self.logic_wrapper.update_match(match_list)           

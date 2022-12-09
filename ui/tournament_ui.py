@@ -51,7 +51,7 @@ class Tournament_UI:
                 # Fáum lista af tournaments sem eru til og hvaða id þau eru
                 tournament_list = self.logic_wrapper.get_all_tournaments()
                 for tournament in tournament_list:
-                    print("Tournament id: {} Tournament name: {}".format(tournament.id, tournament.name))
+                    print("Tournament id: {} Tournament name: {:<12} Start date: {:<12} End date: {}".format(tournament.id, tournament.name, tournament.start_date, tournament.end_date))
                 print()
                 tournament_id = input("Enter Tournament id: ")
                 tournament_list = self.logic_wrapper.get_all_tournaments()
