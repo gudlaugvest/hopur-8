@@ -40,6 +40,7 @@ class General_User_UI:
                     for player in players:
                         if team.id == player.team_id:
                             print(player)
+            
             elif command == "2":
                 # Hér fáum við lista af öllum leikjum sem eru í gagnagrunninum
                 print("Played Matches: \n".rjust(60))
@@ -48,6 +49,7 @@ class General_User_UI:
                     #print(all_matches.date)
                     print()
                     print(game)
+           
             elif command == "3":
             # Á að geta fengið lista af óspiluðum leikjum þ.þ.e.a.s leikir sem date > current date
                 todays_date = '06.12.2022'
@@ -56,7 +58,9 @@ class General_User_UI:
                     if todays_date < matches.date:
                         print(matches)
                     print()
+            
             elif command == "4":
                 pass
+            
             else:
                 print("Invalid input, try again!")
