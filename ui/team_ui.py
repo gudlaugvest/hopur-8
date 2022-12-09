@@ -45,14 +45,6 @@ class Team_UI:
                     #return
                 #team.club == club.name
                 team.name = input("Enter Team Name: ")
-                captain_ssn = input("Verify Captain with captain id: ")
-                captain = self.logic_wrapper.get_player_by_id(captain_ssn)
-                while captain is None:
-                    print()
-                    print("No player found with that id! Please Try again!")
-                    return
-                team.captain_id = captain.ss_number
-                self.logic_wrapper.create_team(team)
 
             else:
                 print()
