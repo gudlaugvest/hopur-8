@@ -1,5 +1,5 @@
 from logic.logic_wrapper import Logic_Wrapper
-from model.match_results_model import Match_Result_Model
+from model.match_model import Match_Model
 
 class Match_UI:
 
@@ -45,7 +45,7 @@ class Match_UI:
         print("Create Match".rjust(23))
         print()
         
-        match_ = Match_Result_Model()
+        match_ = Match_Model()
         match_.home_team = input("Enter Home Team: ")
         match_.away_team = input("Enter Away Team: ")
         match_.type_of_game = input("Enter Type Of Game: ")
@@ -69,7 +69,7 @@ class Match_UI:
         print()
 
         the_match = None
-        match_id = input("Enter match id: ")
+        match_id = input("Enter Match id: ")
         match_list = self.logic_wrapper.get_all_match_results()
         for match in match_list:
             if match.id == match_id:
@@ -82,7 +82,7 @@ class Match_UI:
         
         
         print()
-        new_date = input("Enter new date(dd.mm.yyyy): ")
+        new_date = input("Enter New Date(dd.mm.yyyy): ")
         
         the_match.date = new_date
         self.logic_wrapper.update_match(the_match)

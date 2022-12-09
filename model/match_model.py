@@ -1,4 +1,4 @@
-class Match_Result_Model:
+class Match_Model:
 
     def __init__(self, id = "", home_team_id="", type_of_game="", away_team_id="", date=""):
         self.home_team_id = home_team_id
